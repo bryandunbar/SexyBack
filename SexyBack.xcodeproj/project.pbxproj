@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E337F58B199B0FB400C417D0 /* SBGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F58A199B0FB400C417D0 /* SBGoalsViewController.m */; };
+		E337F58E199B125500C417D0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F58D199B125500C417D0 /* User.m */; };
+		E33C0604199AF59500C9AD10 /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C0603199AF59500C9AD10 /* AppState.m */; };
+		E33C0626199AFE5200C9AD10 /* UIBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C0624199AFE5200C9AD10 /* UIBorderedButton.m */; };
+		E33C0629199AFF3600C9AD10 /* SBQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C0628199AFF3600C9AD10 /* SBQuizViewController.m */; };
+		E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062A199B06FE00C9AD10 /* UIPickerField.m */; };
+		E33C062F199B073000C9AD10 /* SBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062E199B073000C9AD10 /* SBProfileViewController.m */; };
+		E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B0199AEFB30024D8EB /* NSObject+AlertHelper.m */; };
+		E3BB26BC199AEFB30024D8EB /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B2199AEFB30024D8EB /* NSString+Additions.m */; };
+		E3BB26BD199AEFB30024D8EB /* UIDateField.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B4199AEFB30024D8EB /* UIDateField.m */; };
+		E3BB26BE199AEFB30024D8EB /* UIDefaultAccessoryInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B6199AEFB30024D8EB /* UIDefaultAccessoryInputView.m */; };
+		E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B8199AEFB30024D8EB /* UIFormTableViewController.m */; };
+		E3BB26C0199AEFB30024D8EB /* UIFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26BA199AEFB30024D8EB /* UIFormViewController.m */; };
+		E3F5533B1998EBE000AE3A28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533A1998EBE000AE3A28 /* Foundation.framework */; };
+		E3F5533D1998EBE000AE3A28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533C1998EBE000AE3A28 /* CoreGraphics.framework */; };
+		E3F5533F1998EBE000AE3A28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533E1998EBE000AE3A28 /* UIKit.framework */; };
+		E3F553451998EBE000AE3A28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3F553431998EBE000AE3A28 /* InfoPlist.strings */; };
+		E3F553471998EBE000AE3A28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F553461998EBE000AE3A28 /* main.m */; };
+		E3F5534B1998EBE000AE3A28 /* SBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F5534A1998EBE000AE3A28 /* SBAppDelegate.m */; };
+		E3F5534E1998EBE000AE3A28 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F5534C1998EBE000AE3A28 /* Main_iPhone.storyboard */; };
+		E3F553511998EBE000AE3A28 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F5534F1998EBE000AE3A28 /* Main_iPad.storyboard */; };
+		E3F553541998EBE000AE3A28 /* SBTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F553531998EBE000AE3A28 /* SBTrackViewController.m */; };
+		E3F553571998EBE000AE3A28 /* SBHotStuffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F553561998EBE000AE3A28 /* SBHotStuffViewController.m */; };
+		E3F553591998EBE000AE3A28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3F553581998EBE000AE3A28 /* Images.xcassets */; };
+		E3F553601998EBE000AE3A28 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5535F1998EBE000AE3A28 /* XCTest.framework */; };
+		E3F553611998EBE000AE3A28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533A1998EBE000AE3A28 /* Foundation.framework */; };
+		E3F553621998EBE000AE3A28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533E1998EBE000AE3A28 /* UIKit.framework */; };
+		E3F5536A1998EBE000AE3A28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3F553681998EBE000AE3A28 /* InfoPlist.strings */; };
+		E3F5536C1998EBE000AE3A28 /* SexyBackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F5536B1998EBE000AE3A28 /* SexyBackTests.m */; };
+		E3F553781998F3FC00AE3A28 /* SBMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F553771998F3FC00AE3A28 /* SBMainTabBarController.m */; };
+		E3F5538A199AE8F500AE3A28 /* SBConsultantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F55389199AE8F500AE3A28 /* SBConsultantViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3F553631998EBE000AE3A28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3F5532F1998EBE000AE3A28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3F553361998EBE000AE3A28;
+			remoteInfo = SexyBack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E337F589199B0FB400C417D0 /* SBGoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBGoalsViewController.h; sourceTree = "<group>"; };
+		E337F58A199B0FB400C417D0 /* SBGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBGoalsViewController.m; sourceTree = "<group>"; };
+		E337F58C199B125500C417D0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E337F58D199B125500C417D0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E33C0602199AF59500C9AD10 /* AppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppState.h; sourceTree = "<group>"; };
+		E33C0603199AF59500C9AD10 /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
+		E33C0605199AF83A00C9AD10 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E33C0624199AFE5200C9AD10 /* UIBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBorderedButton.m; sourceTree = "<group>"; };
+		E33C0625199AFE5200C9AD10 /* UIBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBorderedButton.h; sourceTree = "<group>"; };
+		E33C0627199AFF3600C9AD10 /* SBQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBQuizViewController.h; sourceTree = "<group>"; };
+		E33C0628199AFF3600C9AD10 /* SBQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBQuizViewController.m; sourceTree = "<group>"; };
+		E33C062A199B06FE00C9AD10 /* UIPickerField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPickerField.m; sourceTree = "<group>"; };
+		E33C062B199B06FE00C9AD10 /* UIPickerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerField.h; sourceTree = "<group>"; };
+		E33C062D199B073000C9AD10 /* SBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBProfileViewController.h; sourceTree = "<group>"; };
+		E33C062E199B073000C9AD10 /* SBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBProfileViewController.m; sourceTree = "<group>"; };
+		E3BB26AF199AEFB30024D8EB /* NSObject+AlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AlertHelper.h"; sourceTree = "<group>"; };
+		E3BB26B0199AEFB30024D8EB /* NSObject+AlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AlertHelper.m"; sourceTree = "<group>"; };
+		E3BB26B1199AEFB30024D8EB /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		E3BB26B2199AEFB30024D8EB /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		E3BB26B3199AEFB30024D8EB /* UIDateField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDateField.h; sourceTree = "<group>"; };
+		E3BB26B4199AEFB30024D8EB /* UIDateField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDateField.m; sourceTree = "<group>"; };
+		E3BB26B5199AEFB30024D8EB /* UIDefaultAccessoryInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDefaultAccessoryInputView.h; sourceTree = "<group>"; };
+		E3BB26B6199AEFB30024D8EB /* UIDefaultAccessoryInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDefaultAccessoryInputView.m; sourceTree = "<group>"; };
+		E3BB26B7199AEFB30024D8EB /* UIFormTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFormTableViewController.h; sourceTree = "<group>"; };
+		E3BB26B8199AEFB30024D8EB /* UIFormTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFormTableViewController.m; sourceTree = "<group>"; };
+		E3BB26B9199AEFB30024D8EB /* UIFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFormViewController.h; sourceTree = "<group>"; };
+		E3BB26BA199AEFB30024D8EB /* UIFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFormViewController.m; sourceTree = "<group>"; };
+		E3F553371998EBE000AE3A28 /* SexyBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SexyBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3F5533A1998EBE000AE3A28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E3F5533C1998EBE000AE3A28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E3F5533E1998EBE000AE3A28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E3F553421998EBE000AE3A28 /* SexyBack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SexyBack-Info.plist"; sourceTree = "<group>"; };
+		E3F553441998EBE000AE3A28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E3F553461998EBE000AE3A28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3F553481998EBE000AE3A28 /* SexyBack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SexyBack-Prefix.pch"; sourceTree = "<group>"; };
+		E3F553491998EBE000AE3A28 /* SBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAppDelegate.h; sourceTree = "<group>"; };
+		E3F5534A1998EBE000AE3A28 /* SBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAppDelegate.m; sourceTree = "<group>"; };
+		E3F5534D1998EBE000AE3A28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		E3F553501998EBE000AE3A28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		E3F553521998EBE000AE3A28 /* SBTrackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBTrackViewController.h; sourceTree = "<group>"; };
+		E3F553531998EBE000AE3A28 /* SBTrackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBTrackViewController.m; sourceTree = "<group>"; };
+		E3F553551998EBE000AE3A28 /* SBHotStuffViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBHotStuffViewController.h; sourceTree = "<group>"; };
+		E3F553561998EBE000AE3A28 /* SBHotStuffViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBHotStuffViewController.m; sourceTree = "<group>"; };
+		E3F553581998EBE000AE3A28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3F5535E1998EBE000AE3A28 /* SexyBackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SexyBackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3F5535F1998EBE000AE3A28 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E3F553671998EBE000AE3A28 /* SexyBackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SexyBackTests-Info.plist"; sourceTree = "<group>"; };
+		E3F553691998EBE000AE3A28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E3F5536B1998EBE000AE3A28 /* SexyBackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SexyBackTests.m; sourceTree = "<group>"; };
+		E3F553761998F3FC00AE3A28 /* SBMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMainTabBarController.h; sourceTree = "<group>"; };
+		E3F553771998F3FC00AE3A28 /* SBMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainTabBarController.m; sourceTree = "<group>"; };
+		E3F55388199AE8F500AE3A28 /* SBConsultantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBConsultantViewController.h; sourceTree = "<group>"; };
+		E3F55389199AE8F500AE3A28 /* SBConsultantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBConsultantViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3F553341998EBE000AE3A28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3F5533D1998EBE000AE3A28 /* CoreGraphics.framework in Frameworks */,
+				E3F5533F1998EBE000AE3A28 /* UIKit.framework in Frameworks */,
+				E3F5533B1998EBE000AE3A28 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3F5535B1998EBE000AE3A28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3F553601998EBE000AE3A28 /* XCTest.framework in Frameworks */,
+				E3F553621998EBE000AE3A28 /* UIKit.framework in Frameworks */,
+				E3F553611998EBE000AE3A28 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E337F586199B0F7800C417D0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E33C062D199B073000C9AD10 /* SBProfileViewController.h */,
+				E33C062E199B073000C9AD10 /* SBProfileViewController.m */,
+				E337F589199B0FB400C417D0 /* SBGoalsViewController.h */,
+				E337F58A199B0FB400C417D0 /* SBGoalsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		E337F587199B0F7E00C417D0 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				E3F553521998EBE000AE3A28 /* SBTrackViewController.h */,
+				E3F553531998EBE000AE3A28 /* SBTrackViewController.m */,
+				E3F553551998EBE000AE3A28 /* SBHotStuffViewController.h */,
+				E3F553561998EBE000AE3A28 /* SBHotStuffViewController.m */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		E337F588199B0F9E00C417D0 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E3F55388199AE8F500AE3A28 /* SBConsultantViewController.h */,
+				E3F55389199AE8F500AE3A28 /* SBConsultantViewController.m */,
+				E33C0627199AFF3600C9AD10 /* SBQuizViewController.h */,
+				E33C0628199AFF3600C9AD10 /* SBQuizViewController.m */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		E33C0601199AF57F00C9AD10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E33C0602199AF59500C9AD10 /* AppState.h */,
+				E33C0603199AF59500C9AD10 /* AppState.m */,
+				E337F58C199B125500C417D0 /* User.h */,
+				E337F58D199B125500C417D0 /* User.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E3BB26AE199AEFB30024D8EB /* ios_shared */ = {
+			isa = PBXGroup;
+			children = (
+				E33C062A199B06FE00C9AD10 /* UIPickerField.m */,
+				E33C062B199B06FE00C9AD10 /* UIPickerField.h */,
+				E33C0624199AFE5200C9AD10 /* UIBorderedButton.m */,
+				E33C0625199AFE5200C9AD10 /* UIBorderedButton.h */,
+				E3BB26AF199AEFB30024D8EB /* NSObject+AlertHelper.h */,
+				E3BB26B0199AEFB30024D8EB /* NSObject+AlertHelper.m */,
+				E3BB26B1199AEFB30024D8EB /* NSString+Additions.h */,
+				E3BB26B2199AEFB30024D8EB /* NSString+Additions.m */,
+				E3BB26B3199AEFB30024D8EB /* UIDateField.h */,
+				E3BB26B4199AEFB30024D8EB /* UIDateField.m */,
+				E3BB26B5199AEFB30024D8EB /* UIDefaultAccessoryInputView.h */,
+				E3BB26B6199AEFB30024D8EB /* UIDefaultAccessoryInputView.m */,
+				E3BB26B7199AEFB30024D8EB /* UIFormTableViewController.h */,
+				E3BB26B8199AEFB30024D8EB /* UIFormTableViewController.m */,
+				E3BB26B9199AEFB30024D8EB /* UIFormViewController.h */,
+				E3BB26BA199AEFB30024D8EB /* UIFormViewController.m */,
+			);
+			name = ios_shared;
+			path = ../ios_shared;
+			sourceTree = "<group>";
+		};
+		E3F5532E1998EBE000AE3A28 = {
+			isa = PBXGroup;
+			children = (
+				E3BB26AE199AEFB30024D8EB /* ios_shared */,
+				E3F553401998EBE000AE3A28 /* SexyBack */,
+				E3F553651998EBE000AE3A28 /* SexyBackTests */,
+				E3F553391998EBE000AE3A28 /* Frameworks */,
+				E3F553381998EBE000AE3A28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E3F553381998EBE000AE3A28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3F553371998EBE000AE3A28 /* SexyBack.app */,
+				E3F5535E1998EBE000AE3A28 /* SexyBackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3F553391998EBE000AE3A28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3F5533A1998EBE000AE3A28 /* Foundation.framework */,
+				E3F5533C1998EBE000AE3A28 /* CoreGraphics.framework */,
+				E3F5533E1998EBE000AE3A28 /* UIKit.framework */,
+				E3F5535F1998EBE000AE3A28 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3F553401998EBE000AE3A28 /* SexyBack */ = {
+			isa = PBXGroup;
+			children = (
+				E33C0601199AF57F00C9AD10 /* Model */,
+				E3F553751998ECCF00AE3A28 /* View Controllers */,
+				E3F553491998EBE000AE3A28 /* SBAppDelegate.h */,
+				E3F5534A1998EBE000AE3A28 /* SBAppDelegate.m */,
+				E3F5534C1998EBE000AE3A28 /* Main_iPhone.storyboard */,
+				E3F5534F1998EBE000AE3A28 /* Main_iPad.storyboard */,
+				E3F553581998EBE000AE3A28 /* Images.xcassets */,
+				E3F553411998EBE000AE3A28 /* Supporting Files */,
+				E33C0605199AF83A00C9AD10 /* Constants.h */,
+			);
+			path = SexyBack;
+			sourceTree = "<group>";
+		};
+		E3F553411998EBE000AE3A28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3F553421998EBE000AE3A28 /* SexyBack-Info.plist */,
+				E3F553431998EBE000AE3A28 /* InfoPlist.strings */,
+				E3F553461998EBE000AE3A28 /* main.m */,
+				E3F553481998EBE000AE3A28 /* SexyBack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3F553651998EBE000AE3A28 /* SexyBackTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3F5536B1998EBE000AE3A28 /* SexyBackTests.m */,
+				E3F553661998EBE000AE3A28 /* Supporting Files */,
+			);
+			path = SexyBackTests;
+			sourceTree = "<group>";
+		};
+		E3F553661998EBE000AE3A28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3F553671998EBE000AE3A28 /* SexyBackTests-Info.plist */,
+				E3F553681998EBE000AE3A28 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3F553751998ECCF00AE3A28 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E337F588199B0F9E00C417D0 /* Onboarding */,
+				E337F587199B0F7E00C417D0 /* Tabs */,
+				E337F586199B0F7800C417D0 /* Settings */,
+				E3F553761998F3FC00AE3A28 /* SBMainTabBarController.h */,
+				E3F553771998F3FC00AE3A28 /* SBMainTabBarController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3F553361998EBE000AE3A28 /* SexyBack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3F5536F1998EBE000AE3A28 /* Build configuration list for PBXNativeTarget "SexyBack" */;
+			buildPhases = (
+				E3F553331998EBE000AE3A28 /* Sources */,
+				E3F553341998EBE000AE3A28 /* Frameworks */,
+				E3F553351998EBE000AE3A28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SexyBack;
+			productName = SexyBack;
+			productReference = E3F553371998EBE000AE3A28 /* SexyBack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E3F5535D1998EBE000AE3A28 /* SexyBackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3F553721998EBE000AE3A28 /* Build configuration list for PBXNativeTarget "SexyBackTests" */;
+			buildPhases = (
+				E3F5535A1998EBE000AE3A28 /* Sources */,
+				E3F5535B1998EBE000AE3A28 /* Frameworks */,
+				E3F5535C1998EBE000AE3A28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3F553641998EBE000AE3A28 /* PBXTargetDependency */,
+			);
+			name = SexyBackTests;
+			productName = SexyBackTests;
+			productReference = E3F5535E1998EBE000AE3A28 /* SexyBackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3F5532F1998EBE000AE3A28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Knight, Norvell and Pater, LLC";
+				TargetAttributes = {
+					E3F5535D1998EBE000AE3A28 = {
+						TestTargetID = E3F553361998EBE000AE3A28;
+					};
+				};
+			};
+			buildConfigurationList = E3F553321998EBE000AE3A28 /* Build configuration list for PBXProject "SexyBack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3F5532E1998EBE000AE3A28;
+			productRefGroup = E3F553381998EBE000AE3A28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3F553361998EBE000AE3A28 /* SexyBack */,
+				E3F5535D1998EBE000AE3A28 /* SexyBackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3F553351998EBE000AE3A28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3F553511998EBE000AE3A28 /* Main_iPad.storyboard in Resources */,
+				E3F553591998EBE000AE3A28 /* Images.xcassets in Resources */,
+				E3F5534E1998EBE000AE3A28 /* Main_iPhone.storyboard in Resources */,
+				E3F553451998EBE000AE3A28 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3F5535C1998EBE000AE3A28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3F5536A1998EBE000AE3A28 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3F553331998EBE000AE3A28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E33C062F199B073000C9AD10 /* SBProfileViewController.m in Sources */,
+				E3BB26BE199AEFB30024D8EB /* UIDefaultAccessoryInputView.m in Sources */,
+				E33C0626199AFE5200C9AD10 /* UIBorderedButton.m in Sources */,
+				E3F553541998EBE000AE3A28 /* SBTrackViewController.m in Sources */,
+				E3BB26BC199AEFB30024D8EB /* NSString+Additions.m in Sources */,
+				E3F553471998EBE000AE3A28 /* main.m in Sources */,
+				E3F553781998F3FC00AE3A28 /* SBMainTabBarController.m in Sources */,
+				E3F5538A199AE8F500AE3A28 /* SBConsultantViewController.m in Sources */,
+				E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */,
+				E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */,
+				E3F5534B1998EBE000AE3A28 /* SBAppDelegate.m in Sources */,
+				E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */,
+				E3F553571998EBE000AE3A28 /* SBHotStuffViewController.m in Sources */,
+				E33C0629199AFF3600C9AD10 /* SBQuizViewController.m in Sources */,
+				E3BB26C0199AEFB30024D8EB /* UIFormViewController.m in Sources */,
+				E337F58E199B125500C417D0 /* User.m in Sources */,
+				E33C0604199AF59500C9AD10 /* AppState.m in Sources */,
+				E337F58B199B0FB400C417D0 /* SBGoalsViewController.m in Sources */,
+				E3BB26BD199AEFB30024D8EB /* UIDateField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3F5535A1998EBE000AE3A28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3F5536C1998EBE000AE3A28 /* SexyBackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3F553641998EBE000AE3A28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3F553361998EBE000AE3A28 /* SexyBack */;
+			targetProxy = E3F553631998EBE000AE3A28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E3F553431998EBE000AE3A28 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3F553441998EBE000AE3A28 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E3F5534C1998EBE000AE3A28 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3F5534D1998EBE000AE3A28 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E3F5534F1998EBE000AE3A28 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3F553501998EBE000AE3A28 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		E3F553681998EBE000AE3A28 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3F553691998EBE000AE3A28 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3F5536D1998EBE000AE3A28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3F5536E1998EBE000AE3A28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3F553701998EBE000AE3A28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SexyBack/SexyBack-Prefix.pch";
+				INFOPLIST_FILE = "SexyBack/SexyBack-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E3F553711998EBE000AE3A28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SexyBack/SexyBack-Prefix.pch";
+				INFOPLIST_FILE = "SexyBack/SexyBack-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E3F553731998EBE000AE3A28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SexyBack.app/SexyBack";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SexyBack/SexyBack-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SexyBackTests/SexyBackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E3F553741998EBE000AE3A28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SexyBack.app/SexyBack";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SexyBack/SexyBack-Prefix.pch";
+				INFOPLIST_FILE = "SexyBackTests/SexyBackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3F553321998EBE000AE3A28 /* Build configuration list for PBXProject "SexyBack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3F5536D1998EBE000AE3A28 /* Debug */,
+				E3F5536E1998EBE000AE3A28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3F5536F1998EBE000AE3A28 /* Build configuration list for PBXNativeTarget "SexyBack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3F553701998EBE000AE3A28 /* Debug */,
+				E3F553711998EBE000AE3A28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3F553721998EBE000AE3A28 /* Build configuration list for PBXNativeTarget "SexyBackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3F553731998EBE000AE3A28 /* Debug */,
+				E3F553741998EBE000AE3A28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3F5532F1998EBE000AE3A28 /* Project object */;
+}
