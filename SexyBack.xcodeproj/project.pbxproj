@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E337F58B199B0FB400C417D0 /* SBGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F58A199B0FB400C417D0 /* SBGoalsViewController.m */; };
 		E337F58E199B125500C417D0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F58D199B125500C417D0 /* User.m */; };
+		E337F593199C361400C417D0 /* SFGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F592199C361400C417D0 /* SFGaugeView.m */; };
+		E337F596199C3C5700C417D0 /* SBRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F595199C3C5700C417D0 /* SBRewardsViewController.m */; };
+		E337F599199C452400C417D0 /* SBNewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F598199C452400C417D0 /* SBNewEventViewController.m */; };
 		E33C0604199AF59500C9AD10 /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C0603199AF59500C9AD10 /* AppState.m */; };
 		E33C0626199AFE5200C9AD10 /* UIBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C0624199AFE5200C9AD10 /* UIBorderedButton.m */; };
 		E33C0629199AFF3600C9AD10 /* SBQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C0628199AFF3600C9AD10 /* SBQuizViewController.m */; };
@@ -55,6 +58,12 @@
 		E337F58A199B0FB400C417D0 /* SBGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBGoalsViewController.m; sourceTree = "<group>"; };
 		E337F58C199B125500C417D0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E337F58D199B125500C417D0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E337F591199C361400C417D0 /* SFGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGaugeView.h; sourceTree = "<group>"; };
+		E337F592199C361400C417D0 /* SFGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGaugeView.m; sourceTree = "<group>"; };
+		E337F594199C3C5700C417D0 /* SBRewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBRewardsViewController.h; sourceTree = "<group>"; };
+		E337F595199C3C5700C417D0 /* SBRewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBRewardsViewController.m; sourceTree = "<group>"; };
+		E337F597199C452400C417D0 /* SBNewEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBNewEventViewController.h; sourceTree = "<group>"; };
+		E337F598199C452400C417D0 /* SBNewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBNewEventViewController.m; sourceTree = "<group>"; };
 		E33C0602199AF59500C9AD10 /* AppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppState.h; sourceTree = "<group>"; };
 		E33C0603199AF59500C9AD10 /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
 		E33C0605199AF83A00C9AD10 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -148,6 +157,10 @@
 				E3F553531998EBE000AE3A28 /* SBTrackViewController.m */,
 				E3F553551998EBE000AE3A28 /* SBHotStuffViewController.h */,
 				E3F553561998EBE000AE3A28 /* SBHotStuffViewController.m */,
+				E337F594199C3C5700C417D0 /* SBRewardsViewController.h */,
+				E337F595199C3C5700C417D0 /* SBRewardsViewController.m */,
+				E337F597199C452400C417D0 /* SBNewEventViewController.h */,
+				E337F598199C452400C417D0 /* SBNewEventViewController.m */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -161,6 +174,15 @@
 				E33C0628199AFF3600C9AD10 /* SBQuizViewController.m */,
 			);
 			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		E337F590199C361400C417D0 /* SFGaugeView */ = {
+			isa = PBXGroup;
+			children = (
+				E337F591199C361400C417D0 /* SFGaugeView.h */,
+				E337F592199C361400C417D0 /* SFGaugeView.m */,
+			);
+			path = SFGaugeView;
 			sourceTree = "<group>";
 		};
 		E33C0601199AF57F00C9AD10 /* Model */ = {
@@ -201,6 +223,7 @@
 		E3F5532E1998EBE000AE3A28 = {
 			isa = PBXGroup;
 			children = (
+				E337F590199C361400C417D0 /* SFGaugeView */,
 				E3BB26AE199AEFB30024D8EB /* ios_shared */,
 				E3F553401998EBE000AE3A28 /* SexyBack */,
 				E3F553651998EBE000AE3A28 /* SexyBackTests */,
@@ -394,6 +417,7 @@
 				E3F553781998F3FC00AE3A28 /* SBMainTabBarController.m in Sources */,
 				E3F5538A199AE8F500AE3A28 /* SBConsultantViewController.m in Sources */,
 				E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */,
+				E337F593199C361400C417D0 /* SFGaugeView.m in Sources */,
 				E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */,
 				E3F5534B1998EBE000AE3A28 /* SBAppDelegate.m in Sources */,
 				E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */,
@@ -403,7 +427,9 @@
 				E337F58E199B125500C417D0 /* User.m in Sources */,
 				E33C0604199AF59500C9AD10 /* AppState.m in Sources */,
 				E337F58B199B0FB400C417D0 /* SBGoalsViewController.m in Sources */,
+				E337F599199C452400C417D0 /* SBNewEventViewController.m in Sources */,
 				E3BB26BD199AEFB30024D8EB /* UIDateField.m in Sources */,
+				E337F596199C3C5700C417D0 /* SBRewardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

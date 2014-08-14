@@ -23,5 +23,8 @@
 @property (nonatomic,strong) NSString *reminderFrequency;
 
 
+@property (nonatomic) int rewardsPoints;
+@property (nonatomic) int frequencyGoalValue;
+@property (nonatomic) int qualityGoalValue;
 
 @end

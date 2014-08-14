@@ -10,7 +10,15 @@
 
 @implementation User
 
-
+-(id)init {
+    self = [super init];
+    if (self) {
+        self.rewardsPoints = 10;
+        self.frequencyGoalValue = 1;
+        self.qualityGoalValue = 1;
+    }
+    return self;
+}
 #pragma mark -
 #pragma mark NSCoding
 -(void)encodeWithCoder:(NSCoder *)aCoder {
@@ -24,6 +32,9 @@
     [aCoder encodeObject:self.sexFrequencyGoal forKey:@"sexFrequencyGoal"];
     [aCoder encodeObject:self.sexQualityGoal forKey:@"sexQualityGoal"];
     [aCoder encodeObject:self.reminderFrequency forKey:@"reminderFrequency"];
+    [aCoder encodeInt:self.rewardsPoints forKey:@"rewardsPoints"];
+    [aCoder encodeInt:self.frequencyGoalValue forKey:@"frequencyGoalValue"];
+    [aCoder encodeInt:self.qualityGoalValue forKey:@"qualityGoalValue"];
 }
 -(id)initWithCoder:(NSCoder *)aDecoder {
     
@@ -38,6 +49,9 @@
         self.sexFrequencyGoal = [aDecoder decodeObjectForKey:@"sexFrequencyGoal"];
         self.sexQualityGoal = [aDecoder decodeObjectForKey:@"sexQualityGoal"];
         self.reminderFrequency = [aDecoder decodeObjectForKey:@"reminderFrequency"];
+        self.rewardsPoints = [aDecoder decodeIntForKey:@"rewardsPoints"];
+        self.frequencyGoalValue = [aDecoder decodeIntForKey:@"frequencyGoalValue"];
+        self.qualityGoalValue = [aDecoder decodeIntForKey:@"qualityGoalValue"];
 
     }
     return self;

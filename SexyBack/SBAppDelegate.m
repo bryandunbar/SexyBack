@@ -7,7 +7,7 @@
 //
 
 #import "SBAppDelegate.h"
-
+#import "Constants.h"
 @interface SBAppDelegate()
 
 @end
@@ -26,6 +26,10 @@
 {
     // Override point for customization after application launch.
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    NSDictionary * navBarTitleTextAttributes =
+  @{ NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
     return YES;
 }
 							
@@ -51,8 +55,11 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    //[self.rootViewController launchAppForConsultant:@"12345"];
-    [self.rootViewController launchSettings];
+    //[self.rootViewController launchAppForConsultant:@"54321"];
+
+    
+    // Getting some points just for launching the app
+    STATE.user.rewardsPoints += 5;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -76,7 +83,6 @@
     
 	if ([url.host isEqualToString:@"consultant"]) {
         NSString *consultantId = [url pathComponents][1];
-        NSLog(@"Launching for consultantId: %@", consultantId);
         [self.rootViewController launchAppForConsultant:consultantId];
         return YES;
 	}
