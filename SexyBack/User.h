@@ -10,6 +10,8 @@
 
 @interface User : NSObject <NSCoding>
 
+@property (nonatomic,strong) NSString *parseObjectId;
+
 @property (nonatomic,strong) NSString *name;
 @property (nonatomic,strong) NSString *email;
 @property (nonatomic,strong) NSDate *birthDay;
@@ -26,5 +28,7 @@
 @property (nonatomic) int rewardsPoints;
 @property (nonatomic) int frequencyGoalValue;
 @property (nonatomic) int qualityGoalValue;
+
+-(void)saveToParse;
 
 @end

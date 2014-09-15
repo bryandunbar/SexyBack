@@ -9,6 +9,7 @@
 #import "SBNewEventViewController.h"
 #import "SFGaugeView.h"
 #import "Constants.h"
+#import <Parse/Parse.h>
 @interface SBNewEventViewController ()
 @property (weak, nonatomic) IBOutlet SFGaugeView *gaugeView;
 
@@ -20,6 +21,11 @@
     STATE.user.frequencyGoalValue++;
     STATE.user.qualityGoalValue += self.gaugeView.currentLevel;
     [APP.stateManager save];
+    
+    PFObject *sexEvent = [PFObject objectWithClassName:@"SexEvent"];
+    sexEvent[@"user"] = [PFObject objectWithoutDataWithClassName:@"UserProfile" objectId:STATE.user.parseObjectId];
+    sexEvent[@"quality"] = @(self.gaugeView.currentLevel);
+    [sexEvent saveInBackground];
     
     [self.navigationController popViewControllerAnimated:YES];
     

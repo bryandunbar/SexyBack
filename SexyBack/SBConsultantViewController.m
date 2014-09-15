@@ -10,9 +10,11 @@
 #import "UIDateField.h"
 #import "UIDefaultAccessoryInputView.h"
 #import "Constants.h"
+#import <Parse/Parse.h>
 
 @interface SBConsultantViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblConsultantName;
+@property (weak, nonatomic) IBOutlet UITextField *partyId;
 @property (weak, nonatomic) IBOutlet UIDateField *partyDateField;
 @end
 
@@ -36,8 +38,10 @@
 
 -(void)configureView {
     
-    self.lblConsultantName.text = [self nameForConsultantId:STATE.consultantId];
+    self.lblConsultantName.text = @"";
     
+    
+    [self nameForConsultantId:STATE.consultantId];
     
     // Configure the date field
     self.partyDateField.dateMode = UIDatePickerModeDate;
@@ -47,6 +51,8 @@
     UIDefaultAccessoryInputView *accInputView = [[UIDefaultAccessoryInputView alloc] initWithHostView:self.partyDateField];
     accInputView.showsNextPrev = NO;
     self.partyDateField.inputAccessoryView = accInputView;
+    
+    self.partyId.inputAccessoryView = [[UIDefaultAccessoryInputView alloc] initWithHostView:self.partyId];
 
     [self.partyDateField setSelectedDate:[NSDate date]];
 }
@@ -59,25 +65,43 @@
 - (IBAction)takeQuizTapped:(id)sender {
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Party"];
+    query.cachePolicy = kPFCachePolicyNetworkElseCache;
+    [query whereKey:@"partyId" equalTo:@([self.partyId.text intValue])];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count > 0) {
+            STATE.party = objects[0];
+            
+            // Subscribe to notifications for this party
+            PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+            [currentInstallation addUniqueObject:STATE.party.objectId forKey:@"channels"];
+            [currentInstallation saveInBackground];
+        }
+    }];
+    
 }
-*/
 
--(NSString*)nameForConsultantId:(NSString*)consultantId {
-    if ([consultantId isEqualToString:@"12345"]) {
-        return @"Mary Pater";
-    } else if ([consultantId isEqualToString:@"54321"]) {
-        return @"Valerie Norvell";
-    } else {
-        return @"Some Consultant";
-    }
+-(void)nameForConsultantId:(NSString*)consultantId {
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Consultant"];
+    query.cachePolicy = kPFCachePolicyNetworkElseCache;
+    [query whereKey:@"username" equalTo:consultantId];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count > 0) {
+            STATE.consultant = objects[0];
+            self.lblConsultantName.text = STATE.consultant[@"name"];
+        }
+    }];
+    
 }
 
 @end

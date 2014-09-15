@@ -22,6 +22,7 @@
     return _appState;
 }
 -(BOOL)save {
+    [self.appState.user saveToParse];
     return [NSKeyedArchiver archiveRootObject:self.appState toFile:self.filePath];
 }
 

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "User.h"
+#import <Parse/Parse.h>
 
 @class AppState;
 
@@ -24,6 +25,8 @@
 @interface AppState : NSObject <NSCoding>
 
 @property (nonatomic) BOOL isFirstLaunch;
+@property (nonatomic,strong) PFObject *consultant;
+@property (nonatomic,strong) PFObject *party;
 @property (nonatomic,strong) NSString *consultantId;
 @property (nonatomic,strong) User *user;
 

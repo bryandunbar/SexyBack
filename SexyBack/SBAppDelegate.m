@@ -8,6 +8,8 @@
 
 #import "SBAppDelegate.h"
 #import "Constants.h"
+#import <Parse/Parse.h>
+
 @interface SBAppDelegate()
 
 @end
@@ -27,10 +29,44 @@
     // Override point for customization after application launch.
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
+    // Connect to Parse
+    [Parse setApplicationId:@"GmQSc8VAYnlIGSPFp3JEr8Y8diHkmyIT7El8Kk6K"
+                  clientKey:@"50MSq0xuEeO1AtZLeyt4ZqfFyZ6h2AXxCsldVTtg"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    // Register for push
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeSound];
+    
     NSDictionary * navBarTitleTextAttributes =
   @{ NSForegroundColorAttributeName : [UIColor whiteColor]};
     [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
+    
+    
+    [self.stateManager save];
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        
+//        [self.rootViewController launchAppForConsultant:@"q2ECPUF8oz"];
+//    });
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
