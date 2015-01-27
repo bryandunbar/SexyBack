@@ -73,7 +73,6 @@
 {
     
     PFQuery *query = [PFQuery queryWithClassName:@"Party"];
-    query.cachePolicy = kPFCachePolicyNetworkElseCache;
     [query whereKey:@"partyId" equalTo:@([self.partyId.text intValue])];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface User : NSObject <NSCoding>
 
@@ -30,5 +31,7 @@
 @property (nonatomic) int qualityGoalValue;
 
 -(void)saveToParse;
+
+@property (nonatomic,strong) PFObject *parseUser;
 
 @end

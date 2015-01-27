@@ -10,33 +10,33 @@
 	<string>SexyBack</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>296A506C-5AC9-4F37-8B82-6E997B168139</key>
-		<string>https://github.com/bryandunbar/ios_shared.git</string>
-		<key>5A4D03DF-2422-4762-9A99-F86C1FCAC3EF</key>
+		<key>002AE87B57E0E76C9F946D5842446704BED934A0</key>
 		<string>https://github.com/bryandunbar/SexyBack.git</string>
+		<key>5FDDBB6E8899DC4777E8747E33C1726DD83F7F65</key>
+		<string>https://github.com/bryandunbar/ios_shared.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SexyBack.xcodeproj/project.xcworkspace</string>
+	<string>SexyBack.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>296A506C-5AC9-4F37-8B82-6E997B168139</key>
-		<string>../../../ios_shared</string>
-		<key>5A4D03DF-2422-4762-9A99-F86C1FCAC3EF</key>
+		<key>002AE87B57E0E76C9F946D5842446704BED934A0</key>
 		<string>../..</string>
+		<key>5FDDBB6E8899DC4777E8747E33C1726DD83F7F65</key>
+		<string>../../../ios_shared</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/bryandunbar/SexyBack.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5A4D03DF-2422-4762-9A99-F86C1FCAC3EF</string>
+	<string>002AE87B57E0E76C9F946D5842446704BED934A0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>296A506C-5AC9-4F37-8B82-6E997B168139</string>
+			<string>5FDDBB6E8899DC4777E8747E33C1726DD83F7F65</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ios_shared</string>
 		</dict>
@@ -44,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5A4D03DF-2422-4762-9A99-F86C1FCAC3EF</string>
+			<string>002AE87B57E0E76C9F946D5842446704BED934A0</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SexyBack</string>
 		</dict>

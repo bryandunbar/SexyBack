@@ -17,6 +17,12 @@
 		E33C0629199AFF3600C9AD10 /* SBQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C0628199AFF3600C9AD10 /* SBQuizViewController.m */; };
 		E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062A199B06FE00C9AD10 /* UIPickerField.m */; };
 		E33C062F199B073000C9AD10 /* SBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062E199B073000C9AD10 /* SBProfileViewController.m */; };
+		E36F4FDA1A77F866008EF6B6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E36F4FD91A77F866008EF6B6 /* Settings.bundle */; };
+		E383B7E61A7739DC007FEE86 /* SBVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E383B7E51A7739DC007FEE86 /* SBVideoTableViewCell.m */; };
+		E383B7E81A773A5A007FEE86 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E383B7E71A773A5A007FEE86 /* MediaPlayer.framework */; };
+		E3A123961A733ECC00076722 /* SB30DayProgramsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A123951A733ECB00076722 /* SB30DayProgramsTableViewController.m */; };
+		E3A123991A73445200076722 /* SBProgramDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A123981A73445200076722 /* SBProgramDetailTableViewController.m */; };
+		E3A1239C1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A1239B1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.m */; };
 		E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B0199AEFB30024D8EB /* NSObject+AlertHelper.m */; };
 		E3BB26BC199AEFB30024D8EB /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B2199AEFB30024D8EB /* NSString+Additions.m */; };
 		E3BB26BD199AEFB30024D8EB /* UIDateField.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B4199AEFB30024D8EB /* UIDateField.m */; };
@@ -33,6 +39,8 @@
 		E3CE29EC19C6729A001B4ACD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E419C67299001B4ACD /* Security.framework */; };
 		E3CE29ED19C6729A001B4ACD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E519C67299001B4ACD /* StoreKit.framework */; };
 		E3CE29EE19C6729A001B4ACD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E619C6729A001B4ACD /* SystemConfiguration.framework */; };
+		E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */; };
+		E3F03CEA19D1A02900413547 /* SB30DayPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F03CE919D1A02900413547 /* SB30DayPageViewController.m */; };
 		E3F5533B1998EBE000AE3A28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533A1998EBE000AE3A28 /* Foundation.framework */; };
 		E3F5533D1998EBE000AE3A28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533C1998EBE000AE3A28 /* CoreGraphics.framework */; };
 		E3F5533F1998EBE000AE3A28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533E1998EBE000AE3A28 /* UIKit.framework */; };
@@ -85,6 +93,16 @@
 		E33C062B199B06FE00C9AD10 /* UIPickerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerField.h; sourceTree = "<group>"; };
 		E33C062D199B073000C9AD10 /* SBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBProfileViewController.h; sourceTree = "<group>"; };
 		E33C062E199B073000C9AD10 /* SBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBProfileViewController.m; sourceTree = "<group>"; };
+		E36F4FD91A77F866008EF6B6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E383B7E41A7739DC007FEE86 /* SBVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBVideoTableViewCell.h; sourceTree = "<group>"; };
+		E383B7E51A7739DC007FEE86 /* SBVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBVideoTableViewCell.m; sourceTree = "<group>"; };
+		E383B7E71A773A5A007FEE86 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E3A123941A733ECB00076722 /* SB30DayProgramsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayProgramsTableViewController.h; sourceTree = "<group>"; };
+		E3A123951A733ECB00076722 /* SB30DayProgramsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SB30DayProgramsTableViewController.m; sourceTree = "<group>"; };
+		E3A123971A73445200076722 /* SBProgramDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBProgramDetailTableViewController.h; sourceTree = "<group>"; };
+		E3A123981A73445200076722 /* SBProgramDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBProgramDetailTableViewController.m; sourceTree = "<group>"; };
+		E3A1239A1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSelfSizingTextViewTableViewCell.h; sourceTree = "<group>"; };
+		E3A1239B1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSelfSizingTextViewTableViewCell.m; sourceTree = "<group>"; };
 		E3BB26AF199AEFB30024D8EB /* NSObject+AlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AlertHelper.h"; sourceTree = "<group>"; };
 		E3BB26B0199AEFB30024D8EB /* NSObject+AlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AlertHelper.m"; sourceTree = "<group>"; };
 		E3BB26B1199AEFB30024D8EB /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
@@ -107,6 +125,10 @@
 		E3CE29E419C67299001B4ACD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E3CE29E519C67299001B4ACD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E3CE29E619C6729A001B4ACD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E3F03CE519D19F0D00413547 /* SB30DayContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayContentViewController.h; sourceTree = "<group>"; };
+		E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SB30DayContentViewController.m; sourceTree = "<group>"; };
+		E3F03CE819D1A02900413547 /* SB30DayPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayPageViewController.h; sourceTree = "<group>"; };
+		E3F03CE919D1A02900413547 /* SB30DayPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SB30DayPageViewController.m; sourceTree = "<group>"; };
 		E3F553371998EBE000AE3A28 /* SexyBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SexyBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F5533A1998EBE000AE3A28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E3F5533C1998EBE000AE3A28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E383B7E81A773A5A007FEE86 /* MediaPlayer.framework in Frameworks */,
 				E3CE29E719C6729A001B4ACD /* AudioToolbox.framework in Frameworks */,
 				E3CE29E819C6729A001B4ACD /* CFNetwork.framework in Frameworks */,
 				E3CE29E919C6729A001B4ACD /* libz.dylib in Frameworks */,
@@ -183,6 +206,7 @@
 		E337F587199B0F7E00C417D0 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				E3F03CE419D19EEE00413547 /* 30 Day Challenge */,
 				E3F553521998EBE000AE3A28 /* SBTrackViewController.h */,
 				E3F553531998EBE000AE3A28 /* SBTrackViewController.m */,
 				E3F553551998EBE000AE3A28 /* SBHotStuffViewController.h */,
@@ -250,9 +274,29 @@
 			path = ../ios_shared;
 			sourceTree = "<group>";
 		};
+		E3F03CE419D19EEE00413547 /* 30 Day Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				E3F03CE519D19F0D00413547 /* SB30DayContentViewController.h */,
+				E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */,
+				E3F03CE819D1A02900413547 /* SB30DayPageViewController.h */,
+				E3F03CE919D1A02900413547 /* SB30DayPageViewController.m */,
+				E3A123941A733ECB00076722 /* SB30DayProgramsTableViewController.h */,
+				E3A123951A733ECB00076722 /* SB30DayProgramsTableViewController.m */,
+				E3A123971A73445200076722 /* SBProgramDetailTableViewController.h */,
+				E3A123981A73445200076722 /* SBProgramDetailTableViewController.m */,
+				E3A1239A1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.h */,
+				E3A1239B1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.m */,
+				E383B7E41A7739DC007FEE86 /* SBVideoTableViewCell.h */,
+				E383B7E51A7739DC007FEE86 /* SBVideoTableViewCell.m */,
+			);
+			name = "30 Day Challenge";
+			sourceTree = "<group>";
+		};
 		E3F5532E1998EBE000AE3A28 = {
 			isa = PBXGroup;
 			children = (
+				E36F4FD91A77F866008EF6B6 /* Settings.bundle */,
 				E3CE29DB19C6724F001B4ACD /* Bolts.framework */,
 				E3CE29DC19C6724F001B4ACD /* Parse.framework */,
 				E337F590199C361400C417D0 /* SFGaugeView */,
@@ -276,6 +320,7 @@
 		E3F553391998EBE000AE3A28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E383B7E71A773A5A007FEE86 /* MediaPlayer.framework */,
 				E3CE29DF19C67299001B4ACD /* AudioToolbox.framework */,
 				E3CE29E019C67299001B4ACD /* CFNetwork.framework */,
 				E3CE29E119C67299001B4ACD /* libz.dylib */,
@@ -397,6 +442,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Knight, Norvell and Pater, LLC";
 				TargetAttributes = {
+					E3F553361998EBE000AE3A28 = {
+						DevelopmentTeam = BB57V2LNA8;
+					};
 					E3F5535D1998EBE000AE3A28 = {
 						TestTargetID = E3F553361998EBE000AE3A28;
 					};
@@ -428,6 +476,7 @@
 			files = (
 				E3F553511998EBE000AE3A28 /* Main_iPad.storyboard in Resources */,
 				E3F553591998EBE000AE3A28 /* Images.xcassets in Resources */,
+				E36F4FDA1A77F866008EF6B6 /* Settings.bundle in Resources */,
 				E3F5534E1998EBE000AE3A28 /* Main_iPhone.storyboard in Resources */,
 				E3F553451998EBE000AE3A28 /* InfoPlist.strings in Resources */,
 			);
@@ -448,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A123991A73445200076722 /* SBProgramDetailTableViewController.m in Sources */,
 				E33C062F199B073000C9AD10 /* SBProfileViewController.m in Sources */,
 				E3BB26BE199AEFB30024D8EB /* UIDefaultAccessoryInputView.m in Sources */,
 				E33C0626199AFE5200C9AD10 /* UIBorderedButton.m in Sources */,
@@ -459,10 +509,15 @@
 				E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */,
 				E337F593199C361400C417D0 /* SFGaugeView.m in Sources */,
 				E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */,
+				E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */,
 				E3F5534B1998EBE000AE3A28 /* SBAppDelegate.m in Sources */,
+				E3A1239C1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.m in Sources */,
+				E3A123961A733ECC00076722 /* SB30DayProgramsTableViewController.m in Sources */,
 				E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */,
 				E3F553571998EBE000AE3A28 /* SBHotStuffViewController.m in Sources */,
 				E33C0629199AFF3600C9AD10 /* SBQuizViewController.m in Sources */,
+				E3F03CEA19D1A02900413547 /* SB30DayPageViewController.m in Sources */,
+				E383B7E61A7739DC007FEE86 /* SBVideoTableViewCell.m in Sources */,
 				E3BB26C0199AEFB30024D8EB /* UIFormViewController.m in Sources */,
 				E337F58E199B125500C417D0 /* User.m in Sources */,
 				E33C0604199AF59500C9AD10 /* AppState.m in Sources */,
@@ -604,6 +659,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -611,8 +668,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SexyBack/SexyBack-Prefix.pch";
 				INFOPLIST_FILE = "SexyBack/SexyBack-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eb165553-e886-4fb9-ae95-6f251a5db7cb";
+				PROVISIONING_PROFILE = "a8b9949e-4b62-4c56-9067-1aa0c5f690bf";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -622,7 +680,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: IPWN TECHNOLOGIES LLC (FSK7LGJ2K7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -630,8 +689,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SexyBack/SexyBack-Prefix.pch";
 				INFOPLIST_FILE = "SexyBack/SexyBack-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eb165553-e886-4fb9-ae95-6f251a5db7cb";
+				PROVISIONING_PROFILE = "a8b9949e-4b62-4c56-9067-1aa0c5f690bf";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

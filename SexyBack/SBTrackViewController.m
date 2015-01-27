@@ -25,11 +25,15 @@
     self.frequencyGauge.minlevel = 1;
     self.frequencyGauge.maxlevel = 100;
     self.frequencyGauge.hideLevel = YES;
+    self.frequencyGauge.needleColor = [UIColor colorWithRed:252/255.0 green:123/255.0 blue:188/255.0 alpha:1.0];
+    //self.frequencyGauge.bgColor = [UIColor colorWithRed:52/255.0 green:129/255.0 blue:188/255.0 alpha:1.0];
     self.frequencyGauge.userInteractionEnabled = NO;
     
     self.qualityGauge.minlevel = 1;
     self.qualityGauge.maxlevel = 100;
     self.qualityGauge.hideLevel = YES;
+    self.qualityGauge.needleColor = [UIColor colorWithRed:252/255.0 green:123/255.0 blue:188/255.0 alpha:1.0];
+    //self.qualityGauge.bgColor = [UIColor colorWithRed:52/255.0 green:129/255.0 blue:188/255.0 alpha:1.0];
     self.qualityGauge.userInteractionEnabled = NO;
     
 

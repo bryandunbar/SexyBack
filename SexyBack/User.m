@@ -18,6 +18,7 @@
         self.rewardsPoints = 10;
         self.frequencyGoalValue = 1;
         self.qualityGoalValue = 1;
+        self.parseUser = [PFObject objectWithClassName:@"UserProfile"];
         
     }
     return self;
@@ -27,7 +28,9 @@
     
     if (self.parseObjectId) {
         PFQuery *query = [PFQuery queryWithClassName:@"UserProfile"];
+        [query includeKey:@"purchasedPrograms"];
         [query getObjectInBackgroundWithId:self.parseObjectId block:^(PFObject *object, NSError *error) {
+            self.parseUser = object;
             [self setUserFields:object];
             [object saveInBackground];
         }];
@@ -36,7 +39,7 @@
         [self setUserFields:parseUser];
         [parseUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
-                self.parseObjectId = parseUser.objectId;
+                _parseObjectId = parseUser.objectId;
 
                 // Add the user id as a channel
                 PFInstallation *currentInstallation = [PFInstallation currentInstallation];

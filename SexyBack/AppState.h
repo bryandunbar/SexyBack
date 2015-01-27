@@ -30,6 +30,10 @@
 @property (nonatomic,strong) NSString *consultantId;
 @property (nonatomic,strong) User *user;
 
+
+@property (nonatomic,strong) NSArray *programs;
+@property (nonatomic,strong) NSArray *challengeDays;
+
 @property (nonatomic,readonly) NSArray *optionsNumberOfKids;
 @property (nonatomic,readonly) NSArray *optionsAnnualIncome;
 @property (nonatomic,readonly) NSArray *optionsMaritalStatus;

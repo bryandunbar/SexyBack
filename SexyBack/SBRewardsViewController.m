@@ -35,6 +35,7 @@
     self.gaugeView.minlevel = 1;
     self.gaugeView.maxlevel = 400;
     self.gaugeView.hideLevel = YES;
+    self.gaugeView.needleColor = [UIColor colorWithRed:252/255.0 green:123/255.0 blue:188/255.0 alpha:1.0];
     self.gaugeView.userInteractionEnabled = NO;
 }
 

@@ -35,16 +35,21 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    // Register defaults
+    NSUserDefaults * standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *demoFor = [standardUserDefaults objectForKey:@"for"];
+    if (!demoFor) {
+        [self registerDefaultsFromSettingsBundle];
+    }
     
     // Register for push
-    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
-     UIRemoteNotificationTypeAlert|
-     UIRemoteNotificationTypeSound];
+    [self registerForNotifications:application];
     
     NSDictionary * navBarTitleTextAttributes =
   @{ NSForegroundColorAttributeName : [UIColor whiteColor]};
     [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
     
+    self.window.backgroundColor = [UIColor lightGrayColor];
     
     [self.stateManager save];
     
@@ -54,6 +59,46 @@
 //    });
     
     return YES;
+}
+
+- (void)registerDefaultsFromSettingsBundle {
+    // this function writes default settings as settings
+    NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+    if(!settingsBundle) {
+        NSLog(@"Could not find Settings.bundle");
+        return;
+    }
+    
+    NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@"Root.plist"]];
+    NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
+    
+    NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
+    for(NSDictionary *prefSpecification in preferences) {
+        NSString *key = [prefSpecification objectForKey:@"Key"];
+        if(key) {
+            [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
+            NSLog(@"writing as default %@ to the key %@",[prefSpecification objectForKey:@"DefaultValue"],key);
+        }
+    }
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
+    
+}
+
+-(void)registerForNotifications:(UIApplication *)application {
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeAlert|UIUserNotificationTypeSound
+                                                                                 categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    } else {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         UIRemoteNotificationTypeBadge |
+         UIRemoteNotificationTypeAlert |
+         UIRemoteNotificationTypeSound];
+        
+    }
+    
 }
 
 - (void)application:(UIApplication *)application
@@ -93,6 +138,14 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     //[self.rootViewController launchAppForConsultant:@"54321"];
 
+    
+    PFQuery *programQuery = [PFQuery queryWithClassName:@"ChallengeProgram"];
+    [programQuery whereKey:@"active" equalTo:@(YES)];
+    [programQuery orderByAscending:@"sort_order"];
+    [programQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        STATE.programs = objects;
+    }];
+    
     
     // Getting some points just for launching the app
     STATE.user.rewardsPoints += 5;

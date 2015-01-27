@@ -25,6 +25,8 @@
     PFObject *sexEvent = [PFObject objectWithClassName:@"SexEvent"];
     sexEvent[@"user"] = [PFObject objectWithoutDataWithClassName:@"UserProfile" objectId:STATE.user.parseObjectId];
     sexEvent[@"quality"] = @(self.gaugeView.currentLevel);
+    
+
     [sexEvent saveInBackground];
     
     [self.navigationController popViewControllerAnimated:YES];
@@ -52,6 +54,8 @@
     self.gaugeView.currentLevel = 5;
     self.gaugeView.minlevel = 1;
     self.gaugeView.maxlevel = 10;
+    self.gaugeView.needleColor = [UIColor colorWithRed:252/255.0 green:123/255.0 blue:188/255.0 alpha:1.0];
+
 }
 
 - (void)didReceiveMemoryWarning
