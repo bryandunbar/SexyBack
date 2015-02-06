@@ -18,6 +18,9 @@
 		E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062A199B06FE00C9AD10 /* UIPickerField.m */; };
 		E33C062F199B073000C9AD10 /* SBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062E199B073000C9AD10 /* SBProfileViewController.m */; };
 		E36F4FDA1A77F866008EF6B6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E36F4FD91A77F866008EF6B6 /* Settings.bundle */; };
+		E372FB811A8468C0008F9353 /* SB30DayProgramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E372FB801A8468C0008F9353 /* SB30DayProgramCell.m */; };
+		E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E372FB841A8469C7008F9353 /* WTCircleImageView.m */; };
+		E372FB871A846AC7008F9353 /* 30DayProgram.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E372FB861A846AC7008F9353 /* 30DayProgram.xcassets */; };
 		E383B7E61A7739DC007FEE86 /* SBVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E383B7E51A7739DC007FEE86 /* SBVideoTableViewCell.m */; };
 		E383B7E81A773A5A007FEE86 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E383B7E71A773A5A007FEE86 /* MediaPlayer.framework */; };
 		E3A123961A733ECC00076722 /* SB30DayProgramsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A123951A733ECB00076722 /* SB30DayProgramsTableViewController.m */; };
@@ -94,6 +97,11 @@
 		E33C062D199B073000C9AD10 /* SBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBProfileViewController.h; sourceTree = "<group>"; };
 		E33C062E199B073000C9AD10 /* SBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBProfileViewController.m; sourceTree = "<group>"; };
 		E36F4FD91A77F866008EF6B6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E372FB7F1A8468C0008F9353 /* SB30DayProgramCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayProgramCell.h; sourceTree = "<group>"; };
+		E372FB801A8468C0008F9353 /* SB30DayProgramCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SB30DayProgramCell.m; sourceTree = "<group>"; };
+		E372FB831A8469C7008F9353 /* WTCircleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCircleImageView.h; sourceTree = "<group>"; };
+		E372FB841A8469C7008F9353 /* WTCircleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCircleImageView.m; sourceTree = "<group>"; };
+		E372FB861A846AC7008F9353 /* 30DayProgram.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = 30DayProgram.xcassets; path = ../30DayProgram.xcassets; sourceTree = "<group>"; };
 		E383B7E41A7739DC007FEE86 /* SBVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBVideoTableViewCell.h; sourceTree = "<group>"; };
 		E383B7E51A7739DC007FEE86 /* SBVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBVideoTableViewCell.m; sourceTree = "<group>"; };
 		E383B7E71A773A5A007FEE86 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -250,6 +258,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E372FB821A8469B2008F9353 /* CircleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				E372FB831A8469C7008F9353 /* WTCircleImageView.h */,
+				E372FB841A8469C7008F9353 /* WTCircleImageView.m */,
+			);
+			name = CircleImageView;
+			sourceTree = "<group>";
+		};
 		E3BB26AE199AEFB30024D8EB /* ios_shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +294,7 @@
 		E3F03CE419D19EEE00413547 /* 30 Day Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				E372FB861A846AC7008F9353 /* 30DayProgram.xcassets */,
 				E3F03CE519D19F0D00413547 /* SB30DayContentViewController.h */,
 				E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */,
 				E3F03CE819D1A02900413547 /* SB30DayPageViewController.h */,
@@ -289,6 +307,8 @@
 				E3A1239B1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.m */,
 				E383B7E41A7739DC007FEE86 /* SBVideoTableViewCell.h */,
 				E383B7E51A7739DC007FEE86 /* SBVideoTableViewCell.m */,
+				E372FB7F1A8468C0008F9353 /* SB30DayProgramCell.h */,
+				E372FB801A8468C0008F9353 /* SB30DayProgramCell.m */,
 			);
 			name = "30 Day Challenge";
 			sourceTree = "<group>";
@@ -300,6 +320,7 @@
 				E3CE29DB19C6724F001B4ACD /* Bolts.framework */,
 				E3CE29DC19C6724F001B4ACD /* Parse.framework */,
 				E337F590199C361400C417D0 /* SFGaugeView */,
+				E372FB821A8469B2008F9353 /* CircleImageView */,
 				E3BB26AE199AEFB30024D8EB /* ios_shared */,
 				E3F553401998EBE000AE3A28 /* SexyBack */,
 				E3F553651998EBE000AE3A28 /* SexyBackTests */,
@@ -474,6 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E372FB871A846AC7008F9353 /* 30DayProgram.xcassets in Resources */,
 				E3F553511998EBE000AE3A28 /* Main_iPad.storyboard in Resources */,
 				E3F553591998EBE000AE3A28 /* Images.xcassets in Resources */,
 				E36F4FDA1A77F866008EF6B6 /* Settings.bundle in Resources */,
@@ -497,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E372FB811A8468C0008F9353 /* SB30DayProgramCell.m in Sources */,
 				E3A123991A73445200076722 /* SBProgramDetailTableViewController.m in Sources */,
 				E33C062F199B073000C9AD10 /* SBProfileViewController.m in Sources */,
 				E3BB26BE199AEFB30024D8EB /* UIDefaultAccessoryInputView.m in Sources */,
@@ -507,6 +530,7 @@
 				E3F553781998F3FC00AE3A28 /* SBMainTabBarController.m in Sources */,
 				E3F5538A199AE8F500AE3A28 /* SBConsultantViewController.m in Sources */,
 				E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */,
+				E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */,
 				E337F593199C361400C417D0 /* SFGaugeView.m in Sources */,
 				E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */,
 				E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */,
@@ -614,7 +638,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -647,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -668,9 +692,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SexyBack/SexyBack-Prefix.pch";
 				INFOPLIST_FILE = "SexyBack/SexyBack-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a8b9949e-4b62-4c56-9067-1aa0c5f690bf";
+				PROVISIONING_PROFILE = "295ee49b-dbfe-46ce-9c33-6b68066b3264";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -680,7 +704,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -689,9 +713,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SexyBack/SexyBack-Prefix.pch";
 				INFOPLIST_FILE = "SexyBack/SexyBack-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a8b9949e-4b62-4c56-9067-1aa0c5f690bf";
+				PROVISIONING_PROFILE = "295ee49b-dbfe-46ce-9c33-6b68066b3264";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

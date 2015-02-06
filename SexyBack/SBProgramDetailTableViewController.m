@@ -9,11 +9,18 @@
 #import "SBProgramDetailTableViewController.h"
 #import "Constants.h"
 #import "SBVideoTableViewCell.h"
-
-@interface SBProgramDetailTableViewController ()
+#import "UIBorderedButton.h"
+@interface SBProgramDetailTableViewController () <UIScrollViewDelegate>
 @property (nonatomic,strong) NSString *videoUrl;
+@property (nonatomic,strong) UIView *headerView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+@property (weak, nonatomic) IBOutlet UIBorderedButton *buyButton;
+@property (nonatomic,strong) CAShapeLayer *headerMaskLayer;
 @end
 
+#define kTableHeaderHeight 200
+#define kTableHeaderCutAway 40
 @implementation SBProgramDetailTableViewController {
 }
 
@@ -21,6 +28,12 @@
     [super viewDidLoad];
     
     self.videoUrl = self.program[@"preview_video_url"];
+    self.titleLabel.text = self.program[@"name"];
+    self.headerImageView.image = [UIImage imageNamed:self.program[@"previewImageName"]];
+
+    [self configureBuyButton];
+    [self configureStretchyHeader];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,6 +45,52 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 
 }
+
+-(void)configureStretchyHeader {
+    self.headerView = self.tableView.tableHeaderView;
+    self.tableView.tableHeaderView = nil; // Steal the ref and add it as a subview
+    [self.tableView addSubview:self.headerView];
+
+    // Move the tableview's content down
+    self.tableView.contentInset = UIEdgeInsetsMake(kTableHeaderHeight, 0, 0, 0);
+    self.tableView.contentOffset = CGPointMake(0, -kTableHeaderHeight);
+    
+    // Configure the mask to cut the corner out
+    self.headerMaskLayer = [CAShapeLayer layer];
+    self.headerMaskLayer.fillColor = [UIColor blackColor].CGColor;
+    self.headerImageView.layer.mask = self.headerMaskLayer;
+    
+    
+    // Kick of first update
+    [self updateHeaderView];
+    
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self updateHeaderView];
+}
+-(void)updateHeaderView {
+    
+    // Grow the image as the user pulls down
+    CGRect headerRect = CGRectMake(0, -kTableHeaderHeight, self.tableView.bounds.size.width, kTableHeaderHeight);
+    if (self.tableView.contentOffset.y < -kTableHeaderHeight) {
+        headerRect.origin.y = self.tableView.contentOffset.y;
+        headerRect.size.height = -self.tableView.contentOffset.y;
+    }
+    self.headerView.frame = headerRect;
+    
+    // Update the mask layer
+    // Create the UIBezierPath for mask, we want to show through the bottom left corner for the
+    // button
+    UIBezierPath *path = [[UIBezierPath alloc] init];
+    [path moveToPoint:CGPointMake(0, 0)];
+    [path addLineToPoint:CGPointMake(headerRect.size.width, 0)];
+    [path addLineToPoint:CGPointMake(headerRect.size.width, headerRect.size.height)];
+    [path addLineToPoint:CGPointMake(0, headerRect.size.height - kTableHeaderCutAway)];
+    self.headerMaskLayer.path = path.CGPath;
+}
+
+
 - (IBAction)buyNowTapped:(id)sender {
     
     NSString *message = nil;
@@ -87,13 +146,8 @@
     // Dispose of any resources that can be recreated.
 }
 
--(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (section == 0)return self.program[@"name"];
-    return @"";
-}
-
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.videoUrl ? 3 : 2;
+    return self.videoUrl ? 2 : 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
@@ -114,10 +168,7 @@
             cell = [self descriptionCellForTableView:tableView atIndexPath:indexPath];
             break;
         case 1:
-            cell = self.videoUrl ? [self videoCellForTableView:tableView atIndexPath:indexPath] : [self buttonCellForTableView:tableView atIndexPath:indexPath];
-            break;
-        case 2:
-            cell = [self buttonCellForTableView:tableView atIndexPath:indexPath];
+            cell = [self videoCellForTableView:tableView atIndexPath:indexPath];
             break;
         default:
             break;
@@ -134,22 +185,18 @@
     return cell;
 }
 
+-(void)configureBuyButton {
 
--(UITableViewCell*)buttonCellForTableView:(UITableView*)tableView atIndexPath:(NSIndexPath*)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"buttonCell" forIndexPath:indexPath];
-    UIButton *button = (UIButton*)[cell viewWithTag:1000];
-    [button addTarget:self action:@selector(buyNowTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
     double price = [self.program[@"price"] doubleValue];
     if (price == 0)
-        [button setTitle:@"Get" forState:UIControlStateNormal];
+        [self.buyButton setTitle:@"Get" forState:UIControlStateNormal];
     else {
         NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
         nf.numberStyle = NSNumberFormatterCurrencyStyle;
-        [button setTitle:[NSString stringWithFormat:@"Buy Now = %@", [nf stringFromNumber:@(price)]] forState:UIControlStateNormal];
+        [self.buyButton setTitle:[NSString stringWithFormat:@"%@", [nf stringFromNumber:@(price)]] forState:UIControlStateNormal];
     }
 
-    return cell;
-    
 }
 -(UITableViewCell*)videoCellForTableView:(UITableView*)tableView atIndexPath:(NSIndexPath*)indexPath {
     

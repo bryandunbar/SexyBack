@@ -10,7 +10,7 @@
 #import "Constants.h"
 #import "SB30DayContentViewController.h"
 #import "SBProgramDetailTableViewController.h"
-
+#import "SB30DayProgramCell.h"
 @interface SB30DayProgramsTableViewController ()
 @property (nonatomic,strong) NSMutableArray *purchasedPrograms;
 @property (nonatomic,strong) NSMutableArray *nonpurchasedPrograms;
@@ -91,7 +91,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    SB30DayProgramCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newCell" forIndexPath:indexPath];
     
     BOOL purchased = NO;
     PFObject *program = nil;
@@ -106,20 +106,15 @@
             program = self.nonpurchasedPrograms[indexPath.row];
     }
     
-    cell.textLabel.text = program[@"name"];
-    
-    if (!purchased) {
-        double price = [program[@"price"] doubleValue];
-        if (price == 0)
-            cell.detailTextLabel.text = @"Free!";
-        else
-            cell.detailTextLabel.text = [self.numberFormmater stringFromNumber:@(price)];
-    } else {
-        cell.detailTextLabel.text = nil;
-    }
-    NSLog(@"DetailLabel.text: %@", cell.detailTextLabel.text);
+    cell.purchased = purchased;
+    cell.program = program;
+
     return cell;
 
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 78;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
