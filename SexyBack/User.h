@@ -33,5 +33,6 @@
 -(void)saveToParse;
 
 @property (nonatomic,strong) PFObject *parseUser;
+@property (nonatomic,strong) NSArray *programProgress;
 
 @end

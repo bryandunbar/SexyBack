@@ -8,61 +8,69 @@
 
 #import "SB30DayContentViewController.h"
 #import "Constants.h"
-
+#import "UIBorderedButton.h"
+#import "SBDareHistoryTableViewController.h"
 @interface SB30DayContentViewController ()
-@property (weak, nonatomic) IBOutlet UISwitch *completedSwitch;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+
+@property (weak, nonatomic) IBOutlet UIBorderedButton *completeButton;
+@property (weak, nonatomic) IBOutlet UIButton *passButton;
+@property (weak, nonatomic) IBOutlet UILabel *dareLabel;
+@property (weak, nonatomic) IBOutlet UITextView *howTextView;
+@property (weak, nonatomic) IBOutlet UILabel *ptsLabel;
+@property (weak, nonatomic) IBOutlet UITextView *whyTextView;
 @end
 
 @implementation SB30DayContentViewController
+- (IBAction)completeTapped:(id)sender {
+    [self challengeCompleted:YES];
+}
+- (IBAction)passedTapped:(id)sender {
+    [self challengeCompleted:NO];
+}
+
+-(void)challengeCompleted:(BOOL)completed {
+    
+    if (completed) {
+        STATE.user.rewardsPoints += [self.dare[@"points"] intValue];
+    }
+    
+    // Save to the back end
+    PFObject *obj = [PFObject objectWithClassName:@"ProgramProgress"];
+    obj[@"user"] = STATE.user.parseUser;
+    obj[@"program"] = self.program;
+    obj[@"challenge"] = self.dare;
+    obj[@"passed"] = [NSNumber numberWithBool:!completed];
+    obj[@"completed"] = [NSNumber numberWithBool:completed];
+    [obj saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+       
+        STATE.dareDay++;
+        [self configureView];
+        
+    }];
+    
+}
+
+-(PFObject*)dare {
+    return STATE.currentDare;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    
-    
-    self.textView.text = self.challengeObj[@"desc"];
-    [self.textView sizeToFit];
-    self.navigationItem.title = [NSString stringWithFormat:@"Day %d", [self.challengeObj[@"day"] intValue]];
-    
-    // Did they complete this challenge?
-    for (PFObject *completedChallenges in self.programProgress[@"completeChallenges"]) {
-        if ([completedChallenges[@"day"] intValue] == [self.challengeObj[@"day"] intValue]) {
-            self.completedSwitch.on = YES;
-            break;
-        }
-    }
-    
+    [self configureView];
 }
 
-- (IBAction)switchSwitched:(UISwitch*)sender {
-    
-    
-    if (!self.programProgress[@"completeChallenges"]) {
-        self.programProgress[@"completeChallenges"] = [NSMutableArray array];
-    }
-    // Does it already exist in their completes?
-    BOOL found = NO;
-    id removeIt = nil;
-    for (PFObject *challenge in self.programProgress[@"completeChallenges"]) {
-        if ([challenge[@"day"] intValue] == [self.challengeObj[@"day"] intValue]) {
-            found = YES;
-            if (!sender.on) {
-                removeIt = challenge;
-            }
-        }
-    }
-    
-    if (!found && sender.on) {
-        [self.programProgress[@"completeChallenges"] addObject:self.challengeObj];
-    } else if (removeIt) {
-        [self.programProgress[@"completeChallenges"] removeObject:removeIt];
-    }
-    
-    [self.programProgress saveInBackground];
-    
+-(void)configureView {
+
+    [UIView transitionWithView:self.view duration:.35f options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        self.dareLabel.text = self.dare[@"dare"];
+        self.howTextView.text = self.dare[@"how"];
+        self.whyTextView.text = self.dare[@"why"];
+        self.ptsLabel.text = [NSString stringWithFormat:@"%@ pts", self.dare[@"points"]];
+    } completion:^(BOOL finished) {
+        [self.tableView reloadData];
+    }];
     
 }
 
@@ -71,24 +79,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    if ([segue.identifier isEqualToString:@"dareHistorySegue"]) {
+        SBDareHistoryTableViewController *vc = (SBDareHistoryTableViewController*)segue.destinationViewController;
+        vc.program = self.program;
+    }
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 1) {
-        [self.textView sizeToFit];
-        return self.textView.bounds.size.height + 30;
+    if (indexPath.section == 0) {
+        [self.howTextView sizeToFit];
+        return self.howTextView.bounds.size.height + 30;
+    } else if (indexPath.section == 1){
+        [self.whyTextView sizeToFit];
+        return self.whyTextView.bounds.size.height + 30;
     } else {
         return tableView.rowHeight;
     }
 }
 
--(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
-    if (section == 1) {
-        return self.challengeObj[@"title"];
-    } else {
-        return [NSString stringWithFormat:@"Day %d", [self.challengeObj[@"day"] intValue]];
-    }
-    
-}
 /*
 #pragma mark - Navigation
 

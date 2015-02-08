@@ -93,12 +93,13 @@
 - (SB30DayContentViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     // Create a new view controller and pass suitable data.
-    SB30DayContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SB30DayContentViewController"];
-    pageContentViewController.pageIndex = index;
-    pageContentViewController.challengeObj = self.challengeDays[index];
-    pageContentViewController.program = self.program;
-    pageContentViewController.programProgress = self.programProgress;
-    return pageContentViewController;
+//    SB30DayContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SB30DayContentViewController"];
+//    pageContentViewController.pageIndex = index;
+//    pageContentViewController.challengeObj = self.challengeDays[index];
+//    pageContentViewController.program = self.program;
+//    pageContentViewController.programProgress = self.programProgress;
+//    return pageContentViewController;
+    return nil;
 }
 
 @end

@@ -33,9 +33,23 @@
             self.parseUser = object;
             [self setUserFields:object];
             [object saveInBackground];
+            
+            // Get the user's program progress
+            PFQuery *progressQuery = [PFQuery queryWithClassName:@"ProgramProgress"];
+            [progressQuery whereKey:@"user" equalTo:self.parseUser];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (!error) {
+                    self.programProgress = objects;
+                }
+            }];
+            
         }];
+        
+        
+        
+        
     } else {
-         PFObject *parseUser = [PFObject objectWithClassName:@"UserProfile"];
+        PFObject *parseUser = [PFObject objectWithClassName:@"UserProfile"];
         [self setUserFields:parseUser];
         [parseUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (succeeded) {

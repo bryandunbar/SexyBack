@@ -41,5 +41,16 @@
 @property (nonatomic,readonly) NSArray *optionsSexQuality;
 @property (nonatomic,readonly) NSArray *optionsSexFrequency;
 
+@property (nonatomic,readonly) NSString *client;
+@property (nonatomic,readonly) NSString *hotStuffUrl;
+
+
+@property (nonatomic) int dareDay;
+@property (nonatomic,readonly) PFObject *currentDare;
+
+
+/** Double Dare Challenge **/
+@property (nonatomic,strong) NSArray *doubleDareChallenges;
+
 @end
 

@@ -7,7 +7,7 @@
 //
 
 #import "SBHotStuffViewController.h"
-
+#import "Constants.h"
 @interface SBHotStuffViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic,strong) UIBarButtonItem *webViewBackButton;
@@ -23,12 +23,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    NSUserDefaults * standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *demoFor = [standardUserDefaults objectForKey:@"for"];
-    
-    
     self.webView.delegate = self;
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:demoFor]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:STATE.hotStuffUrl]]];
     
     self.webViewBackButton = [[UIBarButtonItem alloc] initWithTitle:@"<" style:UIBarButtonItemStylePlain target:self action:@selector(webViewBackTapped:)];
     self.webViewForwardButton = [[UIBarButtonItem alloc] initWithTitle:@">" style:UIBarButtonItemStylePlain target:self action:@selector(webViewForwardTapped:)];

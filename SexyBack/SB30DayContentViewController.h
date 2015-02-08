@@ -12,6 +12,5 @@
 
 @property NSUInteger pageIndex;
 @property PFObject *program;
-@property PFObject *challengeObj;
-@property PFObject *programProgress;
+@property (readonly) PFObject *dare;
 @end

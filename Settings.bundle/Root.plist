@@ -18,7 +18,7 @@
 			<key>Key</key>
 			<string>for</string>
 			<key>DefaultValue</key>
-			<string>https://www.pureromance.com/shop/most-popular/Whipped-Creamy-Lubricant-Orange-Creamsicle</string>
+			<string>PureRomance</string>
 			<key>Titles</key>
 			<array>
 				<string>Pure Romance</string>
@@ -26,9 +26,8 @@
 			</array>
 			<key>Values</key>
 			<array>
-				<string>https://www.pureromance.com/shop/most-popular/Whipped-Creamy-Lubricant-Orange-Creamsicle
-</string>
-				<string>https://www.victoriassecret.com/sleepwear/pajamas/the-cotton-mayfair-pajama?ProductID=226538&amp;CatalogueType=OLS</string>
+				<string>PureRomance</string>
+				<string>VictoriaSecret</string>
 			</array>
 		</dict>
 	</array>

@@ -36,9 +36,8 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     // Register defaults
-    NSUserDefaults * standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *demoFor = [standardUserDefaults objectForKey:@"for"];
-    if (!demoFor) {
+    NSString *client = self.stateManager.appState.client;
+    if (!client) {
         [self registerDefaultsFromSettingsBundle];
     }
     
@@ -82,6 +81,7 @@
     }
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
 
@@ -146,6 +146,12 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
         STATE.programs = objects;
     }];
     
+    PFQuery *doubleDareQuery = [PFQuery queryWithClassName:@"Challenge"];
+    [doubleDareQuery whereKey:@"client" containedIn:@[STATE.client, NSNull.null]];
+    [doubleDareQuery orderByAscending:@"day"];
+    [doubleDareQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        STATE.doubleDareChallenges = objects;
+    }];
     
     // Getting some points just for launching the app
     STATE.user.rewardsPoints += 5;

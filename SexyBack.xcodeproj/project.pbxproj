@@ -42,6 +42,8 @@
 		E3CE29EC19C6729A001B4ACD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E419C67299001B4ACD /* Security.framework */; };
 		E3CE29ED19C6729A001B4ACD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E519C67299001B4ACD /* StoreKit.framework */; };
 		E3CE29EE19C6729A001B4ACD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E619C6729A001B4ACD /* SystemConfiguration.framework */; };
+		E3D1355A1A866649008DBE5D /* SBDareHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D135591A866649008DBE5D /* SBDareHistoryTableViewController.m */; };
+		E3D1355D1A8667B4008DBE5D /* SBDareHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D1355C1A8667B4008DBE5D /* SBDareHistoryCell.m */; };
 		E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */; };
 		E3F03CEA19D1A02900413547 /* SB30DayPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F03CE919D1A02900413547 /* SB30DayPageViewController.m */; };
 		E3F5533B1998EBE000AE3A28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533A1998EBE000AE3A28 /* Foundation.framework */; };
@@ -133,6 +135,10 @@
 		E3CE29E419C67299001B4ACD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E3CE29E519C67299001B4ACD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E3CE29E619C6729A001B4ACD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E3D135581A866649008DBE5D /* SBDareHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDareHistoryTableViewController.h; sourceTree = "<group>"; };
+		E3D135591A866649008DBE5D /* SBDareHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDareHistoryTableViewController.m; sourceTree = "<group>"; };
+		E3D1355B1A8667B4008DBE5D /* SBDareHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDareHistoryCell.h; sourceTree = "<group>"; };
+		E3D1355C1A8667B4008DBE5D /* SBDareHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDareHistoryCell.m; sourceTree = "<group>"; };
 		E3F03CE519D19F0D00413547 /* SB30DayContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayContentViewController.h; sourceTree = "<group>"; };
 		E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SB30DayContentViewController.m; sourceTree = "<group>"; };
 		E3F03CE819D1A02900413547 /* SB30DayPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayPageViewController.h; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 		E337F587199B0F7E00C417D0 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				E3D135571A86662E008DBE5D /* Double Dare Program */,
 				E3F03CE419D19EEE00413547 /* 30 Day Challenge */,
 				E3F553521998EBE000AE3A28 /* SBTrackViewController.h */,
 				E3F553531998EBE000AE3A28 /* SBTrackViewController.m */,
@@ -289,6 +296,17 @@
 			);
 			name = ios_shared;
 			path = ../ios_shared;
+			sourceTree = "<group>";
+		};
+		E3D135571A86662E008DBE5D /* Double Dare Program */ = {
+			isa = PBXGroup;
+			children = (
+				E3D135581A866649008DBE5D /* SBDareHistoryTableViewController.h */,
+				E3D135591A866649008DBE5D /* SBDareHistoryTableViewController.m */,
+				E3D1355B1A8667B4008DBE5D /* SBDareHistoryCell.h */,
+				E3D1355C1A8667B4008DBE5D /* SBDareHistoryCell.m */,
+			);
+			name = "Double Dare Program";
 			sourceTree = "<group>";
 		};
 		E3F03CE419D19EEE00413547 /* 30 Day Challenge */ = {
@@ -530,11 +548,13 @@
 				E3F553781998F3FC00AE3A28 /* SBMainTabBarController.m in Sources */,
 				E3F5538A199AE8F500AE3A28 /* SBConsultantViewController.m in Sources */,
 				E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */,
+				E3D1355A1A866649008DBE5D /* SBDareHistoryTableViewController.m in Sources */,
 				E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */,
 				E337F593199C361400C417D0 /* SFGaugeView.m in Sources */,
 				E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */,
 				E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */,
 				E3F5534B1998EBE000AE3A28 /* SBAppDelegate.m in Sources */,
+				E3D1355D1A8667B4008DBE5D /* SBDareHistoryCell.m in Sources */,
 				E3A1239C1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.m in Sources */,
 				E3A123961A733ECC00076722 /* SB30DayProgramsTableViewController.m in Sources */,
 				E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */,

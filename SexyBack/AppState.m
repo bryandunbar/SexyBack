@@ -8,6 +8,7 @@
 
 
 #import "AppState.h"
+#import "Constants.h"
 @implementation AppStateManager
 @synthesize appState=_appState;
 
@@ -50,6 +51,7 @@
 -(id)init {
     if (self = [super init]) {
         _isFirstLaunch = YES;
+        _dareDay = 0;
     }
     return self;
 }
@@ -61,9 +63,28 @@
     return _user;
 }
 
+-(NSString*)client {
+    NSUserDefaults * standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    return [standardUserDefaults objectForKey:@"for"];
+
+}
+
+-(PFObject*)currentDare {
+    return self.doubleDareChallenges[self.dareDay];
+}
+-(NSString*)hotStuffUrl {
+    if ([self.client isEqualToString:PURE_ROMANCE]) {
+        return @"https://www.pureromance.com/shop/most-popular/Whipped-Creamy-Lubricant-Orange-Creamsicle";
+    } else if ([self.client isEqualToString:VICTORIA_SECRET]) {
+        return @"https://www.victoriassecret.com/sleepwear/pajamas/the-cotton-mayfair-pajama?ProductID=226538&CatalogueType=OLS";
+    }
+    
+    return @"http://www.google.com";
+}
 -(void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.consultantId forKey:@"consultantId"];
     [aCoder encodeObject:self.user forKey:@"user"];
+    [aCoder encodeInt:self.dareDay forKey:@"dareDay"];
     
 }
 -(id)initWithCoder:(NSCoder *)aDecoder {
@@ -71,6 +92,7 @@
         self.consultantId = [aDecoder decodeObjectForKey:@"consultantId"];
         self.user = [aDecoder decodeObjectForKey:@"user"];
         self.isFirstLaunch = NO;
+        self.dareDay = [aDecoder decodeIntForKey:@"dareDay"];
     }
     return self;
 }

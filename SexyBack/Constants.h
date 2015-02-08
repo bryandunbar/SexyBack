@@ -14,5 +14,7 @@
 #define APP ((SBAppDelegate*) [UIApplication sharedApplication].delegate)
 #define STATE APP.stateManager.appState
 
+#define PURE_ROMANCE @"PureRomance"
+#define VICTORIA_SECRET @"VictoriaSecret"
 
 #endif
