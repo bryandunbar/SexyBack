@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NqF-oG-NrQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hi View Controller-->
+        <scene sceneID="QrW-kZ-Fz5">
+            <objects>
+                <viewController id="NqF-oG-NrQ" customClass="HiViewController" customModule="SexyBack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D1b-Du-IZN"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Up-e0-AkO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ecz-vR-j7w">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOd-nT-RGD" userLabel="Arch View">
+                                <rect key="frame" x="0.0" y="155" width="600" height="445"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkA-FR-97l" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
+                                        <rect key="frame" x="206" y="336" width="189" height="30"/>
+                                        <color key="backgroundColor" red="0.66274509800000003" green="0.14117647059999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="FTj-ik-CPn"/>
+                                            <constraint firstAttribute="width" constant="189" id="k36-qk-0lB"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.66274509800000003" green="0.14117647059999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="GET SEXIER!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xg7-eJ-Csd" userLabel="Profile Info View">
+                                        <rect key="frame" x="148" y="95" width="303" height="146"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5f-ce-QR0">
+                                                <rect key="frame" x="115" y="23" width="180" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="gender" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hp1-Ac-KFE">
+                                                <rect key="frame" x="115" y="58" width="180" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="age range" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wa9-hZ-Ibn">
+                                                <rect key="frame" x="115" y="92" width="180" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="BUn-6K-GyV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjU-ha-hz1" userLabel="Profile Picture View" customClass="ProfileImageView" customModule="SexyBack" customModuleProvider="target">
+                                                <rect key="frame" x="7" y="23" width="100" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="clg-kd-8rj"/>
+                                                    <constraint firstAttribute="height" constant="100" id="gOm-Xq-Zvq"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Tap Here to Add Profile Image"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="146" id="2A1-Ed-nN2"/>
+                                            <constraint firstItem="a5f-ce-QR0" firstAttribute="leading" secondItem="hp1-Ac-KFE" secondAttribute="leading" id="5eD-Y0-YDl"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wa9-hZ-Ibn" secondAttribute="trailing" constant="8" id="9eS-lZ-2AE"/>
+                                            <constraint firstAttribute="trailing" secondItem="a5f-ce-QR0" secondAttribute="trailing" constant="8" id="Bwe-pi-OUY"/>
+                                            <constraint firstAttribute="width" constant="303" id="Dnw-g9-Jb1"/>
+                                            <constraint firstAttribute="trailing" secondItem="hp1-Ac-KFE" secondAttribute="trailing" constant="8" id="Ho6-fs-6qA"/>
+                                            <constraint firstItem="Wa9-hZ-Ibn" firstAttribute="top" secondItem="hp1-Ac-KFE" secondAttribute="bottom" constant="4" id="PKm-Wv-xqg"/>
+                                            <constraint firstItem="a5f-ce-QR0" firstAttribute="leading" secondItem="QjU-ha-hz1" secondAttribute="trailing" constant="8" symbolic="YES" id="Qcy-XU-IbP"/>
+                                            <constraint firstItem="QjU-ha-hz1" firstAttribute="top" secondItem="Xg7-eJ-Csd" secondAttribute="top" constant="23" id="Uiz-CF-NjR"/>
+                                            <constraint firstItem="hp1-Ac-KFE" firstAttribute="top" secondItem="a5f-ce-QR0" secondAttribute="bottom" constant="5" id="lFy-Nj-Zuq"/>
+                                            <constraint firstAttribute="bottom" secondItem="QjU-ha-hz1" secondAttribute="bottom" constant="23" id="rQo-8S-Sje"/>
+                                            <constraint firstItem="QjU-ha-hz1" firstAttribute="top" secondItem="a5f-ce-QR0" secondAttribute="top" id="wBv-dy-4jh"/>
+                                            <constraint firstItem="QjU-ha-hz1" firstAttribute="leading" secondItem="Xg7-eJ-Csd" secondAttribute="leading" constant="7" id="z28-RQ-Mfe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.83529411764705885" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.66274509800000003" green="0.14117647059999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="tkA-FR-97l" secondAttribute="centerX" constant="-0.5" id="5Rz-JQ-dHK"/>
+                                    <constraint firstItem="tkA-FR-97l" firstAttribute="top" secondItem="Xg7-eJ-Csd" secondAttribute="bottom" constant="95" id="B0t-w8-bd6"/>
+                                    <constraint firstAttribute="centerX" secondItem="Xg7-eJ-Csd" secondAttribute="centerX" constant="0.5" id="KUh-xo-DKh"/>
+                                    <constraint firstItem="Xg7-eJ-Csd" firstAttribute="top" secondItem="AOd-nT-RGD" secondAttribute="top" constant="95" id="gug-1i-zYD"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gysb-logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Hq-jo-JaT">
+                                <rect key="frame" x="188" y="33" width="224" height="231"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231" id="FOJ-IE-yej"/>
+                                    <constraint firstAttribute="width" constant="224" id="wVU-6M-x52"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GYSB Hi-16" translatesAutoresizingMaskIntoConstraints="NO" id="G8U-zg-agA">
+                                <rect key="frame" x="394" y="98" width="178" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="G9t-YT-0Si"/>
+                                    <constraint firstAttribute="width" constant="178" id="yFV-qH-xUL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.88235294119999996" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="2Hq-jo-JaT" secondAttribute="centerX" id="6ti-zM-HUb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G8U-zg-agA" secondAttribute="trailing" constant="12" id="K2P-ji-uJA"/>
+                            <constraint firstItem="2Hq-jo-JaT" firstAttribute="top" secondItem="D1b-Du-IZN" secondAttribute="bottom" constant="13" id="KKB-VS-vwS"/>
+                            <constraint firstItem="AOd-nT-RGD" firstAttribute="leading" secondItem="ecz-vR-j7w" secondAttribute="leadingMargin" constant="-16" id="QBM-tn-ixc"/>
+                            <constraint firstItem="AOd-nT-RGD" firstAttribute="leading" secondItem="ecz-vR-j7w" secondAttribute="leadingMargin" constant="-16" id="Sfc-yD-Xty"/>
+                            <constraint firstItem="1Up-e0-AkO" firstAttribute="top" secondItem="AOd-nT-RGD" secondAttribute="bottom" id="Yze-JS-Iot"/>
+                            <constraint firstItem="AOd-nT-RGD" firstAttribute="top" secondItem="D1b-Du-IZN" secondAttribute="bottom" constant="135" id="tn4-Rb-W42"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AOd-nT-RGD" secondAttribute="trailing" constant="-16" id="vaI-Xk-S2s"/>
+                            <constraint firstItem="G8U-zg-agA" firstAttribute="centerY" secondItem="2Hq-jo-JaT" secondAttribute="centerY" id="wf5-zc-DXO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AOd-nT-RGD" secondAttribute="trailing" constant="-16" id="xdG-y1-Ako"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hiImage" destination="G8U-zg-agA" id="RzC-O5-1kU"/>
+                        <outlet property="profileImageView" destination="QjU-ha-hz1" id="pA0-g0-WTE"/>
+                        <outlet property="profileViewVerticalSpaceContraint" destination="tn4-Rb-W42" id="1C1-ob-rHp"/>
+                        <outlet property="sexyBackLogo" destination="2Hq-jo-JaT" id="qBr-M7-qi5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6WL-Ld-Bfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="-114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GYSB Hi-16" width="262" height="211"/>
+        <image name="gysb-logo" width="1658" height="996"/>
+    </resources>
+</document>

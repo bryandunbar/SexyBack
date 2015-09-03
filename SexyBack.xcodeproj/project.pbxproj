@@ -32,8 +32,6 @@
 		E3BB26BE199AEFB30024D8EB /* UIDefaultAccessoryInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B6199AEFB30024D8EB /* UIDefaultAccessoryInputView.m */; };
 		E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B8199AEFB30024D8EB /* UIFormTableViewController.m */; };
 		E3BB26C0199AEFB30024D8EB /* UIFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26BA199AEFB30024D8EB /* UIFormViewController.m */; };
-		E3CE29DD19C6724F001B4ACD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29DB19C6724F001B4ACD /* Bolts.framework */; };
-		E3CE29DE19C6724F001B4ACD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29DC19C6724F001B4ACD /* Parse.framework */; };
 		E3CE29E719C6729A001B4ACD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29DF19C67299001B4ACD /* AudioToolbox.framework */; };
 		E3CE29E819C6729A001B4ACD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E019C67299001B4ACD /* CFNetwork.framework */; };
 		E3CE29E919C6729A001B4ACD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E119C67299001B4ACD /* libz.dylib */; };
@@ -44,6 +42,16 @@
 		E3CE29EE19C6729A001B4ACD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E619C6729A001B4ACD /* SystemConfiguration.framework */; };
 		E3D1355A1A866649008DBE5D /* SBDareHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D135591A866649008DBE5D /* SBDareHistoryTableViewController.m */; };
 		E3D1355D1A8667B4008DBE5D /* SBDareHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D1355C1A8667B4008DBE5D /* SBDareHistoryCell.m */; };
+		E3DE88E51B96902700500797 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DE88E31B96902700500797 /* Bolts.framework */; };
+		E3DE88E61B96902700500797 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DE88E41B96902700500797 /* Parse.framework */; };
+		E3DE88EC1B9692B100500797 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3DE88EB1B9692B100500797 /* Main.storyboard */; };
+		E3DE88EE1B9692C100500797 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3DE88ED1B9692C100500797 /* Launch Screen.xib */; };
+		E3DE88F01B96931800500797 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3DE88EF1B96931800500797 /* Media.xcassets */; };
+		E3DE88F21B9694E800500797 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DE88F11B9694E800500797 /* libsqlite3.0.dylib */; };
+		E3DE88F71B96962500500797 /* HiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE88F61B96962500500797 /* HiViewController.swift */; };
+		E3DE88FC1B969C1D00500797 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE88FB1B969C1D00500797 /* ProfileImageView.swift */; };
+		E3DE89031B96A0D400500797 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE89021B96A0D400500797 /* RoundedCornerView.swift */; };
+		E3DE89051B96A66E00500797 /* UIBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE89041B96A66E00500797 /* UIBorderedButton.swift */; };
 		E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */; };
 		E3F03CEA19D1A02900413547 /* SB30DayPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F03CE919D1A02900413547 /* SB30DayPageViewController.m */; };
 		E3F5533B1998EBE000AE3A28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533A1998EBE000AE3A28 /* Foundation.framework */; };
@@ -125,8 +133,6 @@
 		E3BB26B8199AEFB30024D8EB /* UIFormTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFormTableViewController.m; sourceTree = "<group>"; };
 		E3BB26B9199AEFB30024D8EB /* UIFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFormViewController.h; sourceTree = "<group>"; };
 		E3BB26BA199AEFB30024D8EB /* UIFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFormViewController.m; sourceTree = "<group>"; };
-		E3CE29DB19C6724F001B4ACD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		E3CE29DC19C6724F001B4ACD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E3CE29DF19C67299001B4ACD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E3CE29E019C67299001B4ACD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E3CE29E119C67299001B4ACD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -139,6 +145,17 @@
 		E3D135591A866649008DBE5D /* SBDareHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDareHistoryTableViewController.m; sourceTree = "<group>"; };
 		E3D1355B1A8667B4008DBE5D /* SBDareHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDareHistoryCell.h; sourceTree = "<group>"; };
 		E3D1355C1A8667B4008DBE5D /* SBDareHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDareHistoryCell.m; sourceTree = "<group>"; };
+		E3DE88E31B96902700500797 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E3DE88E41B96902700500797 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E3DE88EB1B9692B100500797 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E3DE88ED1B9692C100500797 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		E3DE88EF1B96931800500797 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		E3DE88F11B9694E800500797 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		E3DE88F31B9695EB00500797 /* SexyBack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SexyBack-Bridging-Header.h"; sourceTree = "<group>"; };
+		E3DE88F61B96962500500797 /* HiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiViewController.swift; sourceTree = "<group>"; };
+		E3DE88FB1B969C1D00500797 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		E3DE89021B96A0D400500797 /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		E3DE89041B96A66E00500797 /* UIBorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBorderedButton.swift; sourceTree = "<group>"; };
 		E3F03CE519D19F0D00413547 /* SB30DayContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayContentViewController.h; sourceTree = "<group>"; };
 		E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SB30DayContentViewController.m; sourceTree = "<group>"; };
 		E3F03CE819D1A02900413547 /* SB30DayPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayPageViewController.h; sourceTree = "<group>"; };
@@ -176,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3DE88F21B9694E800500797 /* libsqlite3.0.dylib in Frameworks */,
 				E383B7E81A773A5A007FEE86 /* MediaPlayer.framework in Frameworks */,
 				E3CE29E719C6729A001B4ACD /* AudioToolbox.framework in Frameworks */,
 				E3CE29E819C6729A001B4ACD /* CFNetwork.framework in Frameworks */,
@@ -183,13 +201,13 @@
 				E3CE29EA19C6729A001B4ACD /* MobileCoreServices.framework in Frameworks */,
 				E3CE29EB19C6729A001B4ACD /* QuartzCore.framework in Frameworks */,
 				E3CE29EC19C6729A001B4ACD /* Security.framework in Frameworks */,
+				E3DE88E51B96902700500797 /* Bolts.framework in Frameworks */,
 				E3CE29ED19C6729A001B4ACD /* StoreKit.framework in Frameworks */,
 				E3CE29EE19C6729A001B4ACD /* SystemConfiguration.framework in Frameworks */,
+				E3DE88E61B96902700500797 /* Parse.framework in Frameworks */,
 				E3F5533D1998EBE000AE3A28 /* CoreGraphics.framework in Frameworks */,
 				E3F5533F1998EBE000AE3A28 /* UIKit.framework in Frameworks */,
 				E3F5533B1998EBE000AE3A28 /* Foundation.framework in Frameworks */,
-				E3CE29DD19C6724F001B4ACD /* Bolts.framework in Frameworks */,
-				E3CE29DE19C6724F001B4ACD /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +327,53 @@
 			name = "Double Dare Program";
 			sourceTree = "<group>";
 		};
+		E3DE88EA1B9692B100500797 /* Alpha */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE88FD1B969FCE00500797 /* Views */,
+				E3DE88F31B9695EB00500797 /* SexyBack-Bridging-Header.h */,
+				E3DE88FA1B96964800500797 /* View Controllers */,
+				E3DE88F91B96963D00500797 /* Resources */,
+				E3DE88F81B96962D00500797 /* UI */,
+			);
+			path = Alpha;
+			sourceTree = "<group>";
+		};
+		E3DE88F81B96962D00500797 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE88EB1B9692B100500797 /* Main.storyboard */,
+				E3DE88ED1B9692C100500797 /* Launch Screen.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		E3DE88F91B96963D00500797 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE88EF1B96931800500797 /* Media.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E3DE88FA1B96964800500797 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE88F61B96962500500797 /* HiViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E3DE88FD1B969FCE00500797 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE88FB1B969C1D00500797 /* ProfileImageView.swift */,
+				E3DE89021B96A0D400500797 /* RoundedCornerView.swift */,
+				E3DE89041B96A66E00500797 /* UIBorderedButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		E3F03CE419D19EEE00413547 /* 30 Day Challenge */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,9 +399,9 @@
 		E3F5532E1998EBE000AE3A28 = {
 			isa = PBXGroup;
 			children = (
+				E3DE88E31B96902700500797 /* Bolts.framework */,
+				E3DE88E41B96902700500797 /* Parse.framework */,
 				E36F4FD91A77F866008EF6B6 /* Settings.bundle */,
-				E3CE29DB19C6724F001B4ACD /* Bolts.framework */,
-				E3CE29DC19C6724F001B4ACD /* Parse.framework */,
 				E337F590199C361400C417D0 /* SFGaugeView */,
 				E372FB821A8469B2008F9353 /* CircleImageView */,
 				E3BB26AE199AEFB30024D8EB /* ios_shared */,
@@ -359,6 +424,7 @@
 		E3F553391998EBE000AE3A28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3DE88F11B9694E800500797 /* libsqlite3.0.dylib */,
 				E383B7E71A773A5A007FEE86 /* MediaPlayer.framework */,
 				E3CE29DF19C67299001B4ACD /* AudioToolbox.framework */,
 				E3CE29E019C67299001B4ACD /* CFNetwork.framework */,
@@ -379,6 +445,7 @@
 		E3F553401998EBE000AE3A28 /* SexyBack */ = {
 			isa = PBXGroup;
 			children = (
+				E3DE88EA1B9692B100500797 /* Alpha */,
 				E33C0601199AF57F00C9AD10 /* Model */,
 				E3F553751998ECCF00AE3A28 /* View Controllers */,
 				E3F553491998EBE000AE3A28 /* SBAppDelegate.h */,
@@ -513,11 +580,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3DE88EC1B9692B100500797 /* Main.storyboard in Resources */,
 				E372FB871A846AC7008F9353 /* 30DayProgram.xcassets in Resources */,
 				E3F553511998EBE000AE3A28 /* Main_iPad.storyboard in Resources */,
 				E3F553591998EBE000AE3A28 /* Images.xcassets in Resources */,
 				E36F4FDA1A77F866008EF6B6 /* Settings.bundle in Resources */,
+				E3DE88EE1B9692C100500797 /* Launch Screen.xib in Resources */,
 				E3F5534E1998EBE000AE3A28 /* Main_iPhone.storyboard in Resources */,
+				E3DE88F01B96931800500797 /* Media.xcassets in Resources */,
 				E3F553451998EBE000AE3A28 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,15 +619,19 @@
 				E3F5538A199AE8F500AE3A28 /* SBConsultantViewController.m in Sources */,
 				E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */,
 				E3D1355A1A866649008DBE5D /* SBDareHistoryTableViewController.m in Sources */,
+				E3DE88F71B96962500500797 /* HiViewController.swift in Sources */,
 				E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */,
 				E337F593199C361400C417D0 /* SFGaugeView.m in Sources */,
 				E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */,
 				E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */,
 				E3F5534B1998EBE000AE3A28 /* SBAppDelegate.m in Sources */,
+				E3DE89051B96A66E00500797 /* UIBorderedButton.swift in Sources */,
+				E3DE88FC1B969C1D00500797 /* ProfileImageView.swift in Sources */,
 				E3D1355D1A8667B4008DBE5D /* SBDareHistoryCell.m in Sources */,
 				E3A1239C1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.m in Sources */,
 				E3A123961A733ECC00076722 /* SB30DayProgramsTableViewController.m in Sources */,
 				E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */,
+				E3DE89031B96A0D400500797 /* RoundedCornerView.swift in Sources */,
 				E3F553571998EBE000AE3A28 /* SBHotStuffViewController.m in Sources */,
 				E33C0629199AFF3600C9AD10 /* SBQuizViewController.m in Sources */,
 				E3F03CEA19D1A02900413547 /* SB30DayPageViewController.m in Sources */,
@@ -703,6 +777,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -713,8 +788,12 @@
 				GCC_PREFIX_HEADER = "SexyBack/SexyBack-Prefix.pch";
 				INFOPLIST_FILE = "SexyBack/SexyBack-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "295ee49b-dbfe-46ce-9c33-6b68066b3264";
+				SWIFT_OBJC_BRIDGING_HEADER = "SexyBack/Alpha/SexyBack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -724,6 +803,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -734,8 +814,11 @@
 				GCC_PREFIX_HEADER = "SexyBack/SexyBack-Prefix.pch";
 				INFOPLIST_FILE = "SexyBack/SexyBack-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "295ee49b-dbfe-46ce-9c33-6b68066b3264";
+				SWIFT_OBJC_BRIDGING_HEADER = "SexyBack/Alpha/SexyBack-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
