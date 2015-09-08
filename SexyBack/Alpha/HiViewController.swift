@@ -12,20 +12,38 @@ class HiViewController: UIViewController, ProfileImageViewDelegate{
 
     @IBOutlet var sexyBackLogo: UIImageView!
     
+    @IBOutlet var archView: UIView!
     @IBOutlet var hiImage: UIImageView!
     
+    @IBOutlet var ageRange: UIPickerField!
+    @IBOutlet var gender: UIPickerField!
+    @IBOutlet var firstName: UITextField!
     @IBOutlet var profileImageView: ProfileImageView!
     @IBOutlet var profileViewVerticalSpaceContraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImageView!.delegate = self
-        initDrawerViewLocation()
+        
+        if AppController.instance.isOnboarded {
+            self.performSegueWithIdentifier("nextViewControllerNotAnimated", sender: self)
+        } else {
+            configureDrawerFields()
+            initDrawerViewLocation()
+        }
+    }
+    
+    func configureDrawerFields() {
+        self.ageRange!.choices = ["","18-25", "26-35", "36-50", "Over 50"]
+        self.ageRange!.hideOnSelection = true
+        self.gender!.choices = ["", "Male", "Female"]
+        self.gender!.hideOnSelection = true
     }
     
     func initDrawerViewLocation() {
         
         let height = self.view.bounds.height
-        let constant:CGFloat = height - 100.0
+        let constant:CGFloat = height - 125.0
         self.profileViewVerticalSpaceContraint.constant = constant
         self.view.layoutIfNeeded()
     }
@@ -53,7 +71,7 @@ class HiViewController: UIViewController, ProfileImageViewDelegate{
                     0.5, animations: { () -> Void in
 
                     // Move arch view to middle of the "Hi" Image
-                    let constant = self.hiImage.center.y - 20
+                    let constant = self.hiImage.center.y - 40
                     self.profileViewVerticalSpaceContraint.constant = constant
                     self.view.layoutIfNeeded()
             })
@@ -78,7 +96,24 @@ class HiViewController: UIViewController, ProfileImageViewDelegate{
     }
     */
     
-    // MARK - ProfileImageViewDelegate
+    /// MARK: - Actions
+    @IBAction func doneButtonTapped(sender: AnyObject) {
+
+        // Don't show this screen anymore
+        AppController.instance.isOnboarded = true
+        
+        // Store our user information
+        var user:SBUser = SBUser()
+        user.firstName = self.firstName.text
+        user.gender = self.gender.text
+        user.ageRange = self.ageRange.text
+        user.profileImage = self.profileImageView.image
+        AppController.instance.user = user
+        
+        self.performSegueWithIdentifier("nextViewControllerAnimated", sender: self)
+        
+    }
+    /// MARK: - ProfileImageViewDelegate
     func presentingViewControllerForProfileImageView(view: ProfileImageView) -> UIViewController {
         return self
     }

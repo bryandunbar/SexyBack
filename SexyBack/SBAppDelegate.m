@@ -9,6 +9,7 @@
 #import "SBAppDelegate.h"
 #import "Constants.h"
 #import <Parse/Parse.h>
+#import "SexyBack-Swift.h"
 
 @interface SBAppDelegate()
 
@@ -36,21 +37,21 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     // Register defaults
-    NSString *client = self.stateManager.appState.client;
-    if (!client) {
-        [self registerDefaultsFromSettingsBundle];
-    }
+//    NSString *client = self.stateManager.appState.client;
+//    if (!client) {
+//        [self registerDefaultsFromSettingsBundle];
+//    }
     
     // Register for push
-    [self registerForNotifications:application];
+    //[self registerForNotifications:application];
     
-    NSDictionary * navBarTitleTextAttributes =
-  @{ NSForegroundColorAttributeName : [UIColor whiteColor]};
-    [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
-    
-    self.window.backgroundColor = [UIColor lightGrayColor];
-    
-    [self.stateManager save];
+//    NSDictionary * navBarTitleTextAttributes =
+//  @{ NSForegroundColorAttributeName : [UIColor whiteColor]};
+//    [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
+//    
+//    self.window.backgroundColor = [UIColor lightGrayColor];
+//    
+//    [self.stateManager save];
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        
@@ -118,14 +119,18 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    [self.stateManager save];
+    //[self.stateManager save];
+    AppController *instance = [AppController instance];
+    [instance save];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    [self.stateManager save];
+    //[self.stateManager save];
+    AppController *instance = [AppController instance];
+    [instance save];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -139,28 +144,35 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     //[self.rootViewController launchAppForConsultant:@"54321"];
 
     
-    PFQuery *programQuery = [PFQuery queryWithClassName:@"ChallengeProgram"];
-    [programQuery whereKey:@"active" equalTo:@(YES)];
-    [programQuery orderByAscending:@"sort_order"];
-    [programQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        STATE.programs = objects;
-    }];
+//    PFQuery *programQuery = [PFQuery queryWithClassName:@"ChallengeProgram"];
+//    [programQuery whereKey:@"active" equalTo:@(YES)];
+//    [programQuery orderByAscending:@"sort_order"];
+//    [programQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        STATE.programs = objects;
+//    }];
+//    
+//    PFQuery *doubleDareQuery = [PFQuery queryWithClassName:@"Challenge"];
+//    [doubleDareQuery whereKey:@"client" containedIn:@[STATE.client, NSNull.null]];
+//    [doubleDareQuery orderByAscending:@"day"];
+//    [doubleDareQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        STATE.doubleDareChallenges = objects;
+//    }];
+//    
+//    // Getting some points just for launching the app
+//    STATE.user.rewardsPoints += 5;
     
-    PFQuery *doubleDareQuery = [PFQuery queryWithClassName:@"Challenge"];
-    [doubleDareQuery whereKey:@"client" containedIn:@[STATE.client, NSNull.null]];
-    [doubleDareQuery orderByAscending:@"day"];
-    [doubleDareQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        STATE.doubleDareChallenges = objects;
-    }];
     
-    // Getting some points just for launching the app
-    STATE.user.rewardsPoints += 5;
+    AppController *instance = [AppController instance];
+    SBUser *user = instance.user;
+    NSLog(@"User: %@", user);
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    [self.stateManager save];
+    //[self.stateManager save];
+    AppController *instance = [AppController instance];
+    [instance save];
 }
 
 

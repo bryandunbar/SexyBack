@@ -17,6 +17,22 @@
 		E33C0629199AFF3600C9AD10 /* SBQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C0628199AFF3600C9AD10 /* SBQuizViewController.m */; };
 		E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062A199B06FE00C9AD10 /* UIPickerField.m */; };
 		E33C062F199B073000C9AD10 /* SBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062E199B073000C9AD10 /* SBProfileViewController.m */; };
+		E36C9D1B1B98EE0B00DBBF5A /* SexTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D1A1B98EE0B00DBBF5A /* SexTrackerViewController.swift */; };
+		E36C9D1F1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E36C9D1E1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf */; };
+		E36C9D211B990A4F00DBBF5A /* FeatherSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D201B990A4F00DBBF5A /* FeatherSlider.swift */; };
+		E36C9D231B992C6700DBBF5A /* PushNoAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D221B992C6700DBBF5A /* PushNoAnimationSegue.swift */; };
+		E36C9D271B992D5300DBBF5A /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D261B992D5300DBBF5A /* AppController.swift */; };
+		E36C9D2A1B99334000DBBF5A /* SlidingOverlayPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D291B99334000DBBF5A /* SlidingOverlayPresentationController.swift */; };
+		E36C9D2D1B9939AE00DBBF5A /* SlidingOverlayAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D2C1B9939AE00DBBF5A /* SlidingOverlayAnimator.swift */; };
+		E36C9D2F1B993C5300DBBF5A /* SlidingOverlayTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D2E1B993C5300DBBF5A /* SlidingOverlayTransitioningDelegate.swift */; };
+		E36C9D311B99487900DBBF5A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D301B99487900DBBF5A /* MenuViewController.swift */; };
+		E36C9D361B9A405C00DBBF5A /* BouncyOverlayTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D331B9A405C00DBBF5A /* BouncyOverlayTransitioningDelegate.swift */; };
+		E36C9D371B9A405C00DBBF5A /* BouncyOverlayPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D341B9A405C00DBBF5A /* BouncyOverlayPresentationController.swift */; };
+		E36C9D381B9A405C00DBBF5A /* BouncyViewControllerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D351B9A405C00DBBF5A /* BouncyViewControllerAnimator.swift */; };
+		E36C9D3A1B9A407E00DBBF5A /* ModalBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D391B9A407E00DBBF5A /* ModalBackgroundView.swift */; };
+		E36C9D3D1B9A504B00DBBF5A /* GoalModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3C1B9A504B00DBBF5A /* GoalModalViewController.swift */; };
+		E36C9D3F1B9A562B00DBBF5A /* SBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3E1B9A562B00DBBF5A /* SBTextField.swift */; };
+		E36C9D421B9A6A2F00DBBF5A /* SBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D411B9A6A2F00DBBF5A /* SBUser.swift */; };
 		E36F4FDA1A77F866008EF6B6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E36F4FD91A77F866008EF6B6 /* Settings.bundle */; };
 		E372FB811A8468C0008F9353 /* SB30DayProgramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E372FB801A8468C0008F9353 /* SB30DayProgramCell.m */; };
 		E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E372FB841A8469C7008F9353 /* WTCircleImageView.m */; };
@@ -50,7 +66,7 @@
 		E3DE88F21B9694E800500797 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DE88F11B9694E800500797 /* libsqlite3.0.dylib */; };
 		E3DE88F71B96962500500797 /* HiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE88F61B96962500500797 /* HiViewController.swift */; };
 		E3DE88FC1B969C1D00500797 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE88FB1B969C1D00500797 /* ProfileImageView.swift */; };
-		E3DE89031B96A0D400500797 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE89021B96A0D400500797 /* RoundedCornerView.swift */; };
+		E3DE89031B96A0D400500797 /* ArchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE89021B96A0D400500797 /* ArchedView.swift */; };
 		E3DE89051B96A66E00500797 /* UIBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE89041B96A66E00500797 /* UIBorderedButton.swift */; };
 		E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */; };
 		E3F03CEA19D1A02900413547 /* SB30DayPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F03CE919D1A02900413547 /* SB30DayPageViewController.m */; };
@@ -106,6 +122,22 @@
 		E33C062B199B06FE00C9AD10 /* UIPickerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerField.h; sourceTree = "<group>"; };
 		E33C062D199B073000C9AD10 /* SBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBProfileViewController.h; sourceTree = "<group>"; };
 		E33C062E199B073000C9AD10 /* SBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBProfileViewController.m; sourceTree = "<group>"; };
+		E36C9D1A1B98EE0B00DBBF5A /* SexTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexTrackerViewController.swift; sourceTree = "<group>"; };
+		E36C9D1E1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentowide-Light-webfont.ttf"; sourceTree = "<group>"; };
+		E36C9D201B990A4F00DBBF5A /* FeatherSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatherSlider.swift; sourceTree = "<group>"; };
+		E36C9D221B992C6700DBBF5A /* PushNoAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNoAnimationSegue.swift; sourceTree = "<group>"; };
+		E36C9D261B992D5300DBBF5A /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		E36C9D291B99334000DBBF5A /* SlidingOverlayPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingOverlayPresentationController.swift; sourceTree = "<group>"; };
+		E36C9D2C1B9939AE00DBBF5A /* SlidingOverlayAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingOverlayAnimator.swift; sourceTree = "<group>"; };
+		E36C9D2E1B993C5300DBBF5A /* SlidingOverlayTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingOverlayTransitioningDelegate.swift; sourceTree = "<group>"; };
+		E36C9D301B99487900DBBF5A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E36C9D331B9A405C00DBBF5A /* BouncyOverlayTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncyOverlayTransitioningDelegate.swift; sourceTree = "<group>"; };
+		E36C9D341B9A405C00DBBF5A /* BouncyOverlayPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncyOverlayPresentationController.swift; sourceTree = "<group>"; };
+		E36C9D351B9A405C00DBBF5A /* BouncyViewControllerAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncyViewControllerAnimator.swift; sourceTree = "<group>"; };
+		E36C9D391B9A407E00DBBF5A /* ModalBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalBackgroundView.swift; sourceTree = "<group>"; };
+		E36C9D3C1B9A504B00DBBF5A /* GoalModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalModalViewController.swift; sourceTree = "<group>"; };
+		E36C9D3E1B9A562B00DBBF5A /* SBTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTextField.swift; sourceTree = "<group>"; };
+		E36C9D411B9A6A2F00DBBF5A /* SBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBUser.swift; sourceTree = "<group>"; };
 		E36F4FD91A77F866008EF6B6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E372FB7F1A8468C0008F9353 /* SB30DayProgramCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayProgramCell.h; sourceTree = "<group>"; };
 		E372FB801A8468C0008F9353 /* SB30DayProgramCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SB30DayProgramCell.m; sourceTree = "<group>"; };
@@ -154,7 +186,7 @@
 		E3DE88F31B9695EB00500797 /* SexyBack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SexyBack-Bridging-Header.h"; sourceTree = "<group>"; };
 		E3DE88F61B96962500500797 /* HiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiViewController.swift; sourceTree = "<group>"; };
 		E3DE88FB1B969C1D00500797 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
-		E3DE89021B96A0D400500797 /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		E3DE89021B96A0D400500797 /* ArchedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchedView.swift; sourceTree = "<group>"; };
 		E3DE89041B96A66E00500797 /* UIBorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBorderedButton.swift; sourceTree = "<group>"; };
 		E3F03CE519D19F0D00413547 /* SB30DayContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayContentViewController.h; sourceTree = "<group>"; };
 		E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SB30DayContentViewController.m; sourceTree = "<group>"; };
@@ -283,6 +315,60 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E36C9D1D1B98F87A00DBBF5A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D1E1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf */,
+			);
+			name = Fonts;
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		E36C9D281B9931AE00DBBF5A /* Presentation Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D321B9A404A00DBBF5A /* Bouncy Modal Presentation */,
+				E36C9D2B1B99396F00DBBF5A /* Sliding Overlay Presentation */,
+			);
+			name = "Presentation Controllers";
+			sourceTree = "<group>";
+		};
+		E36C9D2B1B99396F00DBBF5A /* Sliding Overlay Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D291B99334000DBBF5A /* SlidingOverlayPresentationController.swift */,
+				E36C9D2C1B9939AE00DBBF5A /* SlidingOverlayAnimator.swift */,
+				E36C9D2E1B993C5300DBBF5A /* SlidingOverlayTransitioningDelegate.swift */,
+			);
+			name = "Sliding Overlay Presentation";
+			sourceTree = "<group>";
+		};
+		E36C9D321B9A404A00DBBF5A /* Bouncy Modal Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D331B9A405C00DBBF5A /* BouncyOverlayTransitioningDelegate.swift */,
+				E36C9D341B9A405C00DBBF5A /* BouncyOverlayPresentationController.swift */,
+				E36C9D351B9A405C00DBBF5A /* BouncyViewControllerAnimator.swift */,
+			);
+			name = "Bouncy Modal Presentation";
+			sourceTree = "<group>";
+		};
+		E36C9D3B1B9A503300DBBF5A /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D3C1B9A504B00DBBF5A /* GoalModalViewController.swift */,
+			);
+			name = Modals;
+			sourceTree = "<group>";
+		};
+		E36C9D401B9A6A2200DBBF5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D411B9A6A2F00DBBF5A /* SBUser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E372FB821A8469B2008F9353 /* CircleImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,11 +416,16 @@
 		E3DE88EA1B9692B100500797 /* Alpha */ = {
 			isa = PBXGroup;
 			children = (
+				E36C9D401B9A6A2200DBBF5A /* Model */,
+				E36C9D261B992D5300DBBF5A /* AppController.swift */,
+				E36C9D1D1B98F87A00DBBF5A /* Fonts */,
+				E36C9D281B9931AE00DBBF5A /* Presentation Controllers */,
 				E3DE88FD1B969FCE00500797 /* Views */,
 				E3DE88F31B9695EB00500797 /* SexyBack-Bridging-Header.h */,
 				E3DE88FA1B96964800500797 /* View Controllers */,
 				E3DE88F91B96963D00500797 /* Resources */,
 				E3DE88F81B96962D00500797 /* UI */,
+				E36C9D221B992C6700DBBF5A /* PushNoAnimationSegue.swift */,
 			);
 			path = Alpha;
 			sourceTree = "<group>";
@@ -359,7 +450,10 @@
 		E3DE88FA1B96964800500797 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E36C9D3B1B9A503300DBBF5A /* Modals */,
 				E3DE88F61B96962500500797 /* HiViewController.swift */,
+				E36C9D1A1B98EE0B00DBBF5A /* SexTrackerViewController.swift */,
+				E36C9D301B99487900DBBF5A /* MenuViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -368,8 +462,11 @@
 			isa = PBXGroup;
 			children = (
 				E3DE88FB1B969C1D00500797 /* ProfileImageView.swift */,
-				E3DE89021B96A0D400500797 /* RoundedCornerView.swift */,
+				E3DE89021B96A0D400500797 /* ArchedView.swift */,
 				E3DE89041B96A66E00500797 /* UIBorderedButton.swift */,
+				E36C9D201B990A4F00DBBF5A /* FeatherSlider.swift */,
+				E36C9D391B9A407E00DBBF5A /* ModalBackgroundView.swift */,
+				E36C9D3E1B9A562B00DBBF5A /* SBTextField.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -582,6 +679,7 @@
 			files = (
 				E3DE88EC1B9692B100500797 /* Main.storyboard in Resources */,
 				E372FB871A846AC7008F9353 /* 30DayProgram.xcassets in Resources */,
+				E36C9D1F1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf in Resources */,
 				E3F553511998EBE000AE3A28 /* Main_iPad.storyboard in Resources */,
 				E3F553591998EBE000AE3A28 /* Images.xcassets in Resources */,
 				E36F4FDA1A77F866008EF6B6 /* Settings.bundle in Resources */,
@@ -614,33 +712,48 @@
 				E33C0626199AFE5200C9AD10 /* UIBorderedButton.m in Sources */,
 				E3F553541998EBE000AE3A28 /* SBTrackViewController.m in Sources */,
 				E3BB26BC199AEFB30024D8EB /* NSString+Additions.m in Sources */,
+				E36C9D361B9A405C00DBBF5A /* BouncyOverlayTransitioningDelegate.swift in Sources */,
 				E3F553471998EBE000AE3A28 /* main.m in Sources */,
+				E36C9D2A1B99334000DBBF5A /* SlidingOverlayPresentationController.swift in Sources */,
 				E3F553781998F3FC00AE3A28 /* SBMainTabBarController.m in Sources */,
+				E36C9D231B992C6700DBBF5A /* PushNoAnimationSegue.swift in Sources */,
+				E36C9D3A1B9A407E00DBBF5A /* ModalBackgroundView.swift in Sources */,
 				E3F5538A199AE8F500AE3A28 /* SBConsultantViewController.m in Sources */,
+				E36C9D271B992D5300DBBF5A /* AppController.swift in Sources */,
+				E36C9D371B9A405C00DBBF5A /* BouncyOverlayPresentationController.swift in Sources */,
 				E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */,
 				E3D1355A1A866649008DBE5D /* SBDareHistoryTableViewController.m in Sources */,
+				E36C9D311B99487900DBBF5A /* MenuViewController.swift in Sources */,
 				E3DE88F71B96962500500797 /* HiViewController.swift in Sources */,
+				E36C9D3F1B9A562B00DBBF5A /* SBTextField.swift in Sources */,
 				E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */,
 				E337F593199C361400C417D0 /* SFGaugeView.m in Sources */,
 				E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */,
 				E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */,
 				E3F5534B1998EBE000AE3A28 /* SBAppDelegate.m in Sources */,
+				E36C9D1B1B98EE0B00DBBF5A /* SexTrackerViewController.swift in Sources */,
 				E3DE89051B96A66E00500797 /* UIBorderedButton.swift in Sources */,
 				E3DE88FC1B969C1D00500797 /* ProfileImageView.swift in Sources */,
 				E3D1355D1A8667B4008DBE5D /* SBDareHistoryCell.m in Sources */,
 				E3A1239C1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.m in Sources */,
 				E3A123961A733ECC00076722 /* SB30DayProgramsTableViewController.m in Sources */,
+				E36C9D211B990A4F00DBBF5A /* FeatherSlider.swift in Sources */,
+				E36C9D421B9A6A2F00DBBF5A /* SBUser.swift in Sources */,
 				E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */,
-				E3DE89031B96A0D400500797 /* RoundedCornerView.swift in Sources */,
+				E36C9D2F1B993C5300DBBF5A /* SlidingOverlayTransitioningDelegate.swift in Sources */,
+				E3DE89031B96A0D400500797 /* ArchedView.swift in Sources */,
 				E3F553571998EBE000AE3A28 /* SBHotStuffViewController.m in Sources */,
 				E33C0629199AFF3600C9AD10 /* SBQuizViewController.m in Sources */,
 				E3F03CEA19D1A02900413547 /* SB30DayPageViewController.m in Sources */,
 				E383B7E61A7739DC007FEE86 /* SBVideoTableViewCell.m in Sources */,
+				E36C9D2D1B9939AE00DBBF5A /* SlidingOverlayAnimator.swift in Sources */,
 				E3BB26C0199AEFB30024D8EB /* UIFormViewController.m in Sources */,
 				E337F58E199B125500C417D0 /* User.m in Sources */,
+				E36C9D3D1B9A504B00DBBF5A /* GoalModalViewController.swift in Sources */,
 				E33C0604199AF59500C9AD10 /* AppState.m in Sources */,
 				E337F58B199B0FB400C417D0 /* SBGoalsViewController.m in Sources */,
 				E337F599199C452400C417D0 /* SBNewEventViewController.m in Sources */,
+				E36C9D381B9A405C00DBBF5A /* BouncyViewControllerAnimator.swift in Sources */,
 				E3BB26BD199AEFB30024D8EB /* UIDateField.m in Sources */,
 				E337F596199C3C5700C417D0 /* SBRewardsViewController.m in Sources */,
 			);
@@ -776,7 +889,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -802,7 +914,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
