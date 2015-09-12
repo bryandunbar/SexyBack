@@ -23,6 +23,7 @@ class HiViewController: UIViewController, ProfileImageViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         profileImageView!.delegate = self
         
         if AppController.instance.isOnboarded {

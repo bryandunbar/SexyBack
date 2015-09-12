@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>text</key>
+		<string>IGNITE</string>
+		<key>detail</key>
+		<string>Step it up! C'mon, get your party started.</string>
+		<key>imageName</key>
+		<string>level1</string>
+		<key>lowPercentage</key>
+		<integer>0</integer>
+		<key>highPercentage</key>
+		<real>50</real>
+	</dict>
+    <dict>
+        <key>text</key>
+        <string>BLAZE</string>
+        <key>detail</key>
+        <string>Almost there! Turn up the heat.</string>
+        <key>imageName</key>
+        <string>level2</string>
+        <key>lowPercentage</key>
+        <integer>51</integer>
+        <key>highPercentage</key>
+        <real>98</real>
+    </dict>
+    <dict>
+        <key>text</key>
+        <string>SMOKING HOT</string>
+        <key>detail</key>
+        <string>Snap! Way to go hot stuff!</string>
+        <key>imageName</key>
+        <string>level3</string>
+        <key>lowPercentage</key>
+        <integer>99</integer>
+        <key>highPercentage</key>
+        <real>100</real>
+    </dict>
+    <dict>
+        <key>text</key>
+        <string>INFERNO</string>
+        <key>detail</key>
+        <string>Killing it! Can you say, "hot pants"?</string>
+        <key>imageName</key>
+        <string>level4</string>
+        <key>lowPercentage</key>
+        <integer>101</integer>
+        <key>highPercentage</key>
+        <real>1000</real>
+    </dict>
+</array>
+</plist>

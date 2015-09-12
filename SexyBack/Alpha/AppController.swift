@@ -9,8 +9,14 @@
 import Foundation
 import Parse
 
+
+struct Theme {
+    static var PinkColor = UIColor(red: 169/255, green: 36/255, blue: 57/255, alpha: 1.0)
+}
+
 @objc class AppController: NSObject, NSCoding {
    
+    
     
     /// Convenience to the NSUserDefaults
     private var userDefaults: NSUserDefaults {
@@ -63,18 +69,6 @@ import Parse
             let docDir:String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
             return docDir.stringByAppendingPathComponent("SexyBackState.plist")
         }
-    }
-    
-    
-    func getRangeOfWeek(date:NSDate) -> (NSDate, NSDate) {
-        
-        let cal = NSCalendar.currentCalendar()
-
-        var beginningOfWeek: NSDate?
-        var weekDuration = NSTimeInterval()
-        cal.rangeOfUnit(.CalendarUnitWeekOfYear, startDate: &beginningOfWeek, interval: &weekDuration, forDate: date)
-        let endOfWeek = beginningOfWeek?.dateByAddingTimeInterval(weekDuration)
-        return (beginningOfWeek!, endOfWeek!)
     }
     
     required init(coder aDecoder: NSCoder) {

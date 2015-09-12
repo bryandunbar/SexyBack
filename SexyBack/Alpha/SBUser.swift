@@ -42,7 +42,24 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
     func trackSexEvent(block:PFBooleanResultBlock?) {
         var event:PFObject = PFObject(className: "SBEvent")
         event["user"] = PFObject(withoutDataWithClassName: "SBUser", objectId: self.objectId)
+        event["eventDate"] = NSDate()
         event.saveInBackgroundWithBlock(block)
+    }
+    
+    func fetchAllMySexEvents(after:NSDate?, block:PFArrayResultBlock?) {
+        if let parseUser = self.parseUser {
+            
+            var query:PFQuery = PFQuery(className: "SBEvent")
+            query.whereKey("user", equalTo: parseUser)
+            if let afterDate = after {
+                query.whereKey("eventDate", greaterThanOrEqualTo: afterDate)
+            }
+            query.findObjectsInBackgroundWithBlock({ (events:[AnyObject]?, error:NSError?) -> Void in
+                block?(events, error)
+            })
+        } else {
+            block?([], nil)
+        }
     }
     
     func fetchWeeklySexEvents(block:PFArrayResultBlock?) {
@@ -50,13 +67,13 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         if let parseUser = self.parseUser {
             
             let date:NSDate = NSDate()
-            let week:(NSDate, NSDate) = AppController.instance.getRangeOfWeek(date)
+            let week:(NSDate, NSDate) = NSDate.getRangeOfWeek(date)
             
             // Perform the query
             var query:PFQuery = PFQuery(className: "SBEvent")
             query.whereKey("user", equalTo: parseUser)
-            query.whereKey("createdAt", greaterThanOrEqualTo: week.0)
-            query.whereKey("createdAt", lessThanOrEqualTo: week.1)
+            query.whereKey("eventDate", greaterThanOrEqualTo: week.0)
+            query.whereKey("eventDate", lessThanOrEqualTo: week.1)
             query.findObjectsInBackgroundWithBlock({ (events:[AnyObject]?, error:NSError?) -> Void in
                 if events != nil && error == nil {
                     self.weeklyEventCount = events!.count
@@ -183,5 +200,8 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         self.fetchParseUserWithBlock(nil);
         
     }
+    
+    
+    // MARK: Ranking
  
 }

@@ -12,6 +12,7 @@ class SexTrackerViewController: UIViewController {
 
     @IBOutlet var slider: FeatherSlider!
     @IBOutlet var goalLabael: UILabel!
+    @IBOutlet var rankView: SexRankView!
     
     let menuTransitioningDelegate = SlidingOverlayTransitioningDelegate()
     let modalTransitioningDelegate = BouncyOverlayTransitioningDelegate()
@@ -27,6 +28,7 @@ class SexTrackerViewController: UIViewController {
     func weeklyEventCountUpdatedHandler() {
         if let user:SBUser = AppController.instance.user {
             slider.setValue(Float(user.weeklyEventCount), animated: true)
+             configureView()
         }
     }
     deinit {
@@ -37,6 +39,16 @@ class SexTrackerViewController: UIViewController {
         super.viewDidLoad()
         registerForNotifications()
         configureView()
+        
+        rankView.listButton.addTarget(self, action: "listButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if let user = AppController.instance.user {
+            user.fetchWeeklySexEvents({ (events:[AnyObject]?, error:NSError?) -> Void in
+                self.configureView()
+            })
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -55,9 +67,13 @@ class SexTrackerViewController: UIViewController {
             self.slider.hidden = false
             self.slider.maximumValue = Float(user.weeklySexGoal)
             self.slider.value = Float(user.weeklyEventCount);
+            
+            self.rankView.hidden = false
+            self.rankView.updateRank(user)
         } else {
             self.slider.hidden = true
             self.goalLabael.text = nil
+            self.rankView.hidden = true
         }
 
     }
@@ -79,6 +95,8 @@ class SexTrackerViewController: UIViewController {
                     AppController.instance.save()
                 }
             }
+        } else if segue.identifier == "historySegue" {
+            
         }
     }
     
@@ -91,11 +109,14 @@ class SexTrackerViewController: UIViewController {
             })
             
             // Move the slider
-            var sliderVal:Float = self.slider!.value
-            sliderVal = sliderVal + 1
-            self.slider!.setValue(sliderVal, animated: true)
+            user.weeklyEventCount++
+            configureView()
 
         }
         
+    }
+    
+    func listButtonTapped(sender: AnyObject) {
+        self.performSegueWithIdentifier("historySegue", sender: self)
     }
 }

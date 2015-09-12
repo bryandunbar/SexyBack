@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E30D84191B9FC50B005897E6 /* FakeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D84181B9FC50B005897E6 /* FakeAdView.swift */; };
+		E30D841B1B9FC8A8005897E6 /* SexRankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30D841A1B9FC8A8005897E6 /* SexRankView.xib */; };
+		E30D841D1B9FCB36005897E6 /* SexRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D841C1B9FCB36005897E6 /* SexRankView.swift */; };
+		E30D84211BA1145A005897E6 /* SexRankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D84201BA1145A005897E6 /* SexRankController.swift */; };
+		E30D84261BA118A3005897E6 /* Ranks.plist in Resources */ = {isa = PBXBuildFile; fileRef = E30D84251BA118A3005897E6 /* Ranks.plist */; };
+		E30D84281BA214DF005897E6 /* DataBackedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D84271BA214DF005897E6 /* DataBackedTableViewController.swift */; };
+		E30D842A1BA21A7D005897E6 /* SexTrackerHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D84291BA21A7D005897E6 /* SexTrackerHistoryViewController.swift */; };
+		E30D842D1BA3A608005897E6 /* SexHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D842C1BA3A608005897E6 /* SexHistoryTableViewCell.swift */; };
+		E30D842F1BA3AD7A005897E6 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D842E1BA3AD7A005897E6 /* DateUtils.swift */; };
 		E337F58B199B0FB400C417D0 /* SBGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F58A199B0FB400C417D0 /* SBGoalsViewController.m */; };
 		E337F58E199B125500C417D0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F58D199B125500C417D0 /* User.m */; };
 		E337F593199C361400C417D0 /* SFGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F592199C361400C417D0 /* SFGaugeView.m */; };
@@ -101,6 +110,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E30D84181B9FC50B005897E6 /* FakeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAdView.swift; sourceTree = "<group>"; };
+		E30D841A1B9FC8A8005897E6 /* SexRankView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SexRankView.xib; sourceTree = "<group>"; };
+		E30D841C1B9FCB36005897E6 /* SexRankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexRankView.swift; sourceTree = "<group>"; };
+		E30D84201BA1145A005897E6 /* SexRankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexRankController.swift; sourceTree = "<group>"; };
+		E30D84251BA118A3005897E6 /* Ranks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ranks.plist; sourceTree = "<group>"; };
+		E30D84271BA214DF005897E6 /* DataBackedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBackedTableViewController.swift; sourceTree = "<group>"; };
+		E30D84291BA21A7D005897E6 /* SexTrackerHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexTrackerHistoryViewController.swift; sourceTree = "<group>"; };
+		E30D842C1BA3A608005897E6 /* SexHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		E30D842E1BA3AD7A005897E6 /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		E337F589199B0FB400C417D0 /* SBGoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBGoalsViewController.h; sourceTree = "<group>"; };
 		E337F58A199B0FB400C417D0 /* SBGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBGoalsViewController.m; sourceTree = "<group>"; };
 		E337F58C199B125500C417D0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -256,6 +274,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E30D84241BA1188C005897E6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E30D84251BA118A3005897E6 /* Ranks.plist */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		E30D842B1BA3A5EE005897E6 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E30D842C1BA3A608005897E6 /* SexHistoryTableViewCell.swift */,
+			);
+			name = "Table Cells";
+			sourceTree = "<group>";
+		};
 		E337F586199B0F7800C417D0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				E36C9D411B9A6A2F00DBBF5A /* SBUser.swift */,
+				E30D84201BA1145A005897E6 /* SexRankController.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -416,8 +451,9 @@
 		E3DE88EA1B9692B100500797 /* Alpha */ = {
 			isa = PBXGroup;
 			children = (
-				E36C9D401B9A6A2200DBBF5A /* Model */,
 				E36C9D261B992D5300DBBF5A /* AppController.swift */,
+				E30D842E1BA3AD7A005897E6 /* DateUtils.swift */,
+				E36C9D401B9A6A2200DBBF5A /* Model */,
 				E36C9D1D1B98F87A00DBBF5A /* Fonts */,
 				E36C9D281B9931AE00DBBF5A /* Presentation Controllers */,
 				E3DE88FD1B969FCE00500797 /* Views */,
@@ -454,6 +490,8 @@
 				E3DE88F61B96962500500797 /* HiViewController.swift */,
 				E36C9D1A1B98EE0B00DBBF5A /* SexTrackerViewController.swift */,
 				E36C9D301B99487900DBBF5A /* MenuViewController.swift */,
+				E30D84271BA214DF005897E6 /* DataBackedTableViewController.swift */,
+				E30D84291BA21A7D005897E6 /* SexTrackerHistoryViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -461,12 +499,16 @@
 		E3DE88FD1B969FCE00500797 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E30D842B1BA3A5EE005897E6 /* Table Cells */,
 				E3DE88FB1B969C1D00500797 /* ProfileImageView.swift */,
 				E3DE89021B96A0D400500797 /* ArchedView.swift */,
 				E3DE89041B96A66E00500797 /* UIBorderedButton.swift */,
 				E36C9D201B990A4F00DBBF5A /* FeatherSlider.swift */,
 				E36C9D391B9A407E00DBBF5A /* ModalBackgroundView.swift */,
 				E36C9D3E1B9A562B00DBBF5A /* SBTextField.swift */,
+				E30D84181B9FC50B005897E6 /* FakeAdView.swift */,
+				E30D841A1B9FC8A8005897E6 /* SexRankView.xib */,
+				E30D841C1B9FCB36005897E6 /* SexRankView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -542,6 +584,7 @@
 		E3F553401998EBE000AE3A28 /* SexyBack */ = {
 			isa = PBXGroup;
 			children = (
+				E30D84241BA1188C005897E6 /* Data */,
 				E3DE88EA1B9692B100500797 /* Alpha */,
 				E33C0601199AF57F00C9AD10 /* Model */,
 				E3F553751998ECCF00AE3A28 /* View Controllers */,
@@ -685,6 +728,8 @@
 				E36F4FDA1A77F866008EF6B6 /* Settings.bundle in Resources */,
 				E3DE88EE1B9692C100500797 /* Launch Screen.xib in Resources */,
 				E3F5534E1998EBE000AE3A28 /* Main_iPhone.storyboard in Resources */,
+				E30D84261BA118A3005897E6 /* Ranks.plist in Resources */,
+				E30D841B1B9FC8A8005897E6 /* SexRankView.xib in Resources */,
 				E3DE88F01B96931800500797 /* Media.xcassets in Resources */,
 				E3F553451998EBE000AE3A28 /* InfoPlist.strings in Resources */,
 			);
@@ -712,10 +757,13 @@
 				E33C0626199AFE5200C9AD10 /* UIBorderedButton.m in Sources */,
 				E3F553541998EBE000AE3A28 /* SBTrackViewController.m in Sources */,
 				E3BB26BC199AEFB30024D8EB /* NSString+Additions.m in Sources */,
+				E30D841D1B9FCB36005897E6 /* SexRankView.swift in Sources */,
 				E36C9D361B9A405C00DBBF5A /* BouncyOverlayTransitioningDelegate.swift in Sources */,
 				E3F553471998EBE000AE3A28 /* main.m in Sources */,
 				E36C9D2A1B99334000DBBF5A /* SlidingOverlayPresentationController.swift in Sources */,
+				E30D84191B9FC50B005897E6 /* FakeAdView.swift in Sources */,
 				E3F553781998F3FC00AE3A28 /* SBMainTabBarController.m in Sources */,
+				E30D842A1BA21A7D005897E6 /* SexTrackerHistoryViewController.swift in Sources */,
 				E36C9D231B992C6700DBBF5A /* PushNoAnimationSegue.swift in Sources */,
 				E36C9D3A1B9A407E00DBBF5A /* ModalBackgroundView.swift in Sources */,
 				E3F5538A199AE8F500AE3A28 /* SBConsultantViewController.m in Sources */,
@@ -727,10 +775,13 @@
 				E3DE88F71B96962500500797 /* HiViewController.swift in Sources */,
 				E36C9D3F1B9A562B00DBBF5A /* SBTextField.swift in Sources */,
 				E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */,
+				E30D842F1BA3AD7A005897E6 /* DateUtils.swift in Sources */,
+				E30D842D1BA3A608005897E6 /* SexHistoryTableViewCell.swift in Sources */,
 				E337F593199C361400C417D0 /* SFGaugeView.m in Sources */,
 				E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */,
 				E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */,
 				E3F5534B1998EBE000AE3A28 /* SBAppDelegate.m in Sources */,
+				E30D84211BA1145A005897E6 /* SexRankController.swift in Sources */,
 				E36C9D1B1B98EE0B00DBBF5A /* SexTrackerViewController.swift in Sources */,
 				E3DE89051B96A66E00500797 /* UIBorderedButton.swift in Sources */,
 				E3DE88FC1B969C1D00500797 /* ProfileImageView.swift in Sources */,
@@ -739,6 +790,7 @@
 				E3A123961A733ECC00076722 /* SB30DayProgramsTableViewController.m in Sources */,
 				E36C9D211B990A4F00DBBF5A /* FeatherSlider.swift in Sources */,
 				E36C9D421B9A6A2F00DBBF5A /* SBUser.swift in Sources */,
+				E30D84281BA214DF005897E6 /* DataBackedTableViewController.swift in Sources */,
 				E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */,
 				E36C9D2F1B993C5300DBBF5A /* SlidingOverlayTransitioningDelegate.swift in Sources */,
 				E3DE89031B96A0D400500797 /* ArchedView.swift in Sources */,

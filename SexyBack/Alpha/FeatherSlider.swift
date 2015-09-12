@@ -12,12 +12,12 @@ class FeatherSlider: UISlider {
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        //setup()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        //setup()
     }
     
     
@@ -33,11 +33,11 @@ class FeatherSlider: UISlider {
         self.setMinimumTrackImage(expandingTrackImage, forState: UIControlState.Normal)
     }
     
-    override func thumbRectForBounds(bounds: CGRect, trackRect rect: CGRect, value: Float) -> CGRect {
-        let rect:CGRect = super.thumbRectForBounds(bounds, trackRect: rect, value: value)
-        
-        let xOffset:CGFloat = value > (self.maximumValue - self.minimumValue) / 2 ? 40 : -10
-        
-        return CGRect(x: rect.origin.x + xOffset, y: rect.origin.y - 20, width: rect.width, height: rect.height)
-    }
+//    override func thumbRectForBounds(bounds: CGRect, trackRect rect: CGRect, value: Float) -> CGRect {
+//        let rect:CGRect = super.thumbRectForBounds(bounds, trackRect: rect, value: value)
+//        
+//        let xOffset:CGFloat = value > (self.maximumValue - self.minimumValue) / 2 ? 40 : -10
+//        
+//        return CGRect(x: rect.origin.x + xOffset, y: rect.origin.y - 20, width: rect.width, height: rect.height)
+//    }
 }
