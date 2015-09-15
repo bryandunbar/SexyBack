@@ -8,9 +8,11 @@
 
 import UIKit
 
-class DataBackedTableViewController: UITableViewController {
+class DataBackedTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet var tableView: UITableView!
     private var isFetching:Bool = false
+    var refreshControl:UIRefreshControl?
     
     lazy var activityIndicator:UIActivityIndicatorView = {
         var tempActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
@@ -98,4 +100,25 @@ class DataBackedTableViewController: UITableViewController {
     override func viewWillLayoutSubviews() {
         self.activityIndicator.center = CGPoint(x: self.tableView.center.x, y: self.tableView.center.y - 50)
     }
+    
+    
+    // MARK: UITableViewDelegate/DataSource
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 0
+    }
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return nil
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return tableView.rowHeight
+    }
+    
+    
 }

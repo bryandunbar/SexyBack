@@ -64,7 +64,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebr-MT-UIW" userLabel="ImageBackgroundView">
                     <rect key="frame" x="166" y="0.0" width="100" height="100"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qIr-wN-ddt">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbs-up" translatesAutoresizingMaskIntoConstraints="NO" id="qIr-wN-ddt">
                             <rect key="frame" x="5" y="5" width="90" height="90"/>
                         </imageView>
                     </subviews>
@@ -94,5 +94,6 @@
     </objects>
     <resources>
         <image name="259-list" width="20" height="14"/>
+        <image name="thumbs-up" width="75" height="75"/>
     </resources>
 </document>

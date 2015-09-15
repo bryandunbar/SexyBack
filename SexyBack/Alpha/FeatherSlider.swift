@@ -20,6 +20,16 @@ class FeatherSlider: UISlider {
         //setup()
     }
     
+    override func setValue(value: Float, animated: Bool) {
+        super.setValue(value, animated: true)
+        
+        if self.value >= self.maximumValue {
+            self.maximumValueImage = UIImage(named: "sex-tracker-slider-max-complete")
+        } else {
+            self.maximumValueImage = UIImage(named: "sex-tracker-slider-max")
+        }
+    }
+
     
     func setup() {
         let image:UIImage = UIImage(named: "feather" )!
@@ -29,6 +39,7 @@ class FeatherSlider: UISlider {
         
         let trackImage:UIImage = UIImage(named: "sex-tracker-slider-track")!
         let expandingTrackImage:UIImage = trackImage.resizableImageWithCapInsets(UIEdgeInsets(top:0,left:5,bottom:0,right:0))
+        
         self.setMaximumTrackImage(expandingTrackImage, forState: UIControlState.Normal)
         self.setMinimumTrackImage(expandingTrackImage, forState: UIControlState.Normal)
     }
