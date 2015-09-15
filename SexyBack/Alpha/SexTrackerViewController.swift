@@ -8,13 +8,12 @@
 
 import UIKit
 
-class SexTrackerViewController: UIViewController {
+class SexTrackerViewController: BaseSexyBackViewController {
 
     @IBOutlet var slider: FeatherSlider!
     @IBOutlet var goalLabael: UILabel!
     @IBOutlet var rankView: SexRankView!
     
-    let menuTransitioningDelegate = SlidingOverlayTransitioningDelegate()
     let modalTransitioningDelegate = BouncyOverlayTransitioningDelegate()
 
     
@@ -37,6 +36,8 @@ class SexTrackerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.myMenuItemType = MenuItemType.Tracker
+        
         registerForNotifications()
         configureView()
         
@@ -79,12 +80,9 @@ class SexTrackerViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "displayMenuSegue" {
-            let overlayVC = segue.destinationViewController as! UIViewController
-            overlayVC.transitioningDelegate = menuTransitioningDelegate
-            overlayVC.modalPresentationStyle = .Custom
-            
-        } else if segue.identifier == "goalModalSegue" {
+        super.prepareForSegue(segue, sender: sender)
+        
+        if segue.identifier == "goalModalSegue" {
             let overlayVC:GoalModalViewController = segue.destinationViewController as! GoalModalViewController
             overlayVC.transitioningDelegate = modalTransitioningDelegate
             overlayVC.modalPresentationStyle = .Custom
@@ -99,6 +97,7 @@ class SexTrackerViewController: UIViewController {
             
         }
     }
+    
     
     // MARK: Actions
     

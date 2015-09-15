@@ -46,6 +46,9 @@
 		E372FB811A8468C0008F9353 /* SB30DayProgramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E372FB801A8468C0008F9353 /* SB30DayProgramCell.m */; };
 		E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E372FB841A8469C7008F9353 /* WTCircleImageView.m */; };
 		E372FB871A846AC7008F9353 /* 30DayProgram.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E372FB861A846AC7008F9353 /* 30DayProgram.xcassets */; };
+		E37F9E031BA7C08100B17895 /* DareIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F9E021BA7C08100B17895 /* DareIntroViewController.swift */; };
+		E37F9E061BA86AA900B17895 /* NavControllerReplaceSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F9E051BA86AA900B17895 /* NavControllerReplaceSegue.swift */; };
+		E37F9E081BA86D4C00B17895 /* BaseSexyBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F9E071BA86D4C00B17895 /* BaseSexyBackViewController.swift */; };
 		E383B7E61A7739DC007FEE86 /* SBVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E383B7E51A7739DC007FEE86 /* SBVideoTableViewCell.m */; };
 		E383B7E81A773A5A007FEE86 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E383B7E71A773A5A007FEE86 /* MediaPlayer.framework */; };
 		E3A123961A733ECC00076722 /* SB30DayProgramsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A123951A733ECB00076722 /* SB30DayProgramsTableViewController.m */; };
@@ -162,6 +165,9 @@
 		E372FB831A8469C7008F9353 /* WTCircleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCircleImageView.h; sourceTree = "<group>"; };
 		E372FB841A8469C7008F9353 /* WTCircleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCircleImageView.m; sourceTree = "<group>"; };
 		E372FB861A846AC7008F9353 /* 30DayProgram.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = 30DayProgram.xcassets; path = ../30DayProgram.xcassets; sourceTree = "<group>"; };
+		E37F9E021BA7C08100B17895 /* DareIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DareIntroViewController.swift; sourceTree = "<group>"; };
+		E37F9E051BA86AA900B17895 /* NavControllerReplaceSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavControllerReplaceSegue.swift; sourceTree = "<group>"; };
+		E37F9E071BA86D4C00B17895 /* BaseSexyBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSexyBackViewController.swift; sourceTree = "<group>"; };
 		E383B7E41A7739DC007FEE86 /* SBVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBVideoTableViewCell.h; sourceTree = "<group>"; };
 		E383B7E51A7739DC007FEE86 /* SBVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBVideoTableViewCell.m; sourceTree = "<group>"; };
 		E383B7E71A773A5A007FEE86 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -413,6 +419,15 @@
 			name = CircleImageView;
 			sourceTree = "<group>";
 		};
+		E37F9E041BA86A7E00B17895 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D221B992C6700DBBF5A /* PushNoAnimationSegue.swift */,
+				E37F9E051BA86AA900B17895 /* NavControllerReplaceSegue.swift */,
+			);
+			name = Segues;
+			sourceTree = "<group>";
+		};
 		E3BB26AE199AEFB30024D8EB /* ios_shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,17 +466,17 @@
 		E3DE88EA1B9692B100500797 /* Alpha */ = {
 			isa = PBXGroup;
 			children = (
+				E37F9E041BA86A7E00B17895 /* Segues */,
+				E3DE88F31B9695EB00500797 /* SexyBack-Bridging-Header.h */,
 				E36C9D261B992D5300DBBF5A /* AppController.swift */,
 				E30D842E1BA3AD7A005897E6 /* DateUtils.swift */,
 				E36C9D401B9A6A2200DBBF5A /* Model */,
 				E36C9D1D1B98F87A00DBBF5A /* Fonts */,
 				E36C9D281B9931AE00DBBF5A /* Presentation Controllers */,
 				E3DE88FD1B969FCE00500797 /* Views */,
-				E3DE88F31B9695EB00500797 /* SexyBack-Bridging-Header.h */,
 				E3DE88FA1B96964800500797 /* View Controllers */,
 				E3DE88F91B96963D00500797 /* Resources */,
 				E3DE88F81B96962D00500797 /* UI */,
-				E36C9D221B992C6700DBBF5A /* PushNoAnimationSegue.swift */,
 			);
 			path = Alpha;
 			sourceTree = "<group>";
@@ -492,6 +507,8 @@
 				E36C9D301B99487900DBBF5A /* MenuViewController.swift */,
 				E30D84271BA214DF005897E6 /* DataBackedTableViewController.swift */,
 				E30D84291BA21A7D005897E6 /* SexTrackerHistoryViewController.swift */,
+				E37F9E021BA7C08100B17895 /* DareIntroViewController.swift */,
+				E37F9E071BA86D4C00B17895 /* BaseSexyBackViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -751,6 +768,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E372FB811A8468C0008F9353 /* SB30DayProgramCell.m in Sources */,
+				E37F9E081BA86D4C00B17895 /* BaseSexyBackViewController.swift in Sources */,
 				E3A123991A73445200076722 /* SBProgramDetailTableViewController.m in Sources */,
 				E33C062F199B073000C9AD10 /* SBProfileViewController.m in Sources */,
 				E3BB26BE199AEFB30024D8EB /* UIDefaultAccessoryInputView.m in Sources */,
@@ -761,6 +779,7 @@
 				E36C9D361B9A405C00DBBF5A /* BouncyOverlayTransitioningDelegate.swift in Sources */,
 				E3F553471998EBE000AE3A28 /* main.m in Sources */,
 				E36C9D2A1B99334000DBBF5A /* SlidingOverlayPresentationController.swift in Sources */,
+				E37F9E031BA7C08100B17895 /* DareIntroViewController.swift in Sources */,
 				E30D84191B9FC50B005897E6 /* FakeAdView.swift in Sources */,
 				E3F553781998F3FC00AE3A28 /* SBMainTabBarController.m in Sources */,
 				E30D842A1BA21A7D005897E6 /* SexTrackerHistoryViewController.swift in Sources */,
@@ -777,6 +796,7 @@
 				E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */,
 				E30D842F1BA3AD7A005897E6 /* DateUtils.swift in Sources */,
 				E30D842D1BA3A608005897E6 /* SexHistoryTableViewCell.swift in Sources */,
+				E37F9E061BA86AA900B17895 /* NavControllerReplaceSegue.swift in Sources */,
 				E337F593199C361400C417D0 /* SFGaugeView.m in Sources */,
 				E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */,
 				E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */,

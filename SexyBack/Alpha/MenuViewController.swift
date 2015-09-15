@@ -8,14 +8,37 @@
 
 import UIKit
 
+protocol MenuViewControllerDelegate {
+    func itemSelected(controller:MenuViewController, menuItem:MenuItem)
+}
+
+enum MenuItemType:Int {
+    case Tracker = 0, Challenge, Settings, Help
+}
+
+struct MenuItem {
+
+    var type:MenuItemType
+    var title:String!
+    var iconFileName:String?
+    var segueIdentifier:String?
+    var viewControllerIdentifier:String?
+    var viewController:UIViewController?
+}
+
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let menuItems:[String] = ["Tracker", "30 Day Challenge"]
-    let menuIcons:[String] = ["tracker", "challenge"]
+    let menuItems:[MenuItem] = [
+        MenuItem(type: MenuItemType.Tracker, title: "Tracker", iconFileName: "tracker", segueIdentifier: "trackerSegue", viewControllerIdentifier:nil, viewController:nil),
+        MenuItem(type: MenuItemType.Challenge, title: "30 Day Challenge", iconFileName: "challenge", segueIdentifier: "challengeSegue", viewControllerIdentifier:nil, viewController:nil),
+    ]
+    
+    var delegate:MenuViewControllerDelegate?
     
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.tableView.backgroundColor = UIColor.clearColor()
         self.tableView.tableFooterView = UIView()
         // Do any additional setup after loading the view.
@@ -51,8 +74,20 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel!.text = menuItems[indexPath.row]
-        cell.imageView?.image = UIImage(named: menuIcons[indexPath.row])
+        
+        let menuItem:MenuItem = menuItems[indexPath.row]
+        
+        cell.textLabel!.text = menuItem.title
+        if let imageFileName = menuItem.iconFileName {
+            cell.imageView?.image = UIImage(named:imageFileName)
+        }
         return cell
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if let delegate = self.delegate {
+            let menuItem = menuItems[indexPath.row]
+            delegate.itemSelected(self, menuItem: menuItem)
+        }
     }
 }
