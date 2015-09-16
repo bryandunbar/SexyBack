@@ -26,6 +26,8 @@
 		E33C0629199AFF3600C9AD10 /* SBQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C0628199AFF3600C9AD10 /* SBQuizViewController.m */; };
 		E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062A199B06FE00C9AD10 /* UIPickerField.m */; };
 		E33C062F199B073000C9AD10 /* SBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062E199B073000C9AD10 /* SBProfileViewController.m */; };
+		E34878991BA8F4BB00F69E63 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34878981BA8F4BB00F69E63 /* CheckBox.swift */; };
+		E348789C1BA9051200F69E63 /* AlphaChallenge.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E348789B1BA9051200F69E63 /* AlphaChallenge.xcassets */; };
 		E36C9D1B1B98EE0B00DBBF5A /* SexTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D1A1B98EE0B00DBBF5A /* SexTrackerViewController.swift */; };
 		E36C9D1F1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E36C9D1E1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf */; };
 		E36C9D211B990A4F00DBBF5A /* FeatherSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D201B990A4F00DBBF5A /* FeatherSlider.swift */; };
@@ -49,6 +51,10 @@
 		E37F9E031BA7C08100B17895 /* DareIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F9E021BA7C08100B17895 /* DareIntroViewController.swift */; };
 		E37F9E061BA86AA900B17895 /* NavControllerReplaceSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F9E051BA86AA900B17895 /* NavControllerReplaceSegue.swift */; };
 		E37F9E081BA86D4C00B17895 /* BaseSexyBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F9E071BA86D4C00B17895 /* BaseSexyBackViewController.swift */; };
+		E37F9E0A1BA8738900B17895 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F9E091BA8738900B17895 /* ChallengeDetailViewController.swift */; };
+		E37F9E0C1BA8780500B17895 /* BorderedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F9E0B1BA8780500B17895 /* BorderedImageView.swift */; };
+		E37F9E111BA8A20700B17895 /* ChallengeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F9E101BA8A20700B17895 /* ChallengeController.swift */; };
+		E37F9E131BA8A66B00B17895 /* Challenges.plist in Resources */ = {isa = PBXBuildFile; fileRef = E37F9E121BA8A66B00B17895 /* Challenges.plist */; };
 		E383B7E61A7739DC007FEE86 /* SBVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E383B7E51A7739DC007FEE86 /* SBVideoTableViewCell.m */; };
 		E383B7E81A773A5A007FEE86 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E383B7E71A773A5A007FEE86 /* MediaPlayer.framework */; };
 		E3A123961A733ECC00076722 /* SB30DayProgramsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A123951A733ECB00076722 /* SB30DayProgramsTableViewController.m */; };
@@ -143,6 +149,8 @@
 		E33C062B199B06FE00C9AD10 /* UIPickerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerField.h; sourceTree = "<group>"; };
 		E33C062D199B073000C9AD10 /* SBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBProfileViewController.h; sourceTree = "<group>"; };
 		E33C062E199B073000C9AD10 /* SBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBProfileViewController.m; sourceTree = "<group>"; };
+		E34878981BA8F4BB00F69E63 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		E348789B1BA9051200F69E63 /* AlphaChallenge.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AlphaChallenge.xcassets; sourceTree = "<group>"; };
 		E36C9D1A1B98EE0B00DBBF5A /* SexTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexTrackerViewController.swift; sourceTree = "<group>"; };
 		E36C9D1E1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentowide-Light-webfont.ttf"; sourceTree = "<group>"; };
 		E36C9D201B990A4F00DBBF5A /* FeatherSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatherSlider.swift; sourceTree = "<group>"; };
@@ -168,6 +176,10 @@
 		E37F9E021BA7C08100B17895 /* DareIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DareIntroViewController.swift; sourceTree = "<group>"; };
 		E37F9E051BA86AA900B17895 /* NavControllerReplaceSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavControllerReplaceSegue.swift; sourceTree = "<group>"; };
 		E37F9E071BA86D4C00B17895 /* BaseSexyBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSexyBackViewController.swift; sourceTree = "<group>"; };
+		E37F9E091BA8738900B17895 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
+		E37F9E0B1BA8780500B17895 /* BorderedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedImageView.swift; sourceTree = "<group>"; };
+		E37F9E101BA8A20700B17895 /* ChallengeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeController.swift; sourceTree = "<group>"; };
+		E37F9E121BA8A66B00B17895 /* Challenges.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Challenges.plist; path = Alpha/Challenges.plist; sourceTree = "<group>"; };
 		E383B7E41A7739DC007FEE86 /* SBVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBVideoTableViewCell.h; sourceTree = "<group>"; };
 		E383B7E51A7739DC007FEE86 /* SBVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBVideoTableViewCell.m; sourceTree = "<group>"; };
 		E383B7E71A773A5A007FEE86 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -284,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				E30D84251BA118A3005897E6 /* Ranks.plist */,
+				E37F9E121BA8A66B00B17895 /* Challenges.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -406,6 +419,7 @@
 			children = (
 				E36C9D411B9A6A2F00DBBF5A /* SBUser.swift */,
 				E30D84201BA1145A005897E6 /* SexRankController.swift */,
+				E37F9E101BA8A20700B17895 /* ChallengeController.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -494,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				E3DE88EF1B96931800500797 /* Media.xcassets */,
+				E348789B1BA9051200F69E63 /* AlphaChallenge.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -509,6 +524,7 @@
 				E30D84291BA21A7D005897E6 /* SexTrackerHistoryViewController.swift */,
 				E37F9E021BA7C08100B17895 /* DareIntroViewController.swift */,
 				E37F9E071BA86D4C00B17895 /* BaseSexyBackViewController.swift */,
+				E37F9E091BA8738900B17895 /* ChallengeDetailViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -518,6 +534,7 @@
 			children = (
 				E30D842B1BA3A5EE005897E6 /* Table Cells */,
 				E3DE88FB1B969C1D00500797 /* ProfileImageView.swift */,
+				E37F9E0B1BA8780500B17895 /* BorderedImageView.swift */,
 				E3DE89021B96A0D400500797 /* ArchedView.swift */,
 				E3DE89041B96A66E00500797 /* UIBorderedButton.swift */,
 				E36C9D201B990A4F00DBBF5A /* FeatherSlider.swift */,
@@ -526,6 +543,7 @@
 				E30D84181B9FC50B005897E6 /* FakeAdView.swift */,
 				E30D841A1B9FC8A8005897E6 /* SexRankView.xib */,
 				E30D841C1B9FCB36005897E6 /* SexRankView.swift */,
+				E34878981BA8F4BB00F69E63 /* CheckBox.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -745,7 +763,9 @@
 				E36F4FDA1A77F866008EF6B6 /* Settings.bundle in Resources */,
 				E3DE88EE1B9692C100500797 /* Launch Screen.xib in Resources */,
 				E3F5534E1998EBE000AE3A28 /* Main_iPhone.storyboard in Resources */,
+				E348789C1BA9051200F69E63 /* AlphaChallenge.xcassets in Resources */,
 				E30D84261BA118A3005897E6 /* Ranks.plist in Resources */,
+				E37F9E131BA8A66B00B17895 /* Challenges.plist in Resources */,
 				E30D841B1B9FC8A8005897E6 /* SexRankView.xib in Resources */,
 				E3DE88F01B96931800500797 /* Media.xcassets in Resources */,
 				E3F553451998EBE000AE3A28 /* InfoPlist.strings in Resources */,
@@ -791,6 +811,8 @@
 				E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */,
 				E3D1355A1A866649008DBE5D /* SBDareHistoryTableViewController.m in Sources */,
 				E36C9D311B99487900DBBF5A /* MenuViewController.swift in Sources */,
+				E34878991BA8F4BB00F69E63 /* CheckBox.swift in Sources */,
+				E37F9E111BA8A20700B17895 /* ChallengeController.swift in Sources */,
 				E3DE88F71B96962500500797 /* HiViewController.swift in Sources */,
 				E36C9D3F1B9A562B00DBBF5A /* SBTextField.swift in Sources */,
 				E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */,
@@ -828,6 +850,8 @@
 				E36C9D381B9A405C00DBBF5A /* BouncyViewControllerAnimator.swift in Sources */,
 				E3BB26BD199AEFB30024D8EB /* UIDateField.m in Sources */,
 				E337F596199C3C5700C417D0 /* SBRewardsViewController.m in Sources */,
+				E37F9E0A1BA8738900B17895 /* ChallengeDetailViewController.swift in Sources */,
+				E37F9E0C1BA8780500B17895 /* BorderedImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,7 +998,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "295ee49b-dbfe-46ce-9c33-6b68066b3264";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SexyBack/Alpha/SexyBack-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -988,7 +1012,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -999,7 +1023,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "295ee49b-dbfe-46ce-9c33-6b68066b3264";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SexyBack/Alpha/SexyBack-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

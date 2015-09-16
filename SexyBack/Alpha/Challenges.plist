@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<string>1</string>
+		<key>name</key>
+		<string>30-Day Challenge</string>
+		<key>body</key>
+		<string>The Get Your Sexy Back 30-day challenge will help you reclaim your sexy. Each day you will be presented with a new challenge.  We&apos;ll track your progress every week and give you a scorecard of how you did. Make sure to check back every day for your new challenge!</string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>day</key>
+				<integer>1</integer>
+				<key>title</key>
+				<string>Throw It Out</string>
+				<key>body</key>
+				<string>We all have it, that favorite pair of PJ’s that our partner HATES...toss yours and challenge your partner to toss the ones that you both find least sexy. Now, replace what you tossed with something new that turns you both on.</string>
+				<key>thumbnailFileName</key>
+				<string>day1</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>2</integer>
+				<key>title</key>
+				<string>Call Your Partner</string>
+				<key>body</key>
+				<string>Pick up the phone and call your partner in the middle of the day with a steamy message.</string>
+				<key>thumbnailFileName</key>
+				<string>day2</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>3</integer>
+				<key>title</key>
+				<string>Do You Remember When?</string>
+				<key>body</key>
+				<string>Recall your top 3 sexual encounters and list 3 reasons why you liked it.  Think back through your life and recall, which sexual encounters you, enjoyed most.  Was it your favorite because you had a great performance?  Or maybe your partner inspired you to reach new heights of pleasure?  List why you like it.</string>
+				<key>thumbnailFileName</key>
+				<string>day3</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>4</integer>
+				<key>title</key>
+				<string>Turn It Off</string>
+				<key>body</key>
+				<string>Turn off your device and watch a steamy movie or read a racy book to free your mind and get your juices flowing.</string>
+				<key>thumbnailFileName</key>
+				<string>day4</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>5</integer>
+				<key>title</key>
+				<string>Send a Text</string>
+				<key>body</key>
+				<string>Send a text to say that you are thinking of your partner. Tell your partner that tonight begins (insert day of the week) sex night and make it happen. Bonus points if you send a naughty selfie too.</string>
+				<key>thumbnailFileName</key>
+				<string>day5</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>6</integer>
+				<key>title</key>
+				<string>Honey Do List</string>
+				<key>body</key>
+				<string>Sit back and think about the chores you and your partner do around the house.  Identify 2-3 of your partner’s chores (preferably ones not liked) and do them.  Encourage your partner to take advantage of the extra time to do something they enjoy.</string>
+				<key>thumbnailFileName</key>
+				<string>day6</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>7</integer>
+				<key>title</key>
+				<string>Hide a Pair</string>
+				<key>body</key>
+				<string>Hide a pair of your sexy panties in your partner’s brief case or gym bag before leaving for work.  Spray them with his favorite perfume for an added effect.</string>
+				<key>thumbnailFileName</key>
+				<string>day7</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>8</integer>
+				<key>title</key>
+				<string>Choose Together</string>
+				<key>body</key>
+				<string>Circle three lingerie items in the Victoria Secret catalogue.  Leave a note and ask him to call you by 5 and identify which one he’d like to see you in.</string>
+				<key>thumbnailFileName</key>
+				<string>day8</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>9</integer>
+				<key>title</key>
+				<string>Booty Call</string>
+				<key>body</key>
+				<string>Give your partner an unexpected flirty call with a focus on sharing a recent steamy night or favorite intimate memory.  Tell your partner you can’t stop thinking about it.</string>
+				<key>thumbnailFileName</key>
+				<string>day9</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>10</integer>
+				<key>title</key>
+				<string>Trade Up</string>
+				<key>body</key>
+				<string>Bras don’t just go in and out of style, over time they can loose their ability to hold you up and in - give yourself and your wardrobe a boost by trading in your oldest bra for something supportive and fun.</string>
+				<key>thumbnailFileName</key>
+				<string>day10</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>11</integer>
+				<key>title</key>
+				<string>Sneak a Peek</string>
+				<key>body</key>
+				<string>Leave the bathroom door open while getting ready for the day.  Ask him to watch you put on your sexiest bra and panty set. Tell him you can’t wait for him to take them off that night.</string>
+				<key>thumbnailFileName</key>
+				<string>day11</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>12</integer>
+				<key>title</key>
+				<string>Aroma Arousal</string>
+				<key>body</key>
+				<string>A way to a man&apos;s heart is not only through his stomach but through his nose too!  Ask your partner to apply his favorite scent to you.</string>
+				<key>thumbnailFileName</key>
+				<string>day12</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>13</integer>
+				<key>title</key>
+				<string>Afternoon Delight</string>
+				<key>body</key>
+				<string>Plan an afternoon two-hour lunch with your honey at your favorite restaurant or hotel.   Wear something suggestive and flirt with partner like it is your first date.  Send a reminder text of the afternoon to come.</string>
+				<key>thumbnailFileName</key>
+				<string>day13</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>14</integer>
+				<key>title</key>
+				<string>Drink Up</string>
+				<key>body</key>
+				<string>Drink 64 ounces of fluid today and add a slice of lemon, lime, cucumber, or strawberry to the water so that your body can absorb it and put it to good use!</string>
+				<key>thumbnailFileName</key>
+				<string>day14</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>15</integer>
+				<key>title</key>
+				<string>Shower Together</string>
+				<key>body</key>
+				<string>Kids playing?  Baby napping?  Need to clean up?  Head to the bathroom and clean up or get dirty together.  Use your favorite shower gel to clean up and rev up.</string>
+				<key>thumbnailFileName</key>
+				<string>day15</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>16</integer>
+				<key>title</key>
+				<string>Send Flowers</string>
+				<key>body</key>
+				<string>Let your partner know that you are thinking about him and send him flowers at work. Pick a color pallet that reminds you of him.</string>
+				<key>thumbnailFileName</key>
+				<string>day16</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>17</integer>
+				<key>title</key>
+				<string>Twinkle Toes</string>
+				<key>body</key>
+				<string>No time for a pedicure? Not in the budget? Ask your partners to paint your toenails for you.</string>
+				<key>thumbnailFileName</key>
+				<string>day17</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>18</integer>
+				<key>title</key>
+				<string>Kill Stress Not Sex</string>
+				<key>body</key>
+				<string>Stress is the biggest killer of sex drive, so banish stress and restore your libido through 3 simple massage techniques for the shoulders and neck.  Grab your body butter and point out those tight spots, then return the favor.</string>
+				<key>thumbnailFileName</key>
+				<string>day18</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>19</integer>
+				<key>title</key>
+				<string>Protect Your Girls</string>
+				<key>body</key>
+				<string>Exercise can reduce your risk of breast cancer and increase your sex drive but if you are not in the right bra you could increase the likelihood of sagging.  Take the Fit Quiz on victoriassecret.com and find out what sports bra is best for you.</string>
+				<key>thumbnailFileName</key>
+				<string>day19</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>20</integer>
+				<key>title</key>
+				<string>Can You Smell Seduction</string>
+				<key>body</key>
+				<string>Choose your scents wisely...Did you know that different scents affect the brain and the body in different ways? Add a new scent to your routine based on the outcome you are looking for!</string>
+				<key>thumbnailFileName</key>
+				<string>day20</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>21</integer>
+				<key>title</key>
+				<string>Rub a Dub Dub</string>
+				<key>body</key>
+				<string>While you are getting ready for the day, apply your favorite moisturizer in a very seductive fashion in front of your partner.  Don&apos;t forget to flirt (bat your eyes, sideway glances, smile, pout, lick your lips, etc.).</string>
+				<key>thumbnailFileName</key>
+				<string>day21</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>22</integer>
+				<key>title</key>
+				<string>Replace Your Grannies</string>
+				<key>body</key>
+				<string>Go to your favorite website or store, like Victoria&apos;s Secret, and choose 3-5 pairs of new sexy undergarments that fit well and make you feel great. Hello gorgeous!</string>
+				<key>thumbnailFileName</key>
+				<string>day22</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>23</integer>
+				<key>title</key>
+				<string>Organize It</string>
+				<key>body</key>
+				<string>Take 15 minutes to organize your shower gels, soaps, lotions and perfumes. Lay them on a table or counter.  Sort them by type and fragrance. Set aside any old (over 2 years) items or items in bad condition.  Toss them. Now, replace with something that inspires you to get sexy.</string>
+				<key>thumbnailFileName</key>
+				<string>day23</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>24</integer>
+				<key>title</key>
+				<string>Hello Stranger</string>
+				<key>body</key>
+				<string>Go to the grocery store or local bar with your partner.  Pretend you don&apos;t know each other.  Strike up a conversation and begin flirting.  Ask him out on a date.</string>
+				<key>thumbnailFileName</key>
+				<string>day24</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>25</integer>
+				<key>title</key>
+				<string>Sex Works!</string>
+				<key>body</key>
+				<string>Set a recurring alarm on your cell phone to go off 30 minutes before bedtime.  Get ready for bed as you normally would, and spend a few moments doing something relaxing, such as taking a warm bath or shower.  Invite your partner to join you and let the fireworks begin!</string>
+				<key>thumbnailFileName</key>
+				<string>day25</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>26</integer>
+				<key>title</key>
+				<string>Refresh Your Step</string>
+				<key>body</key>
+				<string>Long day, too tired to move? Slumped out the couch is less than sexy, grab that rolling pin and massage those tired legs through these techniques, finish up with a quick foot rub using your favorite lotion and you will find the energy for date night after all!</string>
+				<key>thumbnailFileName</key>
+				<string>day26</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>27</integer>
+				<key>title</key>
+				<string>Shave It</string>
+				<key>body</key>
+				<string>Take out your favorite body gel or shaving cream along with a new razor and ask your partner for some help.  Invite your partner to put the shaving cream on your legs; provide instructions and tips of application and ask them to shave your legs carefully one stroke at a time.</string>
+				<key>thumbnailFileName</key>
+				<string>day27</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>28</integer>
+				<key>title</key>
+				<string>Flirt</string>
+				<key>body</key>
+				<string>Brush up against your partner and make eyes.   After that you can flirt with your mouth (a smile, a pout), with your personality, with your shyness or your coyness, or with your sense of humor. You can flirt with words or with food and drinks.  The possibilities are endless!</string>
+				<key>thumbnailFileName</key>
+				<string>day28</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>29</integer>
+				<key>title</key>
+				<string>Get a Brazilian</string>
+				<key>body</key>
+				<string>Whether you’re preparing to bare all in your favorite bathing suit or just curious, a Brazilian wax is refreshing, freeing and, yes, easy to maintain.  Not to mention it&apos;s an added treat for him and can lead to better sex.</string>
+				<key>thumbnailFileName</key>
+				<string>day29</string>
+			</dict>
+			<dict>
+				<key>day</key>
+				<integer>30</integer>
+				<key>title</key>
+				<string>It&apos;s Date Night</string>
+				<key>body</key>
+				<string>Yes, it&apos;s a spontaneous date night.  Pick a place you&apos;re both dying to explore and go...even if it is a school night.</string>
+				<key>thumbnailFileName</key>
+				<string>day30</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

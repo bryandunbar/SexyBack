@@ -19,6 +19,23 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
     var ageRange:String?
     var weeklySexGoal:Int = 0
     
+    
+    // MARK: 30 Day Challenge Data, For now this is kind of brute force
+    // TODO: THese need to all go on ChallengeController
+    var notifyOfNewChallenges:Bool = false {
+        didSet {
+            if notifyOfNewChallenges {
+                let types:UIUserNotificationType = .Badge | .Sound | .Alert
+                let mySettings = UIUserNotificationSettings(forTypes: types, categories: nil)
+                UIApplication.sharedApplication().registerUserNotificationSettings(mySettings)
+            }
+        }
+    }
+    var challengeStarted:Bool = false
+    var currentChallengeDay:Int = -1
+    var completedChallengeDays:NSMutableSet?
+    // TODO: End should go on challenge controller, leaving here for now for archive purposes
+    
     // We'll cache this an update it from the server every once in awhile
     var weeklyEventCount:Int = 0 {
         didSet {
@@ -36,7 +53,7 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
     
     
     private var profileImageDirty:Bool = false
-    private var objectId:String? // Parse
+    var objectId:String? // Parse
     private var parseUser:PFObject?
     
     func trackSexEvent(block:PFBooleanResultBlock?) {
@@ -188,6 +205,10 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         aCoder.encodeObject(ageRange, forKey: "ageRange")
         aCoder.encodeInteger(weeklySexGoal, forKey: "weeklySexGoal")
         aCoder.encodeInteger(weeklyEventCount, forKey: "weeklyEventCount")
+        aCoder.encodeBool(notifyOfNewChallenges, forKey: "notifyOfNewChallenges")
+        aCoder.encodeBool(challengeStarted, forKey: "challengeStarted")
+        aCoder.encodeObject(completedChallengeDays, forKey: "completedChallengeDays")
+        aCoder.encodeInteger(currentChallengeDay, forKey: "currentChallengeDay")
     }
     
     required convenience init(coder aDecoder: NSCoder) {
@@ -197,6 +218,14 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         self.ageRange = aDecoder.decodeObjectForKey("ageRange") as? String
         self.weeklySexGoal = aDecoder.decodeIntegerForKey("weeklySexGoal")
         self.weeklyEventCount = aDecoder.decodeIntegerForKey("weeklyEventCount")
+        self.notifyOfNewChallenges = aDecoder.decodeBoolForKey("notifyOfNewChallenges")
+        self.challengeStarted = aDecoder.decodeBoolForKey("challengeStarted")
+        self.currentChallengeDay = aDecoder.decodeIntegerForKey("currentChallengeDay")
+        
+        if let archivedChallengeDays = aDecoder.decodeObjectForKey("completedChallengeDays") as? NSSet {
+            self.completedChallengeDays = archivedChallengeDays.mutableCopy() as! NSMutableSet
+        }
+
         self.fetchParseUserWithBlock(nil);
         
     }
