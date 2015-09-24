@@ -39,9 +39,23 @@ extension NSDate {
         return cal.dateByAddingComponents(components, toDate: self, options: NSCalendarOptions(0))
     }
     
+    func dateByAddingComponentToDate(unit:NSCalendarUnit, value:Int) -> NSDate {
+        let cal = NSCalendar.currentCalendar()
+        let components = NSDateComponents()
+        components.setValue(value, forComponent: unit)
+        
+        return cal.dateByAddingComponents(components, toDate: self, options: NSCalendarOptions(0))!
+    }
+    
     func getCalendarComponent(unit:NSCalendarUnit) -> Int {
         let cal = NSCalendar.currentCalendar()
         return cal.component(unit, fromDate: self)
+    }
+    func dateBySettingCalendarComponent(unit:NSCalendarUnit, value:Int) -> NSDate {
+        let cal = NSCalendar.currentCalendar()
+        var components = cal.components(unit, fromDate: self)
+        components.setValue(value, forComponent: unit)
+        return cal.dateFromComponents(components)!
     }
     
     class func getFirstDateOfWeekFromWeekNumber(weekOfYear:Int, inYear:Int) -> NSDate {
@@ -52,5 +66,20 @@ extension NSDate {
         components.yearForWeekOfYear = inYear
         
         return cal.dateFromComponents(components)!
+    }
+    
+    class func daysBetweenDates(fromDate:NSDate, toDate:NSDate) -> Int {
+
+        var calendar: NSCalendar = NSCalendar.currentCalendar()
+        
+        // Replace the hour (time) of both dates with 00:00
+        let date1 = calendar.startOfDayForDate(fromDate)
+        let date2 = calendar.startOfDayForDate(toDate)
+        
+        let flags = NSCalendarUnit.DayCalendarUnit
+        let components = calendar.components(flags, fromDate: date1, toDate: date2, options: nil)
+        
+        return components.day
+        
     }
 }

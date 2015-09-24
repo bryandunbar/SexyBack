@@ -26,8 +26,10 @@
 		E33C0629199AFF3600C9AD10 /* SBQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C0628199AFF3600C9AD10 /* SBQuizViewController.m */; };
 		E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062A199B06FE00C9AD10 /* UIPickerField.m */; };
 		E33C062F199B073000C9AD10 /* SBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C062E199B073000C9AD10 /* SBProfileViewController.m */; };
+		E33D4C691BB1C10D002B0DB9 /* AlphaChallenges.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E33D4C681BB1C10D002B0DB9 /* AlphaChallenges.xcassets */; };
+		E33D4C6C1C0639DB002B0DB9 /* ChallengeCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D4C6B1C0639DB002B0DB9 /* ChallengeCompleteViewController.swift */; };
 		E34878991BA8F4BB00F69E63 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34878981BA8F4BB00F69E63 /* CheckBox.swift */; };
-		E348789C1BA9051200F69E63 /* AlphaChallenge.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E348789B1BA9051200F69E63 /* AlphaChallenge.xcassets */; };
+		E3502A611BB2326700CBFB86 /* ChallengeCheckpointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3502A601BB2326700CBFB86 /* ChallengeCheckpointViewController.swift */; };
 		E36C9D1B1B98EE0B00DBBF5A /* SexTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D1A1B98EE0B00DBBF5A /* SexTrackerViewController.swift */; };
 		E36C9D1F1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E36C9D1E1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf */; };
 		E36C9D211B990A4F00DBBF5A /* FeatherSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D201B990A4F00DBBF5A /* FeatherSlider.swift */; };
@@ -149,8 +151,10 @@
 		E33C062B199B06FE00C9AD10 /* UIPickerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerField.h; sourceTree = "<group>"; };
 		E33C062D199B073000C9AD10 /* SBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBProfileViewController.h; sourceTree = "<group>"; };
 		E33C062E199B073000C9AD10 /* SBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBProfileViewController.m; sourceTree = "<group>"; };
+		E33D4C681BB1C10D002B0DB9 /* AlphaChallenges.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AlphaChallenges.xcassets; sourceTree = "<group>"; };
+		E33D4C6B1C0639DB002B0DB9 /* ChallengeCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeCompleteViewController.swift; sourceTree = "<group>"; };
 		E34878981BA8F4BB00F69E63 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
-		E348789B1BA9051200F69E63 /* AlphaChallenge.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AlphaChallenge.xcassets; sourceTree = "<group>"; };
+		E3502A601BB2326700CBFB86 /* ChallengeCheckpointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeCheckpointViewController.swift; sourceTree = "<group>"; };
 		E36C9D1A1B98EE0B00DBBF5A /* SexTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexTrackerViewController.swift; sourceTree = "<group>"; };
 		E36C9D1E1B98F94500DBBF5A /* Novecentowide-Light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentowide-Light-webfont.ttf"; sourceTree = "<group>"; };
 		E36C9D201B990A4F00DBBF5A /* FeatherSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatherSlider.swift; sourceTree = "<group>"; };
@@ -368,6 +372,17 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E33D4C6A1C0639C3002B0DB9 /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				E37F9E021BA7C08100B17895 /* DareIntroViewController.swift */,
+				E37F9E091BA8738900B17895 /* ChallengeDetailViewController.swift */,
+				E33D4C6B1C0639DB002B0DB9 /* ChallengeCompleteViewController.swift */,
+				E3502A601BB2326700CBFB86 /* ChallengeCheckpointViewController.swift */,
+			);
+			name = Challenge;
+			sourceTree = "<group>";
+		};
 		E36C9D1D1B98F87A00DBBF5A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,7 +523,7 @@
 			isa = PBXGroup;
 			children = (
 				E3DE88EF1B96931800500797 /* Media.xcassets */,
-				E348789B1BA9051200F69E63 /* AlphaChallenge.xcassets */,
+				E33D4C681BB1C10D002B0DB9 /* AlphaChallenges.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -516,15 +531,14 @@
 		E3DE88FA1B96964800500797 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E33D4C6A1C0639C3002B0DB9 /* Challenge */,
 				E36C9D3B1B9A503300DBBF5A /* Modals */,
 				E3DE88F61B96962500500797 /* HiViewController.swift */,
 				E36C9D1A1B98EE0B00DBBF5A /* SexTrackerViewController.swift */,
 				E36C9D301B99487900DBBF5A /* MenuViewController.swift */,
 				E30D84271BA214DF005897E6 /* DataBackedTableViewController.swift */,
 				E30D84291BA21A7D005897E6 /* SexTrackerHistoryViewController.swift */,
-				E37F9E021BA7C08100B17895 /* DareIntroViewController.swift */,
 				E37F9E071BA86D4C00B17895 /* BaseSexyBackViewController.swift */,
-				E37F9E091BA8738900B17895 /* ChallengeDetailViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -763,9 +777,9 @@
 				E36F4FDA1A77F866008EF6B6 /* Settings.bundle in Resources */,
 				E3DE88EE1B9692C100500797 /* Launch Screen.xib in Resources */,
 				E3F5534E1998EBE000AE3A28 /* Main_iPhone.storyboard in Resources */,
-				E348789C1BA9051200F69E63 /* AlphaChallenge.xcassets in Resources */,
 				E30D84261BA118A3005897E6 /* Ranks.plist in Resources */,
 				E37F9E131BA8A66B00B17895 /* Challenges.plist in Resources */,
+				E33D4C691BB1C10D002B0DB9 /* AlphaChallenges.xcassets in Resources */,
 				E30D841B1B9FC8A8005897E6 /* SexRankView.xib in Resources */,
 				E3DE88F01B96931800500797 /* Media.xcassets in Resources */,
 				E3F553451998EBE000AE3A28 /* InfoPlist.strings in Resources */,
@@ -834,6 +848,7 @@
 				E36C9D421B9A6A2F00DBBF5A /* SBUser.swift in Sources */,
 				E30D84281BA214DF005897E6 /* DataBackedTableViewController.swift in Sources */,
 				E33C062C199B06FE00C9AD10 /* UIPickerField.m in Sources */,
+				E33D4C6C1C0639DB002B0DB9 /* ChallengeCompleteViewController.swift in Sources */,
 				E36C9D2F1B993C5300DBBF5A /* SlidingOverlayTransitioningDelegate.swift in Sources */,
 				E3DE89031B96A0D400500797 /* ArchedView.swift in Sources */,
 				E3F553571998EBE000AE3A28 /* SBHotStuffViewController.m in Sources */,
@@ -846,6 +861,7 @@
 				E36C9D3D1B9A504B00DBBF5A /* GoalModalViewController.swift in Sources */,
 				E33C0604199AF59500C9AD10 /* AppState.m in Sources */,
 				E337F58B199B0FB400C417D0 /* SBGoalsViewController.m in Sources */,
+				E3502A611BB2326700CBFB86 /* ChallengeCheckpointViewController.swift in Sources */,
 				E337F599199C452400C417D0 /* SBNewEventViewController.m in Sources */,
 				E36C9D381B9A405C00DBBF5A /* BouncyViewControllerAnimator.swift in Sources */,
 				E3BB26BD199AEFB30024D8EB /* UIDateField.m in Sources */,
@@ -1011,8 +1027,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

@@ -30,8 +30,33 @@ struct Challenge: Printable {
         return nil
     }
     
+    var lastItem:ChallengeItem {
+        get {
+            return items!.last!
+        }
+    }
+    
     var description : String {
         return "[" + id + "], name: " + name + ", items: " + String(items.count)
+    }
+    
+    func scheduleNotifications() {
+        
+        if (!UIApplication.sharedApplication().isRegisteredForRemoteNotifications()) {
+            return
+        }
+        var date:NSDate = NSDate().dateBySettingCalendarComponent(NSCalendarUnit.HourCalendarUnit, value: 8)
+        for item:ChallengeItem in items {
+            var localNotif:UILocalNotification = UILocalNotification()
+            localNotif.fireDate = date
+            localNotif.alertBody = "A New Challenge is Available!"
+            
+            UIApplication.sharedApplication().scheduleLocalNotification(localNotif)
+            
+            // Add a day to the date
+            date = date.dateByAddingComponentToDate(NSCalendarUnit.DayCalendarUnit, value: 1)
+        }
+        
     }
 }
 
@@ -105,17 +130,24 @@ class ChallengeController: NSObject {
     
     func getCurrentItem(challenge:Challenge) -> ChallengeItem? {
         if let user = AppController.instance.user {
-            return challenge.getItemByDay(user.currentChallengeDay)
+            
+            var currentChallengeDay:Int = user.currentChallengeDay
+            if currentChallengeDay > challenge.lastItem.day {
+                user.challengedCompleted = true
+                return nil
+            }
+            
+            return challenge.getItemByDay(currentChallengeDay)
         }
         
         return challenge.getItemByDay(1)
     }
     
-    func setCurrentItem(challenge:Challenge, day:Int) {
-        if let user = AppController.instance.user {
-            user.currentChallengeDay = day
-        }
-    }
+//    func setCurrentItem(challenge:Challenge, day:Int) {
+//        if let user = AppController.instance.user {
+//            user.currentChallengeDay = day
+//        }
+//    }
     
     func startChallenge(challenge:Challenge, wantsNotifications:Bool) {
         
@@ -126,13 +158,13 @@ class ChallengeController: NSObject {
                 user.notifyOfNewChallenges = wantsNotifications
                 
                 // TODO: Setup the series of local notifications
+                challenge.scheduleNotifications()
             } else {
                 user.notifyOfNewChallenges = false
             }
 
             // Set that the user is on day 1
-            user.currentChallengeDay = 1
-            user.challengeStarted = true
+            user.challengeStartDate = NSDate()
             user.completedChallengeDays = NSMutableSet()
             
             AppController.instance.save()
@@ -140,19 +172,19 @@ class ChallengeController: NSObject {
         }
     }
     
-    func advanceChallengeDay(challenge:Challenge) {
-        if let currentItem = getCurrentItem(challenge) {
-            
-            let count = challenge.items.count
-            if currentItem.day < count {
-                setCurrentItem(challenge, day: currentItem.day + 1)
-                
-                // TODO: Notification?
-                
-                AppController.instance.save()
-            }
-        }
-    }
+//    func advanceChallengeDay(challenge:Challenge) {
+//        if let currentItem = getCurrentItem(challenge) {
+//            
+//            let count = challenge.items.count
+//            if currentItem.day < count {
+//                //setCurrentItem(challenge, day: currentItem.day + 1)
+//                
+//                // TODO: Notification?
+//                
+//                AppController.instance.save()
+//            }
+//        }
+//    }
     
     func hasUserCompletedItem(challenge:Challenge, item:ChallengeItem) -> Bool {
         var challengeKey:String = Challenge.buildKey(challenge.id, day: item.day)
@@ -183,5 +215,44 @@ class ChallengeController: NSObject {
             AppController.instance.save()
         }
     }
+    
+    
+    var currentCheckpoint:[String:AnyObject]? {
+        
+        get {
+            if let user = AppController.instance.user {
+                var currentChallengeDay:Int = user.currentChallengeDay
+                var value:[String:AnyObject]? = nil
+                
+                if currentChallengeDay >= 8 && currentChallengeDay < 15 {
+                    
+                    let seen = user.seenChallengeCheckpoints[1]!
+                    if !seen {
+                        value = ["msg":"You've completed Week 1 of the 30-Day Challenge!"]
+                        user.seenChallengeCheckpoints[1] = true
+                    }
+
+                } else if currentChallengeDay >= 15 && currentChallengeDay < 22 {
+                    let seen = user.seenChallengeCheckpoints[2]!
+                    if !seen {
+                        value = ["msg":"You've completed Week 2 of the 30-Day Challenge!"]
+                        user.seenChallengeCheckpoints[2] = true
+                    }
+                } else if currentChallengeDay >= 22 {
+                    let seen = user.seenChallengeCheckpoints[3]!
+                    if !seen {
+                        value = ["msg":"You've completed Week 3 of the 30-Day Challenge!"]
+                        user.seenChallengeCheckpoints[3] = true
+                    }
+                }
+
+                return value
+
+            }
+            
+            return nil
+        }
+    }
+    
 
 }

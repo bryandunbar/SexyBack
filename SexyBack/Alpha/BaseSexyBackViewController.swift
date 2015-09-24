@@ -8,17 +8,53 @@
 
 import UIKit
 
-let DisplayMenuSegueIdentifier = "displayMenuSegue"
+let MenuViewControllerIdentifier = "MenuViewControllerIdentifier"
 
 class BaseSexyBackViewController: UIViewController, MenuViewControllerDelegate {
 
     let menuTransitioningDelegate = SlidingOverlayTransitioningDelegate()
     var myMenuItemType:MenuItemType!
     
+    lazy var menuViewController:MenuViewController = {
+        [unowned self] in
+        
+        var vc:MenuViewController = self.storyboard?.instantiateViewControllerWithIdentifier(MenuViewControllerIdentifier) as! MenuViewController
+        vc.delegate = self
+        vc.transitioningDelegate = self.menuTransitioningDelegate
+        vc.modalPresentationStyle = .Custom
+        return vc
+    }()
+    
+    lazy var hamburgerMenu:UIButton = {
+        [unowned self] in
+        
+        var button:UIButton = UIButton(frame: CGRect(x: 16, y: 20, width: 44.0, height: 44.0))
+        button.setImage(UIImage(named: "hamburger"), forState: .Normal)
+        button.setTranslatesAutoresizingMaskIntoConstraints(false)
+        button.addTarget(self, action: "hamburgerTapped", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(button)
+        self.view.addConstraint(NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.topLayoutGuide, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: -16))
+        button.addConstraint(NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 44.0))
+        button.addConstraint(NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 44.0))
+        return button
+    }()
+
+    var showsHamburgerMenu:Bool = true {
+    
+        didSet {
+            toggleHamburgerMenuVisibility()
+        }
+    }
+    
+    func toggleHamburgerMenuVisibility() {
+        hamburgerMenu.hidden = !showsHamburgerMenu
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        toggleHamburgerMenuVisibility()
         // Do any additional setup after loading the view.
     }
 
@@ -26,15 +62,14 @@ class BaseSexyBackViewController: UIViewController, MenuViewControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == DisplayMenuSegueIdentifier {
-            let overlayVC = segue.destinationViewController as! MenuViewController
-            overlayVC.transitioningDelegate = menuTransitioningDelegate
-            overlayVC.modalPresentationStyle = .Custom
-            overlayVC.delegate = self
+
+    func hamburgerTapped() {
+        self.presentViewController(self.menuViewController, animated: true) { () -> Void in
+            
         }
     }
+    
+
     
     // MARK: MenuControllerDelegate
     func itemSelected(controller: MenuViewController, menuItem: MenuItem) {

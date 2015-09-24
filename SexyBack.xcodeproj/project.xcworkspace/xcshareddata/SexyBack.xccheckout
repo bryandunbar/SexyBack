@@ -7,7 +7,7 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D7E9501F-98E2-4602-8F5F-6D22FF44EE75</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>SexyBack</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>002AE87B57E0E76C9F946D5842446704BED934A0</key>
@@ -16,7 +16,7 @@
 		<string>https://github.com/bryandunbar/ios_shared.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SexyBack.xcodeproj/project.xcworkspace</string>
+	<string>SexyBack.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>002AE87B57E0E76C9F946D5842446704BED934A0</key>

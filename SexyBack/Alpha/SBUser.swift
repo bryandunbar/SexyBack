@@ -31,9 +31,44 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
             }
         }
     }
+    
     var challengeStarted:Bool = false
-    var currentChallengeDay:Int = -1
+    var challengedCompleted:Bool = false
+    
+    var _challengeStartDate:NSDate?
+    var challengeStartDate:NSDate? {
+
+        get {
+            return _challengeStartDate;
+        }
+        set {
+            if newValue != nil {
+                let cal:NSCalendar = NSCalendar.currentCalendar()
+                _challengeStartDate = cal.startOfDayForDate(newValue!)
+            } else {
+                _challengeStartDate = nil
+            }
+            challengeStarted = _challengeStartDate != nil
+        }
+        
+    }
+    var currentChallengeDay:Int {
+        get {
+            if challengeStartDate == nil {
+                return -1
+            } else {
+                return NSDate.daysBetweenDates(challengeStartDate!, toDate: NSDate()) + 1
+            }
+        }
+    }
     var completedChallengeDays:NSMutableSet?
+    var seenChallengeCheckpoints:[Int:Bool]! {
+        didSet {
+            if seenChallengeCheckpoints == nil {
+                seenChallengeCheckpoints = [1:false, 2:false, 3:false]
+            }
+        }
+    }
     // TODO: End should go on challenge controller, leaving here for now for archive purposes
     
     // We'll cache this an update it from the server every once in awhile
@@ -207,8 +242,10 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         aCoder.encodeInteger(weeklyEventCount, forKey: "weeklyEventCount")
         aCoder.encodeBool(notifyOfNewChallenges, forKey: "notifyOfNewChallenges")
         aCoder.encodeBool(challengeStarted, forKey: "challengeStarted")
+        aCoder.encodeBool(challengedCompleted, forKey: "challengedCompleted")
         aCoder.encodeObject(completedChallengeDays, forKey: "completedChallengeDays")
-        aCoder.encodeInteger(currentChallengeDay, forKey: "currentChallengeDay")
+        aCoder.encodeObject(challengeStartDate, forKey: "challengeStartDate")
+        aCoder.encodeObject(seenChallengeCheckpoints, forKey: "seenChallengeCheckpoints")
     }
     
     required convenience init(coder aDecoder: NSCoder) {
@@ -219,8 +256,14 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         self.weeklySexGoal = aDecoder.decodeIntegerForKey("weeklySexGoal")
         self.weeklyEventCount = aDecoder.decodeIntegerForKey("weeklyEventCount")
         self.notifyOfNewChallenges = aDecoder.decodeBoolForKey("notifyOfNewChallenges")
+
         self.challengeStarted = aDecoder.decodeBoolForKey("challengeStarted")
-        self.currentChallengeDay = aDecoder.decodeIntegerForKey("currentChallengeDay")
+        self.challengedCompleted = aDecoder.decodeBoolForKey("challengedCompleted")
+        self.challengeStartDate = aDecoder.decodeObjectForKey("challengeStartDate") as? NSDate
+        self.seenChallengeCheckpoints = aDecoder.decodeObjectForKey("seenChallengeCheckpoints") as? [Int:Bool]
+        if seenChallengeCheckpoints == nil {
+            seenChallengeCheckpoints = [1:false, 2:false, 3:false]
+        }
         
         if let archivedChallengeDays = aDecoder.decodeObjectForKey("completedChallengeDays") as? NSSet {
             self.completedChallengeDays = archivedChallengeDays.mutableCopy() as! NSMutableSet
