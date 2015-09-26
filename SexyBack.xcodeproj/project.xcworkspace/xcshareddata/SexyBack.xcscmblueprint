@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "002AE87B57E0E76C9F946D5842446704BED934A0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "002AE87B57E0E76C9F946D5842446704BED934A0" : 0,
+    "5FDDBB6E8899DC4777E8747E33C1726DD83F7F65" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D7E9501F-98E2-4602-8F5F-6D22FF44EE75",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "002AE87B57E0E76C9F946D5842446704BED934A0" : "SexyBack",
+    "5FDDBB6E8899DC4777E8747E33C1726DD83F7F65" : "ios_shared"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SexyBack",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SexyBack.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bryandunbar\/SexyBack.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "002AE87B57E0E76C9F946D5842446704BED934A0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bryandunbar\/ios_shared.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5FDDBB6E8899DC4777E8747E33C1726DD83F7F65"
+    }
+  ]
+}

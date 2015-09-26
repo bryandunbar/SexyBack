@@ -17,7 +17,7 @@ import QuartzCore
     private var tapGestureRecognizer:UIGestureRecognizer!
     
     required public init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
         setup()
     }
     
@@ -91,12 +91,12 @@ import QuartzCore
         if borderLayer == nil {
             borderLayer = CAShapeLayer()
             borderLayer!.fillColor = UIColor.clearColor().CGColor
-            self.layer.addSublayer(borderLayer)
+            self.layer.addSublayer(borderLayer!)
             
         }
     
         // Place the border
-        let bezierPath = UIBezierPath(rect: self.bounds.rectByInsetting(dx: self.inset, dy: self.inset))
+        let bezierPath = UIBezierPath(rect: self.bounds.insetBy(dx: self.inset, dy: self.inset))
         borderLayer!.lineWidth = self.strokeWidth
         borderLayer!.strokeColor = self.tintColor.CGColor
         borderLayer!.path = bezierPath.CGPath
@@ -106,10 +106,10 @@ import QuartzCore
         if isChecked {
             if markLayer == nil {
                 markLayer = CAShapeLayer()
-                self.layer.addSublayer(markLayer)
+                self.layer.addSublayer(markLayer!)
             }
             
-            let bezierPath = UIBezierPath(rect: self.bounds.rectByInsetting(dx: self.inset + self.markInset, dy: self.inset + self.markInset))
+            let bezierPath = UIBezierPath(rect: self.bounds.insetBy(dx: self.inset + self.markInset, dy: self.inset + self.markInset))
             markLayer!.fillColor = self.tintColor.CGColor
             markLayer!.path = bezierPath.CGPath
             markLayer?.hidden = false

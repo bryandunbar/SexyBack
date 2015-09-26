@@ -41,7 +41,7 @@ import UIKit
     private let imagePicker = UIImagePickerController()
     
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
         setup()
     }
     
@@ -80,7 +80,7 @@ import UIKit
     }
     
     func configureTextLabel() {
-        let rect:CGRect = self.bounds.rectByInsetting(dx: 5, dy: 5)
+        let rect:CGRect = self.bounds.insetBy(dx: 5, dy: 5)
         self.label = UILabel(frame: rect)
         self.label.textAlignment = NSTextAlignment.Center
         self.label.textColor = UIColor.lightGrayColor()
@@ -90,8 +90,8 @@ import UIKit
         self.label.numberOfLines = 0
         
         // Constrain
-        self.label.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-        self.label.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.label.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        self.label.translatesAutoresizingMaskIntoConstraints = true
         self.addSubview(self.label)
     }
     
@@ -140,14 +140,14 @@ import UIKit
             self.imageLayer?.frame = self.bounds;
             self.imageLayer?.backgroundColor = UIColor(white: 0.8, alpha:1.0).CGColor
             self.imageLayer?.contentsGravity = kCAGravityResizeAspectFill;
-            self.layer.addSublayer(self.imageLayer);
+            self.layer.addSublayer(self.imageLayer!);
         } 
         
         updateLayerProperties()
     }
     
     // MARK: UIImagePickerControllerDelegate
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.image = pickedImage
         }

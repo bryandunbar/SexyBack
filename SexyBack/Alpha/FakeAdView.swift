@@ -22,7 +22,7 @@ import UIKit
     */
     
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
         setup()
     }
     
@@ -41,7 +41,7 @@ import UIKit
     }
     
     func configureTextLabel() {
-        let rect:CGRect = self.bounds.rectByInsetting(dx: 5, dy: 5)
+        let rect:CGRect = self.bounds.insetBy(dx: 5, dy: 5)
         self.label = UILabel(frame: rect)
         self.label.textAlignment = NSTextAlignment.Center
         self.label.textColor = UIColor.lightGrayColor()
@@ -51,8 +51,8 @@ import UIKit
         self.label.numberOfLines = 0
         
         // Constrain
-        self.label.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-        self.label.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.label.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        self.label.translatesAutoresizingMaskIntoConstraints = true
         self.addSubview(self.label)
     }
     

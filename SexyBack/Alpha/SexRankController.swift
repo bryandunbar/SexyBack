@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct SexRank: Printable {
+struct SexRank: CustomStringConvertible {
     
     let rankText:String!
     let rankDetail:String!

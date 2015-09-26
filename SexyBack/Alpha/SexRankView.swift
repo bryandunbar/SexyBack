@@ -45,7 +45,7 @@ import UIKit
     }
     
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
         xibSetup()
     }
     
@@ -53,7 +53,7 @@ import UIKit
         view = loadViewFromNib()
         view.backgroundColor = UIColor.clearColor()
         view.frame = bounds
-        view.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
         textBorderView.layer.cornerRadius = 5.0
         imageBackgroundView.layer.cornerRadius = 5.0

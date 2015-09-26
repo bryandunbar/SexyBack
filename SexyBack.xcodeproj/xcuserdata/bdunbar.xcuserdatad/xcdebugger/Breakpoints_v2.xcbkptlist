@@ -346,12 +346,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/SBAppDelegate.m"
-            timestampString = "463609665.105931"
+            timestampString = "464908610.458808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "-applicationWillEnterForeground:"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "-applicationDidEnterBackground:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/SBAppDelegate.m"
-            timestampString = "463609665.105931"
+            timestampString = "464834170.838943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "-registerForNotifications:"
             landmarkType = "5">
          </BreakpointContent>
@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/SBAppDelegate.m"
-            timestampString = "463609665.105931"
+            timestampString = "464834170.838943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-registerForNotifications:"
             landmarkType = "5">
          </BreakpointContent>
@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/SBAppDelegate.m"
-            timestampString = "463609665.105931"
+            timestampString = "464834170.838943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-registerForNotifications:"
             landmarkType = "5">
          </BreakpointContent>
@@ -682,11 +682,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/SBAppDelegate.m"
-            timestampString = "463609665.105931"
+            timestampString = "464834170.838943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "-registerDefaultsFromSettingsBundle"
             landmarkType = "5">
          </BreakpointContent>
@@ -714,11 +714,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/HiViewController.swift"
-            timestampString = "463609817.061538"
+            timestampString = "464834170.838943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "initDrawerViewLocation()"
             landmarkType = "5">
          </BreakpointContent>
@@ -730,11 +730,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/HiViewController.swift"
-            timestampString = "463609817.061538"
+            timestampString = "464834170.838943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "initDrawerViewLocation()"
             landmarkType = "5">
          </BreakpointContent>
@@ -746,11 +746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/HiViewController.swift"
-            timestampString = "463609817.061538"
+            timestampString = "464834170.838943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "runOnboardingAnimations()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1149,7 +1149,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "184"
             endingLineNumber = "184"
-            landmarkName = "fetchParseUserWithBlock(_:)"
+            landmarkName = "updateInParse()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1240,11 +1240,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/AppController.swift"
-            timestampString = "463609665.105931"
+            timestampString = "464983693.666425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "save()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1288,11 +1288,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/AppController.swift"
-            timestampString = "463712112.323817"
+            timestampString = "464983693.666425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "encodeWithCoder(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1309,7 +1309,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "204"
             endingLineNumber = "204"
-            landmarkName = "fillModelFields(_:)"
+            landmarkName = "fetchParseUserWithBlock(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1325,7 +1325,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "217"
             endingLineNumber = "217"
-            landmarkName = "fillParseUser(_:)"
+            landmarkName = "fillModelFields(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1341,7 +1341,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "218"
             endingLineNumber = "218"
-            landmarkName = "fillParseUser(_:)"
+            landmarkName = "fillModelFields(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1352,11 +1352,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/SBAppDelegate.m"
-            timestampString = "463609665.105931"
+            timestampString = "464908610.458808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "-applicationDidBecomeActive:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1496,11 +1496,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/SexTrackerViewController.swift"
-            timestampString = "464023971.203969"
+            timestampString = "464983693.666425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "listButtonTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1511,28 +1511,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SexyBack/Alpha/SexTrackerViewController.swift"
-            timestampString = "464023971.203969"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/SexTrackerHistoryViewController.swift"
-            timestampString = "463720453.149069"
+            timestampString = "464907938.765872"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "organizeEventsByWeek(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1544,11 +1528,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/SexTrackerHistoryViewController.swift"
-            timestampString = "463720453.149069"
+            timestampString = "464907938.765872"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "doFetch()"
             landmarkType = "5">
             <Locations>
@@ -1608,11 +1592,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/SexTrackerHistoryViewController.swift"
-            timestampString = "463720453.149069"
+            timestampString = "464907938.765872"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "organizeEventsByWeek(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1624,11 +1608,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/SexTrackerHistoryViewController.swift"
-            timestampString = "463721543.847136"
+            timestampString = "464907938.765872"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "tableView(_:titleForHeaderInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1640,11 +1624,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/SexTrackerHistoryViewController.swift"
-            timestampString = "463975822.612682"
+            timestampString = "464907938.765872"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "configureCell(_:indexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1848,7 +1832,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/BaseSexyBackViewController.swift"
-            timestampString = "464562672.789995"
+            timestampString = "464907938.765872"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -1949,7 +1933,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
             endingLineNumber = "132"
-            landmarkName = "getCurrentItem(_:)"
+            landmarkName = "init()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1960,11 +1944,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SexyBack/Alpha/ChallengeController.swift"
-            timestampString = "464806409.150535"
+            timestampString = "464810003.661592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "init()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1983,22 +1967,6 @@
             endingLineNumber = "58"
             landmarkName = "configureView()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SexyBack/Alpha/ChallengeController.swift"
-            timestampString = "465322404.021923"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
-            landmarkName = "ChallengeController"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2110,6 +2078,118 @@
             startingLineNumber = "88"
             endingLineNumber = "88"
             landmarkName = "shareTapped(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SexyBack/Alpha/BouncyViewControllerAnimator.swift"
+            timestampString = "464875942.085931"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "transitionDuration(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SexyBack/Alpha/SexTrackerViewController.swift"
+            timestampString = "464908117.658339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SexyBack/Alpha/HiViewController.swift"
+            timestampString = "464908217.81338"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "doneButtonTapped(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SexyBack/Alpha/AppController.swift"
+            timestampString = "464983693.666425"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "save()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SexyBack/Alpha/AppController.swift"
+            timestampString = "464983693.666425"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "AppController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SexyBack/SBAppDelegate.m"
+            timestampString = "464983994.907459"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SexyBack/Alpha/HiViewController.swift"
+            timestampString = "464984043.68232"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

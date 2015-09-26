@@ -30,7 +30,7 @@ class BaseSexyBackViewController: UIViewController, MenuViewControllerDelegate {
         
         var button:UIButton = UIButton(frame: CGRect(x: 16, y: 20, width: 44.0, height: 44.0))
         button.setImage(UIImage(named: "hamburger"), forState: .Normal)
-        button.setTranslatesAutoresizingMaskIntoConstraints(false)
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: "hamburgerTapped", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(button)
         self.view.addConstraint(NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.topLayoutGuide, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0))

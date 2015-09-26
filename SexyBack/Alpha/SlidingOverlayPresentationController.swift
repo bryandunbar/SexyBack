@@ -18,7 +18,7 @@ class SlidingOverlayPresentationController: UIPresentationController {
         }
     }
     
-    override init(presentedViewController: UIViewController!, presentingViewController: UIViewController!) {
+    override init(presentedViewController: UIViewController, presentingViewController: UIViewController) {
         super.init(presentedViewController: presentedViewController, presentingViewController: presentingViewController)
         
         configureDimmingView()
@@ -26,9 +26,9 @@ class SlidingOverlayPresentationController: UIPresentationController {
     
     override func presentationTransitionWillBegin() {
         
-        dimmingView.frame = containerView.bounds
+        dimmingView.frame = containerView!.bounds
         dimmingView.alpha = 0.0
-        containerView.insertSubview(dimmingView, atIndex: 0)
+        containerView!.insertSubview(dimmingView, atIndex: 0)
         
         if let transitionCoordinator = presentedViewController.transitionCoordinator() {
             transitionCoordinator.animateAlongsideTransition({ context in
@@ -61,7 +61,7 @@ class SlidingOverlayPresentationController: UIPresentationController {
     override func frameOfPresentedViewInContainerView() -> CGRect {
         
         var presentedViewFrame:CGRect = CGRect()
-        let containerBounds:CGRect = containerView.bounds
+        let containerBounds:CGRect = containerView!.bounds
         presentedViewFrame.size = sizeForChildContentContainer(presentedViewController, withParentContainerSize: containerBounds.size)
         //presentedViewFrame.origin.x = containerBounds.size.width - presentedViewFrame.size.width
         return presentedViewFrame

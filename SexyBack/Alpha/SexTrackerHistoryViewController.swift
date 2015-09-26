@@ -21,7 +21,8 @@ class SexTrackerHistoryViewController: DataBackedTableViewController {
     private var sortedKeys:[Int]? {
         get {
             if let data = data {
-                return data.keys.array.sorted(>)
+                let keys:[Int] = Array(data.keys)
+                return keys.sort(>)
             }
             return nil
         }
@@ -70,7 +71,7 @@ class SexTrackerHistoryViewController: DataBackedTableViewController {
         
         var tempDict = [Int:[PFObject]]()
         for event:PFObject in events {
-            let weekOfYear = (event["eventDate"] as! NSDate).getCalendarComponent(.CalendarUnitWeekOfYear)
+            let weekOfYear = (event["eventDate"] as! NSDate).getCalendarComponent(NSCalendarUnit.WeekOfYear)
             if let arr = tempDict[weekOfYear] {
                 var tempArray = [PFObject]()
                 tempArray += arr
@@ -94,7 +95,7 @@ class SexTrackerHistoryViewController: DataBackedTableViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if let keys = sortedKeys {
-            let currentYear = NSDate().getCalendarComponent(.CalendarUnitYear)
+            let currentYear = NSDate().getCalendarComponent(NSCalendarUnit.Year)
             let weekOfYear = keys[section]
             let date = NSDate.getFirstDateOfWeekFromWeekNumber(weekOfYear, inYear: currentYear)
             let dataStr = NSDateFormatter.localizedStringFromDate(date, dateStyle: .MediumStyle, timeStyle: .NoStyle)

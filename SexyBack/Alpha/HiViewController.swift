@@ -27,7 +27,13 @@ class HiViewController: UIViewController, ProfileImageViewDelegate{
         profileImageView!.delegate = self
         
         if AppController.instance.isOnboarded {
-            self.performSegueWithIdentifier("nextViewControllerNotAnimated", sender: self)
+            
+            if AppController.instance.openedFromNotificaion {
+                self.performSegueWithIdentifier("challengeSegueNotAnimated", sender: self)
+                AppController.instance.openedFromNotificaion = false
+            } else {
+                self.performSegueWithIdentifier("nextViewControllerNotAnimated", sender: self)
+            }
         } else {
             configureDrawerFields()
             initDrawerViewLocation()
@@ -104,7 +110,7 @@ class HiViewController: UIViewController, ProfileImageViewDelegate{
         AppController.instance.isOnboarded = true
         
         // Store our user information
-        var user:SBUser = SBUser()
+        let user:SBUser = SBUser()
         user.firstName = self.firstName.text
         user.gender = self.gender.text
         user.ageRange = self.ageRange.text

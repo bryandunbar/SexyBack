@@ -42,6 +42,9 @@ struct Theme {
         return Singleton.instance!
     }
     
+    
+    var openedFromNotificaion:Bool = false
+    
     var isOnboarded:Bool {
         set {
             userDefaults.setBool(newValue, forKey: "isOnboarded")
@@ -49,7 +52,18 @@ struct Theme {
         }
         
         get {
-            return userDefaults.boolForKey("isOnboarded")
+            return userDefaults.boolForKey("isOnboarded") && user != nil
+        }
+    }
+    
+    var hasSeenNewEventModal:Bool {
+        set {
+            userDefaults.setBool(newValue, forKey: "hasSeenNewEventModal")
+            userDefaults.synchronize()
+        }
+        
+        get {
+            return userDefaults.boolForKey("hasSeenNewEventModal")
         }
     }
     
@@ -66,8 +80,10 @@ struct Theme {
     
     class var archiveFilePath:String {
         get {
-            let docDir:String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
-            return docDir.stringByAppendingPathComponent("SexyBackState.plist")
+            
+            let docDir:String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0]
+            let docDirNSString:NSString = docDir as NSString
+            return docDirNSString.stringByAppendingPathComponent("SexyBackState.plist")
         }
     }
     

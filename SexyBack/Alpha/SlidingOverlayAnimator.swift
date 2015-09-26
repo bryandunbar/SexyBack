@@ -12,7 +12,7 @@ class SlidingOverlayAnimator: NSObject, UIViewControllerAnimatedTransitioning {
    
     var isPresentation:Bool = false
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.5
     }
     
@@ -24,7 +24,7 @@ class SlidingOverlayAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let toView:UIView = toVC.view
         
         if isPresentation {
-            transitionContext.containerView().addSubview(toView)
+            transitionContext.containerView()!.addSubview(toView)
         }
         
         let animatingVC:UIViewController = isPresentation ? toVC : fromVC
@@ -38,7 +38,7 @@ class SlidingOverlayAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let finalFrame:CGRect = isPresentation ? appearedFrame : dismissedFrame
         
         animatingView.frame = initialFrame
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, usingSpringWithDamping: 300.0, initialSpringVelocity: 5.0, options: UIViewAnimationOptions.AllowUserInteraction | UIViewAnimationOptions.BeginFromCurrentState, animations: { () -> Void in
+        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, usingSpringWithDamping: 300.0, initialSpringVelocity: 5.0, options: [.AllowUserInteraction, .BeginFromCurrentState], animations: { () -> Void in
             animatingView.frame = finalFrame
         }) { (Bool) -> Void in
             if !self.isPresentation {

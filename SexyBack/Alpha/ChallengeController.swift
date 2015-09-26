@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 let ChallengeKeyDelimiter = "::"
-struct Challenge: Printable {
+struct Challenge: CustomStringConvertible {
     let id:String!
     let name:String!
     let body:String!
@@ -19,7 +19,11 @@ struct Challenge: Printable {
     static func buildKey(id:String, day:Int) -> String {
         return id + ChallengeKeyDelimiter + String(day)
     }
-    
+
+    static func dayFromKey(key:String) -> Int {
+        let parts = key.componentsSeparatedByString(ChallengeKeyDelimiter)
+        return Int(parts[1])!
+    }
     
     func getItemByDay(day:Int) -> ChallengeItem? {
         for item in items {
@@ -45,22 +49,23 @@ struct Challenge: Printable {
         if (!UIApplication.sharedApplication().isRegisteredForRemoteNotifications()) {
             return
         }
-        var date:NSDate = NSDate().dateBySettingCalendarComponent(NSCalendarUnit.HourCalendarUnit, value: 8)
+        var date:NSDate = NSDate().dateBySettingCalendarComponent(NSCalendarUnit.Hour, value: 8)
         for item:ChallengeItem in items {
             var localNotif:UILocalNotification = UILocalNotification()
             localNotif.fireDate = date
             localNotif.alertBody = "A New Challenge is Available!"
+            localNotif.timeZone = NSTimeZone.defaultTimeZone()
             
             UIApplication.sharedApplication().scheduleLocalNotification(localNotif)
             
             // Add a day to the date
-            date = date.dateByAddingComponentToDate(NSCalendarUnit.DayCalendarUnit, value: 1)
+            date = date.dateByAddingComponentToDate(NSCalendarUnit.Day, value: 1)
         }
         
     }
 }
 
-struct ChallengeItem: Printable {
+struct ChallengeItem: CustomStringConvertible {
     
     let day:Int!
     let title:String!
@@ -172,20 +177,6 @@ class ChallengeController: NSObject {
         }
     }
     
-//    func advanceChallengeDay(challenge:Challenge) {
-//        if let currentItem = getCurrentItem(challenge) {
-//            
-//            let count = challenge.items.count
-//            if currentItem.day < count {
-//                //setCurrentItem(challenge, day: currentItem.day + 1)
-//                
-//                // TODO: Notification?
-//                
-//                AppController.instance.save()
-//            }
-//        }
-//    }
-    
     func hasUserCompletedItem(challenge:Challenge, item:ChallengeItem) -> Bool {
         var challengeKey:String = Challenge.buildKey(challenge.id, day: item.day)
         if let user = AppController.instance.user {
@@ -223,12 +214,18 @@ class ChallengeController: NSObject {
             if let user = AppController.instance.user {
                 var currentChallengeDay:Int = user.currentChallengeDay
                 var value:[String:AnyObject]? = nil
+                let completedChallengeDays:[String] = user.completedChallengeDays!.allObjects as! [String]
                 
                 if currentChallengeDay >= 8 && currentChallengeDay < 15 {
                     
                     let seen = user.seenChallengeCheckpoints[1]!
                     if !seen {
-                        value = ["msg":"You've completed Week 1 of the 30-Day Challenge!"]
+                        
+                        let arr = completedChallengeDays.filter({
+                            let dayFromKey = Challenge.dayFromKey($0)
+                            return dayFromKey >= 1 && dayFromKey < 8
+                        })
+                        value = ["msg":String(format:"You've completed Week 1 of the 30-Day Challenge!\n\nYou completed %d challenges.", arr.count)]
                         user.seenChallengeCheckpoints[1] = true
                     }
 

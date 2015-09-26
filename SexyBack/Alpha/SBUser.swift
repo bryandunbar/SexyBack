@@ -25,7 +25,7 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
     var notifyOfNewChallenges:Bool = false {
         didSet {
             if notifyOfNewChallenges {
-                let types:UIUserNotificationType = .Badge | .Sound | .Alert
+                let types:UIUserNotificationType = [.Badge, .Sound, .Alert]
                 let mySettings = UIUserNotificationSettings(forTypes: types, categories: nil)
                 UIApplication.sharedApplication().registerUserNotificationSettings(mySettings)
             }
@@ -147,29 +147,40 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         
     }
     
-    
+    private var isSavingInParse:Bool = false
     func updateInParse() {
         
+        if (isSavingInParse) {
+            return
+        }
+        
+        isSavingInParse = true
         if let parseUser = self.parseUser {
             fillParseUser(parseUser)
-            parseUser.saveInBackground()
-        } else if let objectId = self.objectId {
+            parseUser.saveInBackgroundWithBlock({ (success:Bool, error:NSError?) -> Void in
+                self.isSavingInParse = false
+            })
+        } else if let _ = self.objectId {
             fetchParseUserWithBlock({ (user:PFObject?, error:NSError?) -> Void in
                 
                 if error == nil && user != nil {
                     self.fillParseUser(user!)
-                    user!.saveInBackground()
+                    user!.saveInBackgroundWithBlock({ (success:Bool, error:NSError?) -> Void in
+                        self.isSavingInParse = false
+                    })
+
                 }
     
             })
         } else {
             
             // Create the user in parse
-            var parseUser:PFObject = PFObject(className:"SBUser")
+            let parseUser:PFObject = PFObject(className:"SBUser")
             fillParseUser(parseUser)
             parseUser.saveInBackgroundWithBlock({ (success:Bool, error:NSError?) -> Void in
                 if success {
                     NSLog("ObjectId: %@", parseUser.objectId!)
+                    self.isSavingInParse = false
                     self.objectId = parseUser.objectId
                     self.parseUser = parseUser
                 }
@@ -182,7 +193,7 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
     func fetchParseUserWithBlock(block:PFObjectResultBlock?) {
         
         if let objectId = self.objectId {
-            var query:PFQuery = PFQuery(className:"SBUser")
+            let query:PFQuery = PFQuery(className:"SBUser")
             query.getObjectInBackgroundWithId(objectId, block: { (user:PFObject?, error:NSError?) -> Void in
                 if error == nil && user != nil {
                     self.fillModelFields(user!)
@@ -227,7 +238,7 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         
         if profileImageDirty {
             let imageData = UIImageJPEGRepresentation(self.profileImage!, 0.8)
-            let imageFile = PFFile(name: "profile.jpg", data:imageData)
+            let imageFile = PFFile(name: "profile.jpg", data:imageData!)
             parseUser["profile_image"] = imageFile
             profileImageDirty = false
         }

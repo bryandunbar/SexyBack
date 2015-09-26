@@ -59,6 +59,12 @@
 //    });
     
    
+    UILocalNotification *localNotif =
+    [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (localNotif) {
+        AppController *instance = [AppController instance];
+        instance.openedFromNotificaion = YES;
+    }
     
     return YES;
 }
@@ -124,6 +130,8 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     //[self.stateManager save];
     AppController *instance = [AppController instance];
     [instance save];
+    
+    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -133,6 +141,12 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     //[self.stateManager save];
     AppController *instance = [AppController instance];
     [instance save];
+    
+//    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+//    localNotif.fireDate = [NSDate dateWithTimeIntervalSinceNow:30];
+//    localNotif.alertBody = @"This is a test";
+//    localNotif.timeZone = [NSTimeZone defaultTimeZone];
+//    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

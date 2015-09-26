@@ -27,7 +27,7 @@ import UIKit
     private var imageLayer:CALayer?
     
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
         setup()
     }
     
@@ -72,7 +72,7 @@ import UIKit
             
             // Mask the image
             let imageMaskLayer = CAShapeLayer()
-            let innerPath = UIBezierPath(roundedRect: self.bounds .rectByInsetting(dx: self.imageInset, dy: self.imageInset), byRoundingCorners: UIRectCorner.AllCorners, cornerRadii: CGSize(width: self.layer.cornerRadius, height: self.layer.cornerRadius))
+            let innerPath = UIBezierPath(roundedRect: self.bounds.insetBy(dx: self.imageInset, dy: self.imageInset), byRoundingCorners: UIRectCorner.AllCorners, cornerRadii: CGSize(width: self.layer.cornerRadius, height: self.layer.cornerRadius))
             imageMaskLayer.path = innerPath.CGPath
             imageMaskLayer.fillColor = UIColor.blackColor().CGColor
             imageMaskLayer.frame = self.bounds;
@@ -84,7 +84,7 @@ import UIKit
             self.imageLayer?.frame = self.bounds;
             self.imageLayer?.backgroundColor = UIColor(white: 0.8, alpha:1.0).CGColor
             self.imageLayer?.contentsGravity = kCAGravityResizeAspectFill;
-            self.layer.addSublayer(self.imageLayer);
+            self.layer.addSublayer(self.imageLayer!);
         } 
         
         updateLayerProperties()

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SgT-N8-ibw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SgT-N8-ibw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -15,13 +16,13 @@
                         <viewControllerLayoutGuide type="bottom" id="1Up-e0-AkO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ecz-vR-j7w">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOd-nT-RGD" userLabel="Arch View" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AOd-nT-RGD" userLabel="Arch View" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="155" width="600" height="445"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkA-FR-97l" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkA-FR-97l" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
                                         <rect key="frame" x="206" y="336" width="189" height="30"/>
                                         <color key="backgroundColor" red="0.66274509800000003" green="0.14117647059999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -37,7 +38,7 @@
                                             <action selector="doneButtonTapped:" destination="NqF-oG-NrQ" eventType="touchUpInside" id="aJV-xT-RT5"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xg7-eJ-Csd" userLabel="Profile Info View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xg7-eJ-Csd" userLabel="Profile Info View">
                                         <rect key="frame" x="148" y="95" width="303" height="146"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5f-ce-QR0" customClass="SBTextField" customModule="SexyBack" customModuleProvider="target">
@@ -110,7 +111,7 @@
                                     <constraint firstAttribute="width" constant="224" id="wVU-6M-x52"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GYSB Hi-16" translatesAutoresizingMaskIntoConstraints="NO" id="G8U-zg-agA">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="GYSB Hi-16" translatesAutoresizingMaskIntoConstraints="NO" id="G8U-zg-agA">
                                 <rect key="frame" x="394" y="98" width="178" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="101" id="G9t-YT-0Si"/>
@@ -144,6 +145,7 @@
                         <outlet property="sexyBackLogo" destination="2Hq-jo-JaT" id="qBr-M7-qi5"/>
                         <segue destination="SOU-ze-NFJ" kind="custom" identifier="nextViewControllerNotAnimated" customClass="PushNoAnimationSegue" customModule="SexyBack" customModuleProvider="target" id="EfK-hN-qHm"/>
                         <segue destination="SOU-ze-NFJ" kind="show" identifier="nextViewControllerAnimated" id="TyO-jM-sRg"/>
+                        <segue destination="g4n-sx-jF2" kind="custom" identifier="challengeSegueNotAnimated" customClass="PushNoAnimationSegue" customModule="SexyBack" id="4BY-JG-ej8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WL-Ld-Bfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DzO-L5-f20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3018" y="-2366"/>
+            <point key="canvasLocation" x="2366" y="-1558"/>
         </scene>
         <!--Sex Tracker View Controller-->
         <scene sceneID="tL5-fT-4KA">
@@ -243,7 +245,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR0-no-o37" userLabel="New Event Button" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR0-no-o37" userLabel="New Event Button" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
                                 <rect key="frame" x="544" y="28" width="40" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -258,23 +260,23 @@
                                     <action selector="trackEventTapped:" destination="SOU-ze-NFJ" eventType="touchUpInside" id="1hh-sl-L5K"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9r-of-7kQ" userLabel="ArchView" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O9r-of-7kQ" userLabel="ArchView" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="169" width="600" height="431"/>
                                 <subviews>
-                                    <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="3" minimumValueImage="sex-tracker-slider-min" maximumValueImage="sex-tracker-slider-max" translatesAutoresizingMaskIntoConstraints="NO" id="mdp-7r-pAz" customClass="FeatherSlider" customModule="SexyBack" customModuleProvider="target">
+                                    <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="3" minimumValueImage="sex-tracker-slider-min" maximumValueImage="sex-tracker-slider-max" translatesAutoresizingMaskIntoConstraints="NO" id="mdp-7r-pAz" customClass="FeatherSlider" customModule="SexyBack" customModuleProvider="target">
                                         <rect key="frame" x="30" y="54" width="540" height="32"/>
                                         <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
                                         <color key="minimumTrackTintColor" red="0.66274509800000003" green="0.14117647059999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY WEEKLY GOAL: 3x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKz-vf-3fV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MY WEEKLY GOAL: 3x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKz-vf-3fV">
                                         <rect key="frame" x="20" y="93" width="560" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiW-dm-dCs" customClass="SexRankView" customModule="SexyBack" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UiW-dm-dCs" customClass="SexRankView" customModule="SexyBack" customModuleProvider="target">
                                         <rect key="frame" x="20" y="133" width="560" height="199"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -284,7 +286,7 @@
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="thumbs-up"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-hn-0an" customClass="FakeAdView" customModule="SexyBack" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-hn-0an" customClass="FakeAdView" customModule="SexyBack" customModuleProvider="target">
                                         <rect key="frame" x="20" y="348" width="560" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -342,6 +344,7 @@
                         <segue destination="joO-2K-XSo" kind="presentation" identifier="goalModalSegue" id="icJ-Q8-oDH"/>
                         <segue destination="2wW-sl-OCn" kind="show" identifier="historySegue" id="STv-Tc-LUc"/>
                         <segue destination="g4n-sx-jF2" kind="custom" identifier="challengeSegue" customClass="NavControllerReplaceSegue" customModule="SexyBack" customModuleProvider="target" id="j9s-pZ-mGb"/>
+                        <segue destination="sMx-hq-gmh" kind="presentation" identifier="newEventExplainerSegue" id="ws4-Oo-vhM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXF-68-WYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -360,14 +363,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="8vN-hT-oYw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="8vN-hT-oYw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="504"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="60" id="pXT-B7-kuq" customClass="SexHistoryTableViewCell" customModule="SexyBack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="273" width="600" height="55"/>
+                                        <rect key="frame" x="0.0" y="50" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pXT-B7-kuq" id="JO5-02-jX1">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIGRESS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gD9-U1-X1q">
@@ -424,10 +428,10 @@
                                     <outlet property="delegate" destination="2wW-sl-OCn" id="Udi-96-YSK"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-dL-EUq" userLabel="Footer View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-dL-EUq" userLabel="Footer View">
                                 <rect key="frame" x="0.0" y="504" width="600" height="96"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAT-eR-46l" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAT-eR-46l" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
                                         <color key="backgroundColor" red="0.82745098039999998" green="0.83529411760000005" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -439,7 +443,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipboard" translatesAutoresizingMaskIntoConstraints="NO" id="3ly-aP-Asm">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="clipboard" translatesAutoresizingMaskIntoConstraints="NO" id="3ly-aP-Asm">
                                         <rect key="frame" x="250" y="-15" width="100" height="112"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="1y1-6t-hNK"/>
@@ -491,7 +495,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcz-d0-Z4H">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcz-d0-Z4H">
                                 <rect key="frame" x="16" y="20" width="17" height="22"/>
                                 <state key="normal" image="hamburger">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -507,17 +511,20 @@
                                     <constraint firstAttribute="height" constant="97" id="kAN-qf-lPS"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Phj-yc-8Ic">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Phj-yc-8Ic">
                                 <rect key="frame" x="16" y="50" width="505" height="419"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" textLabel="OLL-i0-28w" style="IBUITableViewCellStyleDefault" id="bTw-rz-Of9">
+                                        <rect key="frame" x="0.0" y="22" width="505" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bTw-rz-Of9" id="TTW-4O-W02">
+                                            <rect key="frame" x="0.0" y="0.0" width="505" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="OLL-i0-28w">
+                                                    <rect key="frame" x="15" y="0.0" width="475" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -593,10 +600,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDP-Ob-yDm" userLabel="ArchView" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDP-Ob-yDm" userLabel="ArchView" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="169" width="600" height="431"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHALLENGE TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOf-fO-vAK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHALLENGE TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOf-fO-vAK">
                                         <rect key="frame" x="214" y="34" width="173" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="fUB-f2-ELe"/>
@@ -605,7 +612,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhm-Qv-uFJ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhm-Qv-uFJ">
                                         <rect key="frame" x="40" y="84" width="520" height="103"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="103" id="UZW-3d-sKw"/>
@@ -623,7 +630,7 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuW-n9-om8" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuW-n9-om8" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
                                         <rect key="frame" x="206" y="351" width="189" height="30"/>
                                         <color key="backgroundColor" red="0.66274509800000003" green="0.14117647059999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -640,13 +647,13 @@
                                             <action selector="startChallengeTapped:" destination="g4n-sx-jF2" eventType="touchUpInside" id="WO0-DA-j0F"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notify Me of New Challenges" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eud-Z8-bBK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Notify Me of New Challenges" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eud-Z8-bBK">
                                         <rect key="frame" x="40" y="207" width="479" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cC8-o8-QBw" customClass="CheckBox" customModule="SexyBack" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cC8-o8-QBw" customClass="CheckBox" customModule="SexyBack" customModuleProvider="target">
                                         <rect key="frame" x="527" y="199" width="33" height="33"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.66274509800000003" green="0.14117647059999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -733,10 +740,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxn-T3-mtP" userLabel="ArchView" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nxn-T3-mtP" userLabel="ArchView" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="368" width="600" height="240"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-cl-GuF" userLabel="Controls View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-cl-GuF" userLabel="Controls View">
                                         <rect key="frame" x="8" y="122" width="584" height="110"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OA-iV-R2f" customClass="BorderedImageView" customModule="SexyBack" customModuleProvider="target">
@@ -750,7 +757,7 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="thumbs-up"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0d-pa-p4Y" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0d-pa-p4Y" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
                                                 <rect key="frame" x="112" y="20" width="442" height="30"/>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -776,7 +783,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeA-oP-5nU" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeA-oP-5nU" customClass="UIBorderedButton" customModule="SexyBack" customModuleProvider="target">
                                                 <rect key="frame" x="112" y="58" width="442" height="30"/>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -830,13 +837,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="DAY XXX:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsH-Bt-nOS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="DAY XXX:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsH-Bt-nOS">
                                 <rect key="frame" x="52" y="72" width="79" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                                 <color key="textColor" red="0.66274509800000003" green="0.14117647059999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHALLENGE TITLE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rdZ-Ap-sir">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHALLENGE TITLE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rdZ-Ap-sir">
                                 <rect key="frame" x="151" y="50" width="409" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="rTV-YS-dpR"/>
@@ -845,7 +852,7 @@
                                 <color key="textColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum, blah blah blah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Nl3-FD-Mqa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lorem ipsum, blah blah blah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Nl3-FD-Mqa">
                                 <rect key="frame" x="34" y="96" width="538" height="178"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -899,10 +906,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPS-fl-c65" userLabel="ArchView" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPS-fl-c65" userLabel="ArchView" customClass="ArchedView" customModule="SexyBack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="368" width="600" height="240"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPU-mq-Oif">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPU-mq-Oif">
                                         <rect key="frame" x="232" y="175" width="137" height="30"/>
                                         <state key="normal" title="More Challenges">
                                             <color key="titleColor" red="0.66274509800000003" green="0.14117647059999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -918,7 +925,7 @@
                                     <constraint firstAttribute="bottom" secondItem="yPU-mq-Oif" secondAttribute="bottom" constant="35" id="zYb-9g-Vo9"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've completed the 30-Day Challenge! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Sqw-Xf-bTe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You've completed the 30-Day Challenge! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Sqw-Xf-bTe">
                                 <rect key="frame" x="16" y="102" width="568" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="lAu-3U-CoD"/>
@@ -927,7 +934,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="CONGRATULATIONS!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTr-kF-VfM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="CONGRATULATIONS!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTr-kF-VfM">
                                 <rect key="frame" x="16" y="66" width="568" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
                                 <color key="textColor" red="0.66274509800000003" green="0.14117647059999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1040,6 +1047,81 @@
             </objects>
             <point key="canvasLocation" x="2950" y="1165"/>
         </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="yvJ-cc-jUa">
+            <objects>
+                <viewController id="sMx-hq-gmh" customClass="AlertViewController" customModule="SexyBack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gpq-Gr-NHz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cj4-Hw-lgw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wpz-Cu-q07" customClass="ModalBackgroundView" customModule="SexyBack" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56F-Jm-kqG">
+                                <rect key="frame" x="95" y="262" width="111" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e19-q2-7N5"/>
+                                    <constraint firstAttribute="width" constant="111" id="eJj-ho-mxK"/>
+                                </constraints>
+                                <state key="normal" title="Ok">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="sMx-hq-gmh" eventType="touchUpInside" id="Wwu-Og-agv"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbs-up" translatesAutoresizingMaskIntoConstraints="NO" id="92b-6n-CQ4">
+                                <rect key="frame" x="113" y="43" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="G21-Dd-IpB"/>
+                                    <constraint firstAttribute="width" constant="75" id="smI-bO-97i"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwT-Eb-9nL">
+                                <rect key="frame" x="32" y="126" width="236" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="hPw-pu-coI"/>
+                                </constraints>
+                                <string key="text">You found the new event button. Each time you have sex tap this button to record the event. We'll keep track against your goal and let you know how you are doing!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1529411765" green="0.15686274510000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CwT-Eb-9nL" firstAttribute="centerX" secondItem="wpz-Cu-q07" secondAttribute="centerX" id="7PL-49-xAq"/>
+                            <constraint firstItem="56F-Jm-kqG" firstAttribute="centerX" secondItem="wpz-Cu-q07" secondAttribute="centerX" id="7dL-Rh-bDU"/>
+                            <constraint firstItem="CwT-Eb-9nL" firstAttribute="leading" secondItem="wpz-Cu-q07" secondAttribute="leadingMargin" constant="16" id="BnM-VS-ca7"/>
+                            <constraint firstItem="92b-6n-CQ4" firstAttribute="centerX" secondItem="wpz-Cu-q07" secondAttribute="centerX" id="KDp-y2-y8t"/>
+                            <constraint firstItem="Cj4-Hw-lgw" firstAttribute="top" secondItem="56F-Jm-kqG" secondAttribute="bottom" constant="8" id="SVd-Rk-U1b"/>
+                            <constraint firstItem="CwT-Eb-9nL" firstAttribute="top" secondItem="92b-6n-CQ4" secondAttribute="bottom" constant="8" id="XcG-W1-Z3h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CwT-Eb-9nL" secondAttribute="trailing" constant="16" id="kU3-fv-45E"/>
+                            <constraint firstItem="92b-6n-CQ4" firstAttribute="top" secondItem="Gpq-Gr-NHz" secondAttribute="bottom" constant="23" id="uSZ-Av-c4L"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="archColor">
+                                <color key="value" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="archHeight">
+                                <real key="value" value="150"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="300"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
+                    <connections>
+                        <outlet property="button" destination="56F-Jm-kqG" id="oDE-0S-OYv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xJ-hw-iX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848" y="-1558"/>
+        </scene>
     </scenes>
     <resources>
         <image name="FindYourBarn" width="498" height="280"/>
@@ -1058,6 +1140,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ft3-xd-yhu"/>
-        <segue reference="IK9-sv-2Z1"/>
+        <segue reference="4BY-JG-ej8"/>
+        <segue reference="TyO-jM-sRg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -93,7 +93,11 @@ class SexTrackerViewController: BaseSexyBackViewController {
                     AppController.instance.save()
                 }
             }
-        } else if segue.identifier == "historySegue" {
+        } else if segue.identifier == "newEventExplainerSegue" {
+            segue.destinationViewController.transitioningDelegate = modalTransitioningDelegate
+            segue.destinationViewController.modalPresentationStyle = .Custom
+            
+        }else if segue.identifier == "historySegue" {
             
         }
     }
@@ -102,8 +106,17 @@ class SexTrackerViewController: BaseSexyBackViewController {
     // MARK: Actions
     
     @IBAction func trackEventTapped(sender: AnyObject) {
+
+        // If this is the first tap of the button
+        if !AppController.instance.hasSeenNewEventModal {
+            self.performSegueWithIdentifier("newEventExplainerSegue", sender: self)
+            AppController.instance.hasSeenNewEventModal = true
+            return
+        }
         
+        // They've already seen the modal so they know what they are doing
         if let user = AppController.instance.user {
+            
             user.trackSexEvent({ (success:Bool, error:NSError?) -> Void in
             })
             

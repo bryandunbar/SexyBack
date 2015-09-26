@@ -1,19 +1,19 @@
 //
-//  GoalModalViewController.swift
+//  AlertViewController.swift
 //  SexyBack
 //
-//  Created by Bryan Dunbar on 9/4/15.
-//  Copyright (c) 2015 Knight, Norvell and Pater, LLC. All rights reserved.
+//  Created by Bryan Dunbar on 9/26/15.
+//  Copyright © 2015 Knight, Norvell and Pater, LLC. All rights reserved.
 //
 
 import UIKit
 
-class GoalModalViewController: UIViewController {
+class AlertViewController: UIViewController {
 
-    @IBOutlet var goalAmount: UITextField!
-    var dismissHandler: ((value: Int) -> ())?
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,13 +21,11 @@ class GoalModalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func actionButtonTapped(sender: UIButton) {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
-            self.dismissHandler?(value: Int(self.goalAmount.text!)!)
-        })
-    }
-    
 
+    @IBOutlet var button: UIButton!
+    @IBAction func buttonTapped(sender: AnyObject) {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion:nil)
+    }
     /*
     // MARK: - Navigation
 
