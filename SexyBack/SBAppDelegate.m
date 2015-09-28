@@ -65,10 +65,26 @@
         AppController *instance = [AppController instance];
         instance.openedFromNotificaion = YES;
     }
-    
     return YES;
 }
 
+
+-(void)applyNotifications {
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    AppController *instance = [AppController instance];
+    ChallengeController *challangeController = [ChallengeController instance];
+    if (instance.user.notifyOfNewChallenges && app.scheduledLocalNotifications.count == 0) {
+        [challangeController scheduleNotificationsForCurrentChallenge];
+    }
+    
+    
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    AppController *instance = [AppController instance];
+    instance.openedFromNotificaion = YES;
+}
 - (void)registerDefaultsFromSettingsBundle {
     // this function writes default settings as settings
     NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
@@ -134,6 +150,8 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     
 }
 
+
+
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
@@ -181,6 +199,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     AppController *instance = [AppController instance];
     SBUser *user = instance.user;
     NSLog(@"User: %@", user);
+    
+    [self applyNotifications];
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

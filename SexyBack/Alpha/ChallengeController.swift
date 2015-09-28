@@ -46,16 +46,18 @@ struct Challenge: CustomStringConvertible {
     
     func scheduleNotifications() {
         
-        if (!UIApplication.sharedApplication().isRegisteredForRemoteNotifications()) {
-            return
-        }
-        var date:NSDate = NSDate().dateBySettingCalendarComponent(NSCalendarUnit.Hour, value: 8)
-        for item:ChallengeItem in items {
-            var localNotif:UILocalNotification = UILocalNotification()
+        let calendar: NSCalendar = NSCalendar.currentCalendar()
+        
+        // Replace the hour (time) of both dates with 00:00
+        var date:NSDate = NSDate()
+        date = calendar.startOfDayForDate(date)
+        date = date.dateBySettingCalendarComponent(NSCalendarUnit.Hour, value: 8)
+        for _:ChallengeItem in items {
+            print("Scheduling Notification for: \(date)")
+            let localNotif:UILocalNotification = UILocalNotification()
             localNotif.fireDate = date
             localNotif.alertBody = "A New Challenge is Available!"
             localNotif.timeZone = NSTimeZone.defaultTimeZone()
-            
             UIApplication.sharedApplication().scheduleLocalNotification(localNotif)
             
             // Add a day to the date
@@ -87,6 +89,12 @@ class ChallengeController: NSObject {
             static let instance = ChallengeController()
         }
         return Singleton.instance
+    }
+    
+    func scheduleNotificationsForCurrentChallenge() {
+        if let challenge = getChallenge("1") {
+            challenge.scheduleNotifications()
+        }
     }
     
     func getChallenge(id:String) -> Challenge? {

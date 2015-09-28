@@ -53,7 +53,7 @@ extension NSDate {
     }
     func dateBySettingCalendarComponent(unit:NSCalendarUnit, value:Int) -> NSDate {
         let cal = NSCalendar.currentCalendar()
-        var components = cal.components(unit, fromDate: self)
+        let components = cal.components(NSCalendarUnit(rawValue: UInt.max), fromDate: self)
         components.setValue(value, forComponent: unit)
         return cal.dateFromComponents(components)!
     }
