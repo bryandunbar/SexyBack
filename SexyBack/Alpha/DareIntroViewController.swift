@@ -46,7 +46,7 @@ class DareIntroViewController: BaseSexyBackViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let asRange = segue.identifier?.rangeOfString("challengeDetailSegue")
         if let asRange = asRange where asRange.startIndex == segue.identifier?.startIndex {
-            let detailViewController = segue.destinationViewController as! ChallengeDetailViewController
+            let detailViewController = segue.destinationViewController as! ChallengeDetailPageViewController
             detailViewController.challenge = self.challenge
         }
     }

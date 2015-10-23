@@ -10,13 +10,8 @@ import UIKit
 
 class ChallengeDetailViewController: BaseSexyBackViewController {
 
-    var challenge:Challenge! {
-        didSet {
-            self.challengeItem = ChallengeController.instance.getCurrentItem(challenge)
-        }
-    }
-    var challengeItem:ChallengeItem?
-    
+    var challenge:Challenge!
+    var challengeItem:ChallengeItem!
     
     let modalTransitioningDelegate = BouncyOverlayTransitioningDelegate()
 
@@ -58,7 +53,7 @@ class ChallengeDetailViewController: BaseSexyBackViewController {
         shareButton.addTarget(self, action: "shareTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         
         if let challengeItem = self.challengeItem {
-            challengeDay.text = String(format: "DAY %d:", challengeItem.day)
+            challengeDay.text = String(format: "DAY %d", challengeItem.day)
             challengeTitle.text = challengeItem.title.uppercaseString
             challengeBody.text = challengeItem.body
             challengeImage.image = challengeItem.thumbnailImage

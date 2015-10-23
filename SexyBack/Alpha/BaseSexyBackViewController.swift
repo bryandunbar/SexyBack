@@ -85,6 +85,13 @@ class BaseSexyBackViewController: UIViewController, MenuViewControllerDelegate {
         // Show the selected
         if let segueIdentifer = menuItem.segueIdentifier {
             self.performSegueWithIdentifier(segueIdentifer, sender: self)
+        } else if let viewControllerIdentifer = menuItem.viewControllerIdentifier {
+            let vc:UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier(viewControllerIdentifer))!
+            if let navigationController = self.navigationController {
+                navigationController.popViewControllerAnimated(false)
+                navigationController.pushViewController(vc, animated: false)
+            }
+            
         }
         // TODO: handle other cases
     }

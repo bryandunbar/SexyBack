@@ -68,7 +68,7 @@
 		E3BB26BE199AEFB30024D8EB /* UIDefaultAccessoryInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B6199AEFB30024D8EB /* UIDefaultAccessoryInputView.m */; };
 		E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B8199AEFB30024D8EB /* UIFormTableViewController.m */; };
 		E3BB26C0199AEFB30024D8EB /* UIFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26BA199AEFB30024D8EB /* UIFormViewController.m */; };
-		E3CDE4F31BB7128800CDE3BA /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CDE4F21BB7128800CDE3BA /* AlertViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E3CDE4F31BB7128800CDE3BA /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CDE4F21BB7128800CDE3BA /* AlertViewController.swift */; };
 		E3CE29E719C6729A001B4ACD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29DF19C67299001B4ACD /* AudioToolbox.framework */; };
 		E3CE29E819C6729A001B4ACD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E019C67299001B4ACD /* CFNetwork.framework */; };
 		E3CE29E919C6729A001B4ACD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E119C67299001B4ACD /* libz.dylib */; };
@@ -109,6 +109,9 @@
 		E3F5536C1998EBE000AE3A28 /* SexyBackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F5536B1998EBE000AE3A28 /* SexyBackTests.m */; };
 		E3F553781998F3FC00AE3A28 /* SBMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F553771998F3FC00AE3A28 /* SBMainTabBarController.m */; };
 		E3F5538A199AE8F500AE3A28 /* SBConsultantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F55389199AE8F500AE3A28 /* SBConsultantViewController.m */; };
+		E3FB08071BD326D600EDF5B2 /* ChallengeDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB08061BD326D600EDF5B2 /* ChallengeDetailPageViewController.swift */; };
+		E3FB08091BD3315200EDF5B2 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB08081BD3315200EDF5B2 /* ShopViewController.swift */; };
+		E3FB080B1BD3316600EDF5B2 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB080A1BD3316600EDF5B2 /* RewardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +263,9 @@
 		E3F553771998F3FC00AE3A28 /* SBMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainTabBarController.m; sourceTree = "<group>"; };
 		E3F55388199AE8F500AE3A28 /* SBConsultantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBConsultantViewController.h; sourceTree = "<group>"; };
 		E3F55389199AE8F500AE3A28 /* SBConsultantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBConsultantViewController.m; sourceTree = "<group>"; };
+		E3FB08061BD326D600EDF5B2 /* ChallengeDetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDetailPageViewController.swift; sourceTree = "<group>"; };
+		E3FB08081BD3315200EDF5B2 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		E3FB080A1BD3316600EDF5B2 /* RewardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +387,7 @@
 				E37F9E091BA8738900B17895 /* ChallengeDetailViewController.swift */,
 				E33D4C6B1C0639DB002B0DB9 /* ChallengeCompleteViewController.swift */,
 				E3502A601BB2326700CBFB86 /* ChallengeCheckpointViewController.swift */,
+				E3FB08061BD326D600EDF5B2 /* ChallengeDetailPageViewController.swift */,
 			);
 			name = Challenge;
 			sourceTree = "<group>";
@@ -542,6 +549,8 @@
 				E30D84271BA214DF005897E6 /* DataBackedTableViewController.swift */,
 				E30D84291BA21A7D005897E6 /* SexTrackerHistoryViewController.swift */,
 				E37F9E071BA86D4C00B17895 /* BaseSexyBackViewController.swift */,
+				E3FB08081BD3315200EDF5B2 /* ShopViewController.swift */,
+				E3FB080A1BD3316600EDF5B2 /* RewardsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -813,9 +822,11 @@
 				E33C0626199AFE5200C9AD10 /* UIBorderedButton.m in Sources */,
 				E3F553541998EBE000AE3A28 /* SBTrackViewController.m in Sources */,
 				E3BB26BC199AEFB30024D8EB /* NSString+Additions.m in Sources */,
+				E3FB08071BD326D600EDF5B2 /* ChallengeDetailPageViewController.swift in Sources */,
 				E30D841D1B9FCB36005897E6 /* SexRankView.swift in Sources */,
 				E36C9D361B9A405C00DBBF5A /* BouncyOverlayTransitioningDelegate.swift in Sources */,
 				E3F553471998EBE000AE3A28 /* main.m in Sources */,
+				E3FB08091BD3315200EDF5B2 /* ShopViewController.swift in Sources */,
 				E36C9D2A1B99334000DBBF5A /* SlidingOverlayPresentationController.swift in Sources */,
 				E37F9E031BA7C08100B17895 /* DareIntroViewController.swift in Sources */,
 				E30D84191B9FC50B005897E6 /* FakeAdView.swift in Sources */,
@@ -845,6 +856,7 @@
 				E36C9D1B1B98EE0B00DBBF5A /* SexTrackerViewController.swift in Sources */,
 				E3DE89051B96A66E00500797 /* UIBorderedButton.swift in Sources */,
 				E3DE88FC1B969C1D00500797 /* ProfileImageView.swift in Sources */,
+				E3FB080B1BD3316600EDF5B2 /* RewardsViewController.swift in Sources */,
 				E3D1355D1A8667B4008DBE5D /* SBDareHistoryCell.m in Sources */,
 				E3A1239C1A734A9E00076722 /* SBSelfSizingTextViewTableViewCell.m in Sources */,
 				E3A123961A733ECC00076722 /* SB30DayProgramsTableViewController.m in Sources */,

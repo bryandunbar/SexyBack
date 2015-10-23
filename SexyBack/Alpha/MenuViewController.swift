@@ -13,7 +13,7 @@ protocol MenuViewControllerDelegate {
 }
 
 enum MenuItemType:Int {
-    case Tracker = 0, Challenge, Settings, Help
+    case Tracker = 0, Challenge, Shop, Rewards, Settings, Help
 }
 
 struct MenuItem {
@@ -29,8 +29,11 @@ struct MenuItem {
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let menuItems:[MenuItem] = [
-        MenuItem(type: MenuItemType.Tracker, title: "Tracker", iconFileName: "tracker", segueIdentifier: "trackerSegue", viewControllerIdentifier:nil, viewController:nil),
-        MenuItem(type: MenuItemType.Challenge, title: "30 Day Challenge", iconFileName: "challenge", segueIdentifier: "challengeSegue", viewControllerIdentifier:nil, viewController:nil),
+        MenuItem(type: MenuItemType.Tracker, title: "Tracker", iconFileName: "tracker", segueIdentifier: nil, viewControllerIdentifier:"SexTrackerViewController", viewController:nil),
+        MenuItem(type: MenuItemType.Challenge, title: "30 Day Challenge", iconFileName: "challenge", segueIdentifier: nil, viewControllerIdentifier:"ChallengeViewController", viewController:nil),
+        MenuItem(type: MenuItemType.Shop, title: "Shop", iconFileName: "shop", segueIdentifier: nil, viewControllerIdentifier:"ShopViewController", viewController:nil),
+        MenuItem(type: MenuItemType.Rewards, title: "Rewards", iconFileName: "rewards", segueIdentifier: nil, viewControllerIdentifier:"RewardsViewController", viewController:nil)
+        
     ]
     
     var delegate:MenuViewControllerDelegate?

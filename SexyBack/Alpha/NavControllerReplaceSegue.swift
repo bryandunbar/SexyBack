@@ -11,8 +11,8 @@ import UIKit
 class NavControllerReplaceSegue: UIStoryboardSegue {
    
     override func perform() {
-        let sourceViewController = self.sourceViewController as! UIViewController
-        let destinationViewController = self.destinationViewController as! UIViewController
+        let sourceViewController = self.sourceViewController 
+        let destinationViewController = self.destinationViewController 
         
         let navigationController = sourceViewController.navigationController
         
