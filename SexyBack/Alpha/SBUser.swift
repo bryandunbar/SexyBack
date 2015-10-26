@@ -18,6 +18,7 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
     var gender:String?
     var ageRange:String?
     var weeklySexGoal:Int = 0
+    var rewardsPoints:Int = 0
     
     
     // MARK: 30 Day Challenge Data, For now this is kind of brute force
@@ -75,6 +76,12 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
     var weeklyEventCount:Int = 0 {
         didSet {
             NSNotificationCenter.defaultCenter().postNotificationName(WeeklyEventCountUpdatedNotification, object: nil)
+            
+            // Reward if they've exceeded their goal (but only the first time)
+            if (weeklyEventCount == self.weeklySexGoal + 1) {
+                RewardsController.instance.exceededSexGoal()
+            }
+            
         }
     }
     
@@ -96,6 +103,9 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         event["user"] = PFObject(withoutDataWithClassName: "SBUser", objectId: self.objectId)
         event["eventDate"] = NSDate()
         event.saveInBackgroundWithBlock(block)
+        
+        // Reward Points
+        RewardsController.instance.sexTracked()
     }
     
     func fetchAllMySexEvents(after:NSDate?, block:PFArrayResultBlock?) {
@@ -221,6 +231,9 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         if let weeklySexGoal = parseUser["weekly_sex_goal"] {
             self.weeklySexGoal = weeklySexGoal as! Int
         }
+        if let rewardsPoints = parseUser["rewards_points"] {
+            self.rewardsPoints = rewardsPoints as! Int
+        }
     }
     func fillParseUser(parseUser:PFObject){
         
@@ -235,7 +248,8 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         }
         
         parseUser["weekly_sex_goal"] = weeklySexGoal
-        
+        parseUser["rewards_points"] = rewardsPoints
+
         if profileImageDirty {
             let imageData = UIImageJPEGRepresentation(self.profileImage!, 0.8)
             let imageFile = PFFile(name: "profile.jpg", data:imageData!)
@@ -257,6 +271,7 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         aCoder.encodeObject(completedChallengeDays, forKey: "completedChallengeDays")
         aCoder.encodeObject(challengeStartDate, forKey: "challengeStartDate")
         aCoder.encodeObject(seenChallengeCheckpoints, forKey: "seenChallengeCheckpoints")
+        aCoder.encodeInteger(rewardsPoints, forKey: "rewardsPoints")
     }
     
     required convenience init(coder aDecoder: NSCoder) {
@@ -279,6 +294,8 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
         if let archivedChallengeDays = aDecoder.decodeObjectForKey("completedChallengeDays") as? NSSet {
             self.completedChallengeDays = archivedChallengeDays.mutableCopy() as! NSMutableSet
         }
+        
+        self.rewardsPoints = aDecoder.decodeIntegerForKey("rewardsPoints")
 
         self.fetchParseUserWithBlock(nil);
         

@@ -1216,8 +1216,15 @@
                                     <constraint firstAttribute="height" constant="240" id="v8P-CX-XzS"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rewards-large" translatesAutoresizingMaskIntoConstraints="NO" id="3h5-h0-z5T">
+                                <rect key="frame" x="260" y="520" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="cMe-lL-hUH"/>
+                                    <constraint firstAttribute="width" constant="80" id="oUz-Rv-OMn"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REWARDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQc-Me-Hgc">
-                                <rect key="frame" x="260" y="88" width="80" height="21"/>
+                                <rect key="frame" x="260" y="118" width="80" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="8UK-7Z-FVT"/>
                                     <constraint firstAttribute="height" constant="21" id="Qba-oS-ije"/>
@@ -1226,16 +1233,74 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Reward Points:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1P-7Y-C76">
+                                <rect key="frame" x="152" y="167" width="156" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="wwd-Wb-Zkq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your next reward level is %@." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrx-hz-nwG">
+                                <rect key="frame" x="20" y="205" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bNA-gU-jJR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlJ-fj-Gbn">
+                                <rect key="frame" x="40" y="196" width="520" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2wp-AD-qnW"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999,999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJc-69-MC4" customClass="RoundedLabel" customModule="SexyBack" customModuleProvider="target">
+                                <rect key="frame" x="324" y="164" width="111" height="26"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.15686274510000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="DWR-kh-DqV"/>
+                                    <constraint firstAttribute="width" constant="111" id="FAW-pz-pVN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.88235294119999996" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="1gv-aw-g4H" firstAttribute="leading" secondItem="GoF-vH-K1T" secondAttribute="leadingMargin" constant="-16" id="OHu-Pk-fpD"/>
-                            <constraint firstItem="UQc-Me-Hgc" firstAttribute="centerX" secondItem="GoF-vH-K1T" secondAttribute="centerX" id="Pi5-Ua-VC6"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="1gv-aw-g4H" secondAttribute="bottom" constant="-8" id="Pmo-Zq-reA"/>
-                            <constraint firstItem="UQc-Me-Hgc" firstAttribute="top" secondItem="Uie-2l-QdE" secondAttribute="bottom" constant="68" id="WCm-jA-s94"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1gv-aw-g4H" secondAttribute="trailing" constant="-16" id="eus-d1-ykp"/>
+                            <constraint firstItem="UQc-Me-Hgc" firstAttribute="top" secondItem="Uie-2l-QdE" secondAttribute="bottom" constant="98" id="CWN-gf-c5d"/>
+                            <constraint firstItem="pB1-wv-YPD" firstAttribute="top" secondItem="3h5-h0-z5T" secondAttribute="bottom" id="HZe-Au-Xes"/>
+                            <constraint firstItem="Rrx-hz-nwG" firstAttribute="trailing" secondItem="GoF-vH-K1T" secondAttribute="trailingMargin" id="JUU-f7-MAe"/>
+                            <constraint firstItem="Rrx-hz-nwG" firstAttribute="top" secondItem="AlJ-fj-Gbn" secondAttribute="bottom" constant="8" id="Kfp-Yq-qUD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AlJ-fj-Gbn" secondAttribute="trailing" constant="20" id="Nb1-v0-4eT"/>
+                            <constraint firstItem="rJc-69-MC4" firstAttribute="leading" secondItem="W1P-7Y-C76" secondAttribute="trailing" constant="16" id="OSR-by-xf5"/>
+                            <constraint firstItem="W1P-7Y-C76" firstAttribute="centerX" secondItem="GoF-vH-K1T" secondAttribute="centerX" constant="-70" id="PTC-ZT-MLq"/>
+                            <constraint firstItem="1gv-aw-g4H" firstAttribute="leading" secondItem="GoF-vH-K1T" secondAttribute="leadingMargin" constant="-16" id="YrX-Sx-Nzw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="1gv-aw-g4H" secondAttribute="bottom" constant="-8" id="a3v-MG-udW"/>
+                            <constraint firstItem="W1P-7Y-C76" firstAttribute="top" secondItem="UQc-Me-Hgc" secondAttribute="bottom" constant="28" id="dSv-da-Bqg"/>
+                            <constraint firstItem="UQc-Me-Hgc" firstAttribute="centerX" secondItem="GoF-vH-K1T" secondAttribute="centerX" id="hL2-Fo-Pju"/>
+                            <constraint firstItem="rJc-69-MC4" firstAttribute="centerY" secondItem="W1P-7Y-C76" secondAttribute="centerY" constant="0.5" id="k7N-UK-e2k"/>
+                            <constraint firstItem="AlJ-fj-Gbn" firstAttribute="centerX" secondItem="GoF-vH-K1T" secondAttribute="centerX" id="kUf-Fo-Ggq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1gv-aw-g4H" secondAttribute="trailing" constant="-16" id="n1t-Qq-bZg"/>
+                            <constraint firstItem="AlJ-fj-Gbn" firstAttribute="leading" secondItem="GoF-vH-K1T" secondAttribute="leadingMargin" constant="20" id="vaf-Sg-5sv"/>
+                            <constraint firstItem="Rrx-hz-nwG" firstAttribute="leading" secondItem="GoF-vH-K1T" secondAttribute="leadingMargin" id="wcA-u5-CLe"/>
+                            <constraint firstItem="AlJ-fj-Gbn" firstAttribute="top" secondItem="W1P-7Y-C76" secondAttribute="bottom" constant="10" id="x2M-R1-Z4h"/>
+                            <constraint firstItem="3h5-h0-z5T" firstAttribute="centerX" secondItem="GoF-vH-K1T" secondAttribute="centerX" id="ybW-aI-XLr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myRewardsPoints" destination="rJc-69-MC4" id="ZKg-VK-lLx"/>
+                        <outlet property="nextRewardLevel" destination="Rrx-hz-nwG" id="fTY-bN-afd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjh-6n-yET" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1252,6 +1317,7 @@
         <image name="gysb-logo-white" width="291" height="231"/>
         <image name="hamburger" width="17" height="17"/>
         <image name="level3" width="320" height="320"/>
+        <image name="rewards-large" width="120" height="120"/>
         <image name="sex-tracker" width="161" height="105"/>
         <image name="sex-tracker-slider-max" width="33" height="29"/>
         <image name="sex-tracker-slider-min" width="32" height="32"/>

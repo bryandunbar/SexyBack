@@ -210,6 +210,8 @@ class ChallengeController: NSObject {
             
             //TODO: Analytics
             
+            // Reward Points
+            RewardsController.instance.challengeCompleted()
             
             AppController.instance.save()
         }

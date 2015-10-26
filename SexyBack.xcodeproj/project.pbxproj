@@ -68,6 +68,8 @@
 		E3BB26BE199AEFB30024D8EB /* UIDefaultAccessoryInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B6199AEFB30024D8EB /* UIDefaultAccessoryInputView.m */; };
 		E3BB26BF199AEFB30024D8EB /* UIFormTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26B8199AEFB30024D8EB /* UIFormTableViewController.m */; };
 		E3BB26C0199AEFB30024D8EB /* UIFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB26BA199AEFB30024D8EB /* UIFormViewController.m */; };
+		E3CD7BBF1BDE86C20090185C /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CD7BBE1BDE86C20090185C /* RoundedLabel.swift */; };
+		E3CD7BC11BDE8E320090185C /* RewardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CD7BC01BDE8E320090185C /* RewardsController.swift */; };
 		E3CDE4F31BB7128800CDE3BA /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CDE4F21BB7128800CDE3BA /* AlertViewController.swift */; };
 		E3CE29E719C6729A001B4ACD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29DF19C67299001B4ACD /* AudioToolbox.framework */; };
 		E3CE29E819C6729A001B4ACD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE29E019C67299001B4ACD /* CFNetwork.framework */; };
@@ -209,6 +211,8 @@
 		E3BB26B8199AEFB30024D8EB /* UIFormTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFormTableViewController.m; sourceTree = "<group>"; };
 		E3BB26B9199AEFB30024D8EB /* UIFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFormViewController.h; sourceTree = "<group>"; };
 		E3BB26BA199AEFB30024D8EB /* UIFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFormViewController.m; sourceTree = "<group>"; };
+		E3CD7BBE1BDE86C20090185C /* RoundedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
+		E3CD7BC01BDE8E320090185C /* RewardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardsController.swift; sourceTree = "<group>"; };
 		E3CDE4F21BB7128800CDE3BA /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		E3CE29DF19C67299001B4ACD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E3CE29E019C67299001B4ACD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -445,6 +449,7 @@
 				E36C9D411B9A6A2F00DBBF5A /* SBUser.swift */,
 				E30D84201BA1145A005897E6 /* SexRankController.swift */,
 				E37F9E101BA8A20700B17895 /* ChallengeController.swift */,
+				E3CD7BC01BDE8E320090185C /* RewardsController.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -570,6 +575,7 @@
 				E30D841A1B9FC8A8005897E6 /* SexRankView.xib */,
 				E30D841C1B9FCB36005897E6 /* SexRankView.swift */,
 				E34878981BA8F4BB00F69E63 /* CheckBox.swift */,
+				E3CD7BBE1BDE86C20090185C /* RoundedLabel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -829,6 +835,7 @@
 				E3FB08091BD3315200EDF5B2 /* ShopViewController.swift in Sources */,
 				E36C9D2A1B99334000DBBF5A /* SlidingOverlayPresentationController.swift in Sources */,
 				E37F9E031BA7C08100B17895 /* DareIntroViewController.swift in Sources */,
+				E3CD7BC11BDE8E320090185C /* RewardsController.swift in Sources */,
 				E30D84191B9FC50B005897E6 /* FakeAdView.swift in Sources */,
 				E3F553781998F3FC00AE3A28 /* SBMainTabBarController.m in Sources */,
 				E30D842A1BA21A7D005897E6 /* SexTrackerHistoryViewController.swift in Sources */,
@@ -852,6 +859,7 @@
 				E3BB26BB199AEFB30024D8EB /* NSObject+AlertHelper.m in Sources */,
 				E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */,
 				E3F5534B1998EBE000AE3A28 /* SBAppDelegate.m in Sources */,
+				E3CD7BBF1BDE86C20090185C /* RoundedLabel.swift in Sources */,
 				E30D84211BA1145A005897E6 /* SexRankController.swift in Sources */,
 				E36C9D1B1B98EE0B00DBBF5A /* SexTrackerViewController.swift in Sources */,
 				E3DE89051B96A66E00500797 /* UIBorderedButton.swift in Sources */,

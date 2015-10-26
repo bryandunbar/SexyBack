@@ -76,7 +76,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) 
         
         let menuItem:MenuItem = menuItems[indexPath.row]
         
@@ -84,6 +84,14 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let imageFileName = menuItem.iconFileName {
             cell.imageView?.image = UIImage(named:imageFileName)
         }
+        
+        if menuItem.type == .Rewards {
+            
+            if let user = AppController.instance.user {
+                cell.textLabel!.text = cell.textLabel!.text! + ": " + NSNumberFormatter.localizedStringFromNumber(user.rewardsPoints, numberStyle: .DecimalStyle)
+            }
+        }
+        
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
