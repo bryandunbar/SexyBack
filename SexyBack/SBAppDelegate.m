@@ -74,7 +74,15 @@
     UIApplication *app = [UIApplication sharedApplication];
     AppController *instance = [AppController instance];
     ChallengeController *challangeController = [ChallengeController instance];
-    if (instance.user.notifyOfNewChallenges && app.scheduledLocalNotifications.count == 0) {
+    
+    // In case we scheduled too many
+    if (instance.user.challengedCompleted && app.scheduledLocalNotifications.count > 0) {
+        // Cancel any future notifications
+        [app cancelAllLocalNotifications];
+    }
+    
+    // Check to see if the user registered but we didn't set the notifications up
+    if (!instance.user.challengedCompleted && instance.user.notifyOfNewChallenges && app.scheduledLocalNotifications.count == 0) {
         [challangeController scheduleNotificationsForCurrentChallenge];
     }
     

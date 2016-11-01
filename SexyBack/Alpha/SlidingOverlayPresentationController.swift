@@ -18,7 +18,7 @@ class SlidingOverlayPresentationController: UIPresentationController {
         }
     }
     
-    override init(presentedViewController: UIViewController, presentingViewController: UIViewController) {
+    override init(presentedViewController: UIViewController, presentingViewController: UIViewController?) {
         super.init(presentedViewController: presentedViewController, presentingViewController: presentingViewController)
         
         configureDimmingView()
@@ -72,7 +72,7 @@ class SlidingOverlayPresentationController: UIPresentationController {
         dimmingView.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
         dimmingView.alpha = 0.0
         
-        let tapGestureRecognizer:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dimmingViewTapped:")
+        let tapGestureRecognizer:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SlidingOverlayPresentationController.dimmingViewTapped(_:)))
         dimmingView.addGestureRecognizer(tapGestureRecognizer)
     }
     

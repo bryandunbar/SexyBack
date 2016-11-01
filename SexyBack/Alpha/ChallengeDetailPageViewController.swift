@@ -14,12 +14,28 @@ class ChallengeDetailPageViewController: UIPageViewController, UIPageViewControl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let challengeItem = ChallengeController.instance.getCurrentItem(challenge)
+        
+        // Bootstrap
+        var vc:UIViewController?
+        if let user = AppController.instance.user {
+            if user.challengedCompleted {
+                
+                vc = self.storyboard?.instantiateViewControllerWithIdentifier("ChallengeCompletedViewController") as! ChallengeCompleteViewController
+                
+            }
+        }
+        
+        if vc == nil {
+            vc = self.viewControllerAtIndex(challengeItem!.day - 1)
+        }
+        
         self.delegate = self
         self.dataSource = self
         self.view.backgroundColor = UIColor(red: 224/255.0, green: 225/255.0, blue: 224/255.0, alpha: 1.0)
-        let challengeItem = ChallengeController.instance.getCurrentItem(challenge)
-        let vc:ChallengeDetailViewController = self.viewControllerAtIndex(challengeItem!.day - 1)
-        self.setViewControllers([vc], direction: .Forward, animated: false, completion: nil)
+        
+        self.setViewControllers([vc!], direction: .Forward, animated: false, completion: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -38,10 +54,26 @@ class ChallengeDetailPageViewController: UIPageViewController, UIPageViewControl
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
+        
+        // Nothing comes after the complete view controller
+        if let _ = viewController as? ChallengeCompleteViewController {
+            return nil
+        }
+        
         let challengeDetailViewController = viewController as! ChallengeDetailViewController
         var index:Int = challengeDetailViewController.challengeItem.day - 1 // Days are 1 indexed
-        index++
+        index += 1
         if index == self.challenge.items.count {
+            
+            // We are at the end of the regular challenges, check to see if they are done and add the
+            // completed view controller
+            if let user = AppController.instance.user {
+                if user.challengedCompleted {
+                    let vc:ChallengeCompleteViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ChallengeCompletedViewController") as! ChallengeCompleteViewController
+                    return vc
+                }
+            }
+            
             return nil
         }
         return self.viewControllerAtIndex(index)
@@ -49,13 +81,20 @@ class ChallengeDetailPageViewController: UIPageViewController, UIPageViewControl
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        let challengeDetailViewController = viewController as! ChallengeDetailViewController
-        var index:Int = challengeDetailViewController.challengeItem.day - 1 // Days are 1 indexed
+        var index:Int = 0
+        if let _ = viewController as? ChallengeCompleteViewController {
+            index = challenge.lastItem.day
+        } else {
+            let challengeDetailViewController = viewController as! ChallengeDetailViewController
+            index = challengeDetailViewController.challengeItem.day - 1 // Days are 1 indexed
+        }
+        
+        // Nothing comes before teh first one
         if (index == 0 || index == NSNotFound) {
             return nil
         }
         
-        index--
+        index -= 1
         return self.viewControllerAtIndex(index)
     }
     

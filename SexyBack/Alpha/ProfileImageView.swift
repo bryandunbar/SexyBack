@@ -96,7 +96,7 @@ import UIKit
     }
     
     func configureTapGestureRecognizer() {
-        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "viewTapped:")
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProfileImageView.viewTapped(_:)))
         self.addGestureRecognizer(tapGestureRecognizer)
         self.tapGestureRecognizer.delegate = self
     }

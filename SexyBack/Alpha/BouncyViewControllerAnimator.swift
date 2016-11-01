@@ -27,7 +27,7 @@ class BouncyViewControllerAnimator : NSObject, UIViewControllerAnimatedTransitio
       let centre = presentedView.center
       presentedView.center = CGPointMake(centre.x, -presentedView.bounds.size.height / 2)
       
-      transitionContext.containerView()!.addSubview(presentedView)
+      transitionContext.containerView().addSubview(presentedView)
       
       UIView.animateWithDuration(self.transitionDuration(transitionContext),
         delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10.0, options: [],

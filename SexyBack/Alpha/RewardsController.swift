@@ -34,7 +34,7 @@ class RewardsController: NSObject {
     func nextRewardLevel() -> Int {
         
         if let user = AppController.instance.user {
-            for (var i = 0; i < rewardLevels.count; i++) {
+            for i in 0 ..< rewardLevels.count {
                 if user.rewardsPoints < rewardLevels[i] {
                     return rewardLevels[i]
                 }

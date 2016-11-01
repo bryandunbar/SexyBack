@@ -22,7 +22,7 @@ class SBTextField: UITextField, UIDefaultAccessoryInputViewDelegate {
     
     func setup() {
         
-        var accView:UIDefaultAccessoryInputView = UIDefaultAccessoryInputView(hostView: self)
+        let accView:UIDefaultAccessoryInputView = UIDefaultAccessoryInputView(hostView: self)
         accView.accessoryInputViewDelegate = self
         accView.showsNextPrev = false
         self.inputAccessoryView = accView

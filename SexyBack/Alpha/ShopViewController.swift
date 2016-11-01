@@ -28,7 +28,7 @@ class ShopViewController: BaseSexyBackViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         self.activityIndicator.stopAnimating()
         

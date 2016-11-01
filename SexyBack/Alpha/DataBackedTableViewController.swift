@@ -56,7 +56,7 @@ class DataBackedTableViewController: UIViewController, UITableViewDataSource, UI
         super.viewDidLoad()
         self.refreshControl = UIRefreshControl()
         self.tableView.addSubview(self.refreshControl!)
-        self.refreshControl?.addTarget(self, action: "fetchData", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl?.addTarget(self, action: #selector(DataBackedTableViewController.fetchData as (DataBackedTableViewController) -> () -> ()), forControlEvents: UIControlEvents.ValueChanged)
     }
 
     override func didReceiveMemoryWarning() {

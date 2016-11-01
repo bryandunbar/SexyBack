@@ -99,8 +99,8 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
     private var parseUser:PFObject?
     
     func trackSexEvent(block:PFBooleanResultBlock?) {
-        var event:PFObject = PFObject(className: "SBEvent")
-        event["user"] = PFObject(withoutDataWithClassName: "SBUser", objectId: self.objectId)
+        let event:PFObject = PFObject(className: "SBEvent")
+        event["user"] = PFObject(outDataWithClassName: "SBUser", objectId: self.objectId)
         event["eventDate"] = NSDate()
         event.saveInBackgroundWithBlock(block)
         
@@ -111,7 +111,7 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
     func fetchAllMySexEvents(after:NSDate?, block:PFArrayResultBlock?) {
         if let parseUser = self.parseUser {
             
-            var query:PFQuery = PFQuery(className: "SBEvent")
+            let query:PFQuery = PFQuery(className: "SBEvent")
             query.whereKey("user", equalTo: parseUser)
             if let afterDate = after {
                 query.whereKey("eventDate", greaterThanOrEqualTo: afterDate)
@@ -132,7 +132,7 @@ let WeeklyEventCountUpdatedNotification = "WeeklyEventCountUpdatedNotification"
             let week:(NSDate, NSDate) = NSDate.getRangeOfWeek(date)
             
             // Perform the query
-            var query:PFQuery = PFQuery(className: "SBEvent")
+            let query:PFQuery = PFQuery(className: "SBEvent")
             query.whereKey("user", equalTo: parseUser)
             query.whereKey("eventDate", greaterThanOrEqualTo: week.0)
             query.whereKey("eventDate", lessThanOrEqualTo: week.1)

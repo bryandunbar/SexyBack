@@ -11,7 +11,7 @@ import UIKit
 class SlidingOverlayTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
     func presentationControllerForPresentedViewController(presented: UIViewController,
-        presentingViewController presenting: UIViewController,
+        presentingViewController presenting: UIViewController?,
         sourceViewController source: UIViewController) -> UIPresentationController? {
             
             let presentationController = SlidingOverlayPresentationController(presentedViewController: presented,

@@ -31,7 +31,7 @@ import QuartzCore
     }
     
     func setupTapGesture() {
-        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "viewTapped:")
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CheckBox.viewTapped(_:)))
         self.addGestureRecognizer(tapGestureRecognizer)
         self.tapGestureRecognizer.delegate = self
     }

@@ -18,7 +18,7 @@ class SexTrackerViewController: BaseSexyBackViewController {
 
     
     func registerForNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "weeklyEventCountUpdatedHandler", name: WeeklyEventCountUpdatedNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SexTrackerViewController.weeklyEventCountUpdatedHandler), name: WeeklyEventCountUpdatedNotification, object: nil)
     }
     func unregisterForNotifications() {
         NSNotificationCenter.defaultCenter().removeObserver(self)
@@ -41,7 +41,7 @@ class SexTrackerViewController: BaseSexyBackViewController {
         registerForNotifications()
         configureView()
         
-        rankView.listButton.addTarget(self, action: "listButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+        rankView.listButton.addTarget(self, action: #selector(SexTrackerViewController.listButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -56,7 +56,7 @@ class SexTrackerViewController: BaseSexyBackViewController {
         super.viewDidAppear(animated)
     
         // Ask for sex goal if we havne't set it
-        var user:SBUser? = AppController.instance.user
+        let user:SBUser? = AppController.instance.user
         if user == nil || user!.weeklySexGoal == 0 {
             self.performSegueWithIdentifier("goalModalSegue", sender: self)
         }
@@ -121,7 +121,7 @@ class SexTrackerViewController: BaseSexyBackViewController {
             })
             
             // Move the slider
-            user.weeklyEventCount++
+            user.weeklyEventCount += 1
             configureView()
 
         }

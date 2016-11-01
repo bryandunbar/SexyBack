@@ -31,15 +31,9 @@ class ChallengeDetailViewController: BaseSexyBackViewController {
         self.myMenuItemType = .Challenge
         configureView()
         
-        if let user = AppController.instance.user {
-            if user.challengedCompleted {
-                performSegueWithIdentifier("challengeCompleted", sender: self)
-            } else {
-                self.checkpoint = ChallengeController.instance.currentCheckpoint
-                if self.checkpoint != nil {
-                    performSegueWithIdentifier("checkpointSegue", sender: self)
-                }
-            }
+        self.checkpoint = ChallengeController.instance.currentCheckpoint
+        if self.checkpoint != nil {
+            performSegueWithIdentifier("checkpointSegue", sender: self)
         }
     }
 
@@ -50,7 +44,7 @@ class ChallengeDetailViewController: BaseSexyBackViewController {
     
     func configureView() {
         
-        shareButton.addTarget(self, action: "shareTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+        shareButton.addTarget(self, action: #selector(ChallengeDetailViewController.shareTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
         if let challengeItem = self.challengeItem {
             challengeDay.text = String(format: "DAY %d", challengeItem.day)

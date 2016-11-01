@@ -144,7 +144,7 @@ class ChallengeController: NSObject {
     func getCurrentItem(challenge:Challenge) -> ChallengeItem? {
         if let user = AppController.instance.user {
             
-            var currentChallengeDay:Int = user.currentChallengeDay
+            let currentChallengeDay:Int = user.currentChallengeDay
             if currentChallengeDay > challenge.lastItem.day {
                 user.challengedCompleted = true
                 return nil
@@ -186,7 +186,7 @@ class ChallengeController: NSObject {
     }
     
     func hasUserCompletedItem(challenge:Challenge, item:ChallengeItem) -> Bool {
-        var challengeKey:String = Challenge.buildKey(challenge.id, day: item.day)
+        let challengeKey:String = Challenge.buildKey(challenge.id, day: item.day)
         if let user = AppController.instance.user {
             if let completedChallengeDays = user.completedChallengeDays {
                 return completedChallengeDays.containsObject(challengeKey)
@@ -196,13 +196,13 @@ class ChallengeController: NSObject {
     }
     
     func completeChallengeItem(challenge:Challenge, item:ChallengeItem) {
-        var challengeKey:String = Challenge.buildKey(challenge.id, day: item.day)
+        let challengeKey:String = Challenge.buildKey(challenge.id, day: item.day)
         
         if let user = AppController.instance.user {
             user.completedChallengeDays?.addObject(challengeKey)
         
-            var event:PFObject = PFObject(className: "SBChallengeTrackRecord")
-            event["user"] = PFObject(withoutDataWithClassName: "SBUser", objectId: user.objectId)
+            let event:PFObject = PFObject(className: "SBChallengeTrackRecord")
+            event["user"] = PFObject(outDataWithClassName: "SBUser", objectId: user.objectId)
             event["eventDate"] = NSDate()
             event["challengeId"] = challenge.id
             event["challengeDay"] = item.day
@@ -222,7 +222,7 @@ class ChallengeController: NSObject {
         
         get {
             if let user = AppController.instance.user {
-                var currentChallengeDay:Int = user.currentChallengeDay
+                let currentChallengeDay:Int = user.currentChallengeDay
                 var value:[String:AnyObject]? = nil
                 let completedChallengeDays:[String] = user.completedChallengeDays!.allObjects as! [String]
                 
@@ -242,15 +242,24 @@ class ChallengeController: NSObject {
                 } else if currentChallengeDay >= 15 && currentChallengeDay < 22 {
                     let seen = user.seenChallengeCheckpoints[2]!
                     if !seen {
-                        value = ["msg":"You've completed Week 2 of the 30-Day Challenge!"]
+                        let arr = completedChallengeDays.filter({
+                            let dayFromKey = Challenge.dayFromKey($0)
+                            return dayFromKey >= 15 && dayFromKey < 22
+                        })
+                        value = ["msg":String(format:"You've completed Week 2 of the 30-Day Challenge!\n\nYou completed %d challenges.", arr.count)]
                         user.seenChallengeCheckpoints[2] = true
                     }
                 } else if currentChallengeDay >= 22 {
                     let seen = user.seenChallengeCheckpoints[3]!
                     if !seen {
-                        value = ["msg":"You've completed Week 3 of the 30-Day Challenge!"]
+                        let arr = completedChallengeDays.filter({
+                            let dayFromKey = Challenge.dayFromKey($0)
+                            return dayFromKey >= 22
+                        })
+                        value = ["msg":String(format:"You've completed Week 3 of the 30-Day Challenge!\n\nYou completed %d challenges.", arr.count)]
                         user.seenChallengeCheckpoints[3] = true
                     }
+
                 }
 
                 return value

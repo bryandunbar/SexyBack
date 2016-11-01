@@ -24,7 +24,7 @@ class SlidingOverlayAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let toView:UIView = toVC.view
         
         if isPresentation {
-            transitionContext.containerView()!.addSubview(toView)
+            transitionContext.containerView().addSubview(toView)
         }
         
         let animatingVC:UIViewController = isPresentation ? toVC : fromVC

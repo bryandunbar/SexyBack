@@ -15,7 +15,6 @@
 		E30D84281BA214DF005897E6 /* DataBackedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D84271BA214DF005897E6 /* DataBackedTableViewController.swift */; };
 		E30D842A1BA21A7D005897E6 /* SexTrackerHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D84291BA21A7D005897E6 /* SexTrackerHistoryViewController.swift */; };
 		E30D842D1BA3A608005897E6 /* SexHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D842C1BA3A608005897E6 /* SexHistoryTableViewCell.swift */; };
-		E30D842F1BA3AD7A005897E6 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D842E1BA3AD7A005897E6 /* DateUtils.swift */; };
 		E337F58B199B0FB400C417D0 /* SBGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F58A199B0FB400C417D0 /* SBGoalsViewController.m */; };
 		E337F58E199B125500C417D0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F58D199B125500C417D0 /* User.m */; };
 		E337F593199C361400C417D0 /* SFGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E337F592199C361400C417D0 /* SFGaugeView.m */; };
@@ -91,6 +90,7 @@
 		E3DE88FC1B969C1D00500797 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE88FB1B969C1D00500797 /* ProfileImageView.swift */; };
 		E3DE89031B96A0D400500797 /* ArchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE89021B96A0D400500797 /* ArchedView.swift */; };
 		E3DE89051B96A66E00500797 /* UIBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE89041B96A66E00500797 /* UIBorderedButton.swift */; };
+		E3E85BBD1C16724600E4B7A9 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E85BBC1C16724600E4B7A9 /* DateUtils.swift */; };
 		E3F03CE719D19F0D00413547 /* SB30DayContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */; };
 		E3F03CEA19D1A02900413547 /* SB30DayPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F03CE919D1A02900413547 /* SB30DayPageViewController.m */; };
 		E3F5533B1998EBE000AE3A28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F5533A1998EBE000AE3A28 /* Foundation.framework */; };
@@ -135,7 +135,6 @@
 		E30D84271BA214DF005897E6 /* DataBackedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBackedTableViewController.swift; sourceTree = "<group>"; };
 		E30D84291BA21A7D005897E6 /* SexTrackerHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexTrackerHistoryViewController.swift; sourceTree = "<group>"; };
 		E30D842C1BA3A608005897E6 /* SexHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexHistoryTableViewCell.swift; sourceTree = "<group>"; };
-		E30D842E1BA3AD7A005897E6 /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		E337F589199B0FB400C417D0 /* SBGoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBGoalsViewController.h; sourceTree = "<group>"; };
 		E337F58A199B0FB400C417D0 /* SBGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBGoalsViewController.m; sourceTree = "<group>"; };
 		E337F58C199B125500C417D0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -226,6 +225,7 @@
 		E3D135591A866649008DBE5D /* SBDareHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDareHistoryTableViewController.m; sourceTree = "<group>"; };
 		E3D1355B1A8667B4008DBE5D /* SBDareHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDareHistoryCell.h; sourceTree = "<group>"; };
 		E3D1355C1A8667B4008DBE5D /* SBDareHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDareHistoryCell.m; sourceTree = "<group>"; };
+		E3DC56021DC8D7D000947616 /* SexyBack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SexyBack.entitlements; sourceTree = "<group>"; };
 		E3DE88E31B96902700500797 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		E3DE88E41B96902700500797 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E3DE88EB1B9692B100500797 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -237,6 +237,7 @@
 		E3DE88FB1B969C1D00500797 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		E3DE89021B96A0D400500797 /* ArchedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchedView.swift; sourceTree = "<group>"; };
 		E3DE89041B96A66E00500797 /* UIBorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBorderedButton.swift; sourceTree = "<group>"; };
+		E3E85BBC1C16724600E4B7A9 /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		E3F03CE519D19F0D00413547 /* SB30DayContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayContentViewController.h; sourceTree = "<group>"; };
 		E3F03CE619D19F0D00413547 /* SB30DayContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SB30DayContentViewController.m; sourceTree = "<group>"; };
 		E3F03CE819D1A02900413547 /* SB30DayPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB30DayPageViewController.h; sourceTree = "<group>"; };
@@ -475,6 +476,7 @@
 		E3BB26AE199AEFB30024D8EB /* ios_shared */ = {
 			isa = PBXGroup;
 			children = (
+				E3E85BBC1C16724600E4B7A9 /* DateUtils.swift */,
 				E33C062A199B06FE00C9AD10 /* UIPickerField.m */,
 				E33C062B199B06FE00C9AD10 /* UIPickerField.h */,
 				E33C0624199AFE5200C9AD10 /* UIBorderedButton.m */,
@@ -513,7 +515,6 @@
 				E37F9E041BA86A7E00B17895 /* Segues */,
 				E3DE88F31B9695EB00500797 /* SexyBack-Bridging-Header.h */,
 				E36C9D261B992D5300DBBF5A /* AppController.swift */,
-				E30D842E1BA3AD7A005897E6 /* DateUtils.swift */,
 				E36C9D401B9A6A2200DBBF5A /* Model */,
 				E36C9D1D1B98F87A00DBBF5A /* Fonts */,
 				E36C9D281B9931AE00DBBF5A /* Presentation Controllers */,
@@ -651,6 +652,7 @@
 		E3F553401998EBE000AE3A28 /* SexyBack */ = {
 			isa = PBXGroup;
 			children = (
+				E3DC56021DC8D7D000947616 /* SexyBack.entitlements */,
 				E30D84241BA1188C005897E6 /* Data */,
 				E3DE88EA1B9692B100500797 /* Alpha */,
 				E33C0601199AF57F00C9AD10 /* Model */,
@@ -758,6 +760,12 @@
 				TargetAttributes = {
 					E3F553361998EBE000AE3A28 = {
 						DevelopmentTeam = BB57V2LNA8;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					E3F5535D1998EBE000AE3A28 = {
 						TestTargetID = E3F553361998EBE000AE3A28;
@@ -850,9 +858,9 @@
 				E34878991BA8F4BB00F69E63 /* CheckBox.swift in Sources */,
 				E37F9E111BA8A20700B17895 /* ChallengeController.swift in Sources */,
 				E3DE88F71B96962500500797 /* HiViewController.swift in Sources */,
+				E3E85BBD1C16724600E4B7A9 /* DateUtils.swift in Sources */,
 				E36C9D3F1B9A562B00DBBF5A /* SBTextField.swift in Sources */,
 				E372FB851A8469C7008F9353 /* WTCircleImageView.m in Sources */,
-				E30D842F1BA3AD7A005897E6 /* DateUtils.swift in Sources */,
 				E30D842D1BA3A608005897E6 /* SexHistoryTableViewCell.swift in Sources */,
 				E37F9E061BA86AA900B17895 /* NavControllerReplaceSegue.swift in Sources */,
 				E337F593199C361400C417D0 /* SFGaugeView.m in Sources */,
@@ -1027,6 +1035,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SexyBack/SexyBack.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1040,10 +1049,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1dbd772b-7ac7-43ba-9f68-d351b03d7ae1";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SexyBack/Alpha/SexyBack-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1053,8 +1063,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Vantedge, INC. (BB57V2LNA8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vantedge, INC. (BB57V2LNA8)";
+				CODE_SIGN_ENTITLEMENTS = SexyBack/SexyBack.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1066,9 +1077,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1dbd772b-7ac7-43ba-9f68-d351b03d7ae1";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SexyBack/Alpha/SexyBack-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

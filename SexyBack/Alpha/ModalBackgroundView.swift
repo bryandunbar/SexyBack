@@ -59,7 +59,7 @@ import UIKit
         maskLayer!.frame = self.bounds
         
         // position archview
-        var archViewRect:CGRect = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: self.bounds.width, height: self.archHeight)
+        let archViewRect:CGRect = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: self.bounds.width, height: self.archHeight)
         if archView == nil {
             archView = ArchedView(frame: archViewRect)
             archView.archedViewSide = ArchedViewSide.Bottom

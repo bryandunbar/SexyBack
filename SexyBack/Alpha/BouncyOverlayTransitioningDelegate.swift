@@ -3,7 +3,7 @@ import UIKit
 class BouncyOverlayTransitioningDelegate : NSObject, UIViewControllerTransitioningDelegate {
   
   func presentationControllerForPresentedViewController(presented: UIViewController,
-                        presentingViewController presenting: UIViewController,
+                        presentingViewController presenting: UIViewController?,
                         sourceViewController source: UIViewController) -> UIPresentationController? {
     
     return BouncyOverlayPresentationController(presentedViewController: presented,
